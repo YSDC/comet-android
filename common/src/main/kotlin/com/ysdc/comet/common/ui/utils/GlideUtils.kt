@@ -2,7 +2,7 @@ package com.ysdc.comet.common.ui.utils
 
 import com.ysdc.comet.common.R
 import com.ysdc.comet.common.application.GeneralConfig
-import ae.propertyfinder.model.ProjectDimension
+import com.ysdc.comet.model.ProjectDimension
 import com.ysdc.comet.common.di.module.GlideApp
 import android.widget.ImageView
 import com.bumptech.glide.load.engine.DiskCacheStrategy

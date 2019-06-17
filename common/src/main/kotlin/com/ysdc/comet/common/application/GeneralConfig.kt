@@ -1,8 +1,8 @@
 package com.ysdc.comet.common.application
 
 
-import ae.propertyfinder.model.ProjectDimension
-import ae.propertyfinder.model.Version
+import com.ysdc.comet.model.ProjectDimension
+import com.ysdc.comet.model.Version
 import com.snowplowanalytics.snowplow.tracker.emitter.RequestSecurity
 import com.squareup.moshi.Moshi
 
@@ -74,4 +74,9 @@ interface GeneralConfig {
      * @return an instance of Moshi, builded with the required customization
      */
     fun getMoshi(): Moshi
+
+    /**
+     * @return the store url of the app
+     */
+    fun storeUrl(): String
 }

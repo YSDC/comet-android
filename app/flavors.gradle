@@ -7,10 +7,10 @@ android {
         comet {
             resConfigs "fr", "en"
             dimension "client"
-            applicationIdSuffix ".comet"
             signingConfig signingConfigs.release
             buildConfigField('String', 'PRIMARY_LANGUAGE', "\"fr\"")
             buildConfigField('String', 'DEFAULT_LANGUAGE', "\"en\"")
+            buildConfigField("String", "ANDROID_STORE_URL", "\"market://details?id=com.ysdc.comet\"")
             buildConfigField("String", "ANDROID_RECOMMENDED_APP_VERSION", "\"android_propertyfinder_recommended_version\"")
             buildConfigField("String", "ANDROID_REQUIRED_APP_VERSION", "\"android_propertyfinder_required_version\"")
             ext {

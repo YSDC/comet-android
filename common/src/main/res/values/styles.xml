@@ -77,62 +77,6 @@
     <style name="AppTheme.MainButton_theme" parent="Widget.AppCompat.Button.Colored">
         <item name="android:textColor">@color/white</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="AppTheme.RaisedButtonCandy" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">52dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:padding">@dimen/medium_padding</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:layout_marginTop">7dp</item>
-        <item name="android:layout_marginBottom">7dp</item>
-        <item name="android:theme">@style/AppTheme.Button.CandyOverlay</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
-        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
-        <item name="colorControlHighlight">@color/light_grey</item>
-        <item name="colorAccent">@color/light_grey</item>
-    </style>
-
-    <style name="AppTheme.RaisedButton.Fb" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">52dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:drawableStart">@drawable/ic_fb_logo_compat</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:text">@string/fb_btn_login</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:layout_marginTop">7dp</item>
-        <item name="android:layout_marginBottom">7dp</item>
-        <item name="android:theme">@style/AppTheme.Button.FbBlueOverlay</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="LoginAlertTextView">
-        <item name="android:background">@drawable/rounded_background_red</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:layout_marginBottom">10dp</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/colorAccent</item>
-    </style>
-
-    <style name="AppTheme.Button.FbBlueOverlay" parent="Widget.AppCompat.Button.Colored">
-        <item name="colorAccent">@color/fb_blue</item>
-    </style>
-
-    <style name="AppTheme.Button.CandyOverlay" parent="Widget.AppCompat.Button.Colored">
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <color name="fb_blue">#3b5998</color>
+    </style>>
 
 </resources>

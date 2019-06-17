@@ -11,11 +11,11 @@ import android.app.Application
  */
 
 class DefaultNetworkServiceCreator(
-    networkConfig: com.ysdc.comet.common.network.config.NetworkConfig,
+    networkConfig: NetworkConfig,
     generalConfig: GeneralConfig,
     application: Application,
-    crashlyticsUtils: com.ysdc.comet.common.utils.CrashlyticsUtils,
-    networkUtils: com.ysdc.comet.common.utils.NetworkUtils
+    crashlyticsUtils: CrashlyticsUtils,
+    networkUtils: NetworkUtils
 ) : NetworkServiceCreator(networkConfig, generalConfig, application, crashlyticsUtils, networkUtils) {
     private var configurationService: ConfigurationService? = null
 

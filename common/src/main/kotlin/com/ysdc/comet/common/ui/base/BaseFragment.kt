@@ -15,13 +15,9 @@
 
 package com.ysdc.comet.common.ui.base
 
-import com.ysdc.comet.common.R
-import com.ysdc.comet.common.utils.AppConstants
 import android.content.Context
 import android.content.res.Resources
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -30,10 +26,11 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import com.ysdc.comet.common.R
+import com.ysdc.comet.common.utils.AppConstants
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
@@ -41,26 +38,18 @@ import javax.inject.Inject
 abstract class BaseFragment : Fragment(), MvpView {
 
     protected var baseActivity: BaseActivity? = null
-    protected var defaultActivity: AppCompatActivity? = null
 
     @Inject
     protected lateinit var crashlyticsUtils: com.ysdc.comet.common.utils.CrashlyticsUtils
 
-    val isBottomBarVisible: Boolean
-        get() = true
-
     protected val backArrow: Int
         get() = R.drawable.ic_arrow_back_black
-
-    val menu: Int
-        get() = R.menu.menu_empty
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(false)
         //TODO: remove this when old app is not use anymore
-        var mergedActivity: AppCompatActivity? = if (baseActivity != null) baseActivity else defaultActivity
-        val actionBar = mergedActivity?.supportActionBar
+        val actionBar = baseActivity?.supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(shouldDisplayBackButton())
             if (shouldDisplayBackButton()) {
@@ -94,23 +83,12 @@ abstract class BaseFragment : Fragment(), MvpView {
         super.onDestroy()
     }
 
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        menu.clear()
-        if (baseActivity != null) {
-            inflater.inflate(baseActivity!!.currentMenu, menu)
-        }
-    }
-
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
         super.onAttach(context)
         if (context is BaseActivity) {
             this.baseActivity = context
             context.onFragmentAttached()
-            //TODO: remove when we don't use the old app
-        } else if (context is AppCompatActivity) {
-            defaultActivity = context
         }
     }
 
@@ -152,17 +130,11 @@ abstract class BaseFragment : Fragment(), MvpView {
 
     override fun onDetach() {
         baseActivity = null
-        defaultActivity = null
         super.onDetach()
     }
 
     override fun hideKeyboard() {
-        if (baseActivity != null) {
-            baseActivity!!.hideKeyboard()
-        }else if(defaultActivity != null && view != null){
-            val imm = defaultActivity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view!!.windowToken, 0)
-        }
+        baseActivity!!.hideKeyboard()
     }
 
     fun showKeyboard(view: View) {
@@ -239,7 +211,7 @@ abstract class BaseFragment : Fragment(), MvpView {
         fun onFragmentDetached(tag: String)
     }
 
-    override fun onBackPressed(){
+    override fun onBackPressed() {
         //Nothing to do
     }
 }

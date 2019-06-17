@@ -3,14 +3,13 @@ package com.ysdc.comet.common.ui.base
 import com.ysdc.comet.common.R
 import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.exception.*
-import com.ysdc.comet.common.ui.UiConstants.TAB_DEFAULT
 import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import com.ysdc.comet.common.utils.AppConstants.LOGGING_CATEGORY_ACTIVITY_LIFECYCLE
 import com.ysdc.comet.common.utils.AppConstants.LOGGING_CATEGORY_INTERACTIONS
 import com.ysdc.comet.common.utils.CrashlyticsUtils
 import com.ysdc.comet.common.utils.NetworkUtils
 import com.ysdc.comet.common.ui.utils.DialogBuilder
-import ae.propertyfinder.model.Animation
+import com.ysdc.comet.model.Animation
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
@@ -27,8 +26,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.Pair
 import androidx.fragment.app.Fragment
-import com.jetradar.multibackstack.BackStackEntry
-import com.jetradar.multibackstack.BackStackManager
 import dagger.android.AndroidInjection
 import timber.log.Timber
 import javax.inject.Inject
@@ -38,12 +35,7 @@ private const val STATE_BACK_STACK_MANAGER = "STATE_BACK_STACK_MANAGER"
 
 abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callback {
 
-    var curTabId: Int = TAB_DEFAULT
-        protected set
-    var currentMenu: Int = R.menu.menu_empty
-        private set
     private var versionDialog: AlertDialog? = null
-    private var backStackManager: BackStackManager? = null
 
     @Inject
     protected lateinit var crashlyticsUtils: CrashlyticsUtils
@@ -55,7 +47,6 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
-        backStackManager = BackStackManager()
     }
 
     override fun onStart() {
@@ -78,20 +69,7 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
 
     override fun onDestroy() {
         crashlyticsUtils.log(LOGGING_CATEGORY_ACTIVITY_LIFECYCLE, "onDestroy", this.javaClass.simpleName, 0)
-        backStackManager = null
         super.onDestroy()
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt(STATE_CURRENT_TAB_ID, curTabId)
-        outState.putParcelable(STATE_BACK_STACK_MANAGER, backStackManager!!.saveState())
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        curTabId = savedInstanceState.getInt(STATE_CURRENT_TAB_ID)
-        backStackManager!!.restoreState(savedInstanceState.getParcelable(STATE_BACK_STACK_MANAGER))
     }
 
     override fun onError(throwable: Throwable) {
@@ -99,14 +77,6 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         Timber.e(throwable, "An Error occurred")
         if (throwable is NoConnectivityException) {
             onError(getString(R.string.exception_no_connectivity))
-        } else if (throwable is BackendException || throwable is ValidationException) {
-            onError(throwable.message ?: throwable.javaClass.name)
-        } else if (throwable is GoogleException) {
-            onError(getString(R.string.error_google_connection))
-        } else if (throwable is NotLoggedException) {
-            onError(getString(R.string.exception_not_logged))
-        } else if (throwable is InvalidCredentialsException) {
-            //TODO
         } else {
             onError(getString(R.string.exception_undefined))
         }
@@ -172,77 +142,6 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
 
     override fun provideResources(): Resources {
         return resources
-    }
-
-    /**
-     * @return false if failed to put fragment in back stack. Relates to issue:
-     * java.lang.IllegalStateException: Fragment is not currently in the FragmentManager at
-     * android.support.v4.app.FragmentManagerImpl.saveFragmentInstanceState(FragmentManager.java:702)
-     */
-    protected fun pushFragmentToBackStack(hostId: Int, fragment: Fragment): Boolean {
-        try {
-            val entry = BackStackEntry.create(supportFragmentManager, fragment)
-            backStackManager!!.push(hostId, entry)
-            return true
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to add fragment to back stack")
-            return false
-        }
-
-    }
-
-    protected fun popFragmentFromBackStack(hostId: Int): Fragment? {
-        val entry = backStackManager!!.pop(hostId)
-        return if (entry != null) entry.toFragment(this) else null
-    }
-
-    protected fun popFragmentFromBackStack(): Pair<Int, Fragment>? {
-        val pair = backStackManager!!.pop()
-        return if (pair != null) Pair.create(pair.first, pair.second!!.toFragment(this)) else null
-    }
-
-    /**
-     * @return false if back stack is missing.
-     */
-    protected fun resetBackStackToRoot(hostId: Int): Boolean {
-        return backStackManager!!.resetToRoot(hostId)
-    }
-
-    /**
-     * @return false if back stack is missing.
-     */
-    protected fun clearBackStack(hostId: Int): Boolean {
-        return backStackManager!!.clear(hostId)
-    }
-
-    /**
-     * @return the number of fragments in back stack.
-     */
-    protected fun backStackSize(hostId: Int): Int {
-        return backStackManager!!.backStackSize(hostId)
-    }
-
-    open fun showFragment(fragment: BaseFragment, addToBackStack: Boolean = true, animation : Animation?) {
-        //Implemented by class that inherit, if they need it
-    }
-
-    protected fun updateCurrentMenu(fragment: BaseFragment) {
-        this.currentMenu = fragment.menu
-    }
-
-    protected fun logInteractionOnCrashlytics(v: View) {
-        var viewText = EMPTY_STRING
-        try {
-            if (v is Button) {
-                viewText = v.text.toString()
-            } else if (v is TextView) {
-                viewText = v.text.toString()
-            }
-        } catch (e: Exception) {
-            crashlyticsUtils.logException(e)
-        }
-
-        crashlyticsUtils.log(LOGGING_CATEGORY_INTERACTIONS, "click", viewText)
     }
 
     override fun onFragmentAttached() {

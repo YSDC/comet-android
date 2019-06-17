@@ -52,10 +52,6 @@ abstract class NetworkServiceCreator(
         } else {
             httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.NONE
         }
-        this.httpClient.addInterceptor(NetworkInterceptor(crashlyticsUtils))
-        this.httpClient.addInterceptor(httpLoggingInterceptor)
-        this.httpClient.addInterceptor(AuthorizationInterceptor(networkConfig))
-        this.httpClient.addInterceptor(UserAgentInterceptor(application))
         this.httpClient.addInterceptor(ConnectivityInterceptor(application.applicationContext, networkUtils))
     }
 

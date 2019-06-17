@@ -90,7 +90,6 @@ dependencies {
     implementation timber
 
     debugImplementation developmentLibs
-    releaseImplementation releaseLibs
 
     kapt annotationProcessorLibs
     kapt daggerProcessorLibs
