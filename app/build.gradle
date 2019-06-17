@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../dependencies.gradle'
+apply from: '../publish.gradle'
+apply from: '../jacoco.gradle'
+apply from: 'sonar.gradle'
+apply from: 'flavors.gradle'
+apply from: '../linter.gradle'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ysdc.comet"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode Integer.valueOf(appVersionCode)
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        maxProcessCount 4
+        preDexLibraries false
+        javaMaxHeapSize "8g"
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+            project.ext.set("buildTypeName", "debug")
+            applicationIdSuffix '.debug'
+            debuggable true
+            buildConfigField "boolean", "MEMORY_ANALIZE", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '.../proguard-rules.pro'
+            shrinkResources false
+        }
+        release {
+            project.ext.set("buildTypeName", "release")
+            minifyEnabled true
+            buildConfigField "boolean", "MEMORY_ANALIZE", "true"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '.../proguard-rules.pro'
+            shrinkResources false
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+publishing {
+    publications {
+        apk(MavenPublication) {
+            android.applicationVariants.all { variant ->
+                groupId = "com.ysdc.comet.android-apk"
+                artifactId = project.getName()
+                version = android.defaultConfig.versionName
+
+                artifact("$buildDir/outputs/apk/${android.productFlavors[0].name}/${project.buildTypeName}/${project.getName()}-" +
+                        "${android.productFlavors[0].name}-${project.buildTypeName}.apk")
+            }
+        }
+    }
+}
+
+artifactoryPublish {
+    publications(publishing.publications.apk)
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation mulitdexLibs
+    implementation kotlinLibs
+    implementation supportLibs
+    implementation rxJavaLibs
+    implementation analyticsLibs
+    implementation networkLibs
+    implementation stethoLibs
+    implementation googlePlayLibs
+    implementation uiLibs
+    implementation daggerLibs
+    implementation glideLibs
+    implementation timber
+
+    debugImplementation developmentLibs
+    releaseImplementation releaseLibs
+
+    kapt annotationProcessorLibs
+    kapt daggerProcessorLibs
+
+    testImplementation unitTestLibs
+
+    implementation project(':common')
+    implementation project(':analytics')
+    implementation project(':model')
+}
+apply plugin: 'com.google.gms.google-services'

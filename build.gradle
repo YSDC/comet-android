@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.gradle_version = '3.6.0-alpha03'
+    ext.kotlin_version = '1.3.31'
+    ext.fabric_version = '1.27.1'
+    ext.gms_version = '4.2.0'
+    ext.artifactory_version = '4.9.0'
+    ext.jacoco_version = '0.1.4'
+    ext.sonar_version = '2.7'
+
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://dl.bintray.com/subsub/maven" }
+        google()
+        jcenter()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.fabric.io/public' }
+        //maven { url "https://artifactory.propertyfinder.net/artifactory/gradle-dev" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "io.fabric.tools:gradle:$fabric_version"
+        classpath "com.google.gms:google-services:$gms_version"
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:$artifactory_version"
+        classpath "com.dicedmelon.gradle:jacoco-android:$jacoco_version"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$sonar_version"
+    }
+
+    buildscript {
+        configurations.all {
+            resolutionStrategy {
+                force 'net.sf.proguard:proguard-gradle:6.1.0beta2'
+                force 'org.codehaus.groovy:groovy-all:2.4.15'
+            }
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://dl.bintray.com/subsub/maven" }
+        jcenter()
+        google()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://artifactory.propertyfinder.net/artifactory/gradle-dev" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//to force update of all dependencies
+//--refresh-dependencies

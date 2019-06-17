@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ae.propertyfinder">
+
+    <application
+        android:name=".App"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.appsee.ApiKey" android:value="3502afb151964cfa8695d84a89af1fb2" />
+
+    </application>
+
+</manifest>

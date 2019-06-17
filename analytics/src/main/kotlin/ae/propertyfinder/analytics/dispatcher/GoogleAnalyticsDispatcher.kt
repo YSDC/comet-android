@@ -1,0 +1,61 @@
+package ae.propertyfinder.analytics.dispatcher
+
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_CALL_STATUS
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_CALL_TRACK_ENABLED
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_CLIENT_ID
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_COUNTRY
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_IS_ADMIN
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_LEAD_TIME
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_LEAD_TYPE
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_LOCATION
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_USER_ID
+import ae.propertyfinder.analytics.AnalyticsConstants.DIMENSION_VERIFIED_USER
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_BANNER_EXPIRED
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_BANNER_REJECTED
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_COUNTRY_SELECTED
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_DELETE_DOCUMENT
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_GENERATE_REPORT
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_NOTE
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_NOTIFICATION_BACKGROUND
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_NOTIFICATION_FOREGROUND
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_PROPERTIES_FILTER
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_SUBMIT_VERIFICATION
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_TOP_COMMUNITY_SEARCH
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_TREND_PERIOD
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_TREND_SEARCH
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_VERIFICATION_UPLOAD
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_ACTION_VERIFY_BUTTON
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_BANNER
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_GENERATE_REPORT
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_LEAD
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_PRICE_FINDER
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_PROPERTIES_FILTER
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_PUSH_NOTIFICATION
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_RECORDING_START
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_SAVE_CONTACT
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_USER
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_CATEGORY_VERIFICATION
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_EMAIL_LEAD_DETAILS
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_FORCE_LOG_OUT
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_LOG_IN
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_LOG_OUT
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_PHONE_LEAD_DETAILS
+import ae.propertyfinder.analytics.AnalyticsConstants.EVENT_RESET_PWD
+import ae.propertyfinder.analytics.AnalyticsConstants.GA_USER_ID
+import ae.propertyfinder.analytics.AnalyticsConstants.PARAM_VALUE_ERROR
+import ae.propertyfinder.analytics.AnalyticsConstants.PARAM_VALUE_MAIL
+import ae.propertyfinder.analytics.AnalyticsConstants.PARAM_VALUE_PHONE
+import ae.propertyfinder.analytics.AnalyticsConstants.PARAM_VALUE_SUCCESS
+import com.google.android.gms.analytics.HitBuilders
+import com.google.android.gms.analytics.Tracker
+import java.util.*
+
+class GoogleAnalyticsDispatcher(private val tracker: Tracker) {
+
+    init {
+        tracker.enableAdvertisingIdCollection(true)
+        tracker.enableAutoActivityTracking(false)
+        tracker.enableExceptionReporting(false)
+    }
+
+}

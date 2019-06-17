@@ -1,0 +1,38 @@
+apply from: '../signing.gradle'
+
+android {
+    flavorDimensions "client", "server"
+
+    productFlavors {
+        comet {
+            resConfigs "fr", "en"
+            dimension "client"
+            applicationIdSuffix ".comet"
+            signingConfig signingConfigs.release
+            buildConfigField('String', 'PRIMARY_LANGUAGE', "\"fr\"")
+            buildConfigField('String', 'DEFAULT_LANGUAGE', "\"en\"")
+            buildConfigField("String", "ANDROID_RECOMMENDED_APP_VERSION", "\"android_propertyfinder_recommended_version\"")
+            buildConfigField("String", "ANDROID_REQUIRED_APP_VERSION", "\"android_propertyfinder_required_version\"")
+            ext {
+                production = "todo"
+            }
+        }
+
+        production {
+            dimension "server"
+
+            buildConfigField "String", "BASE_AUTH_USERNAME", "\"todo\""
+            buildConfigField "String", "BASE_AUTH_PASSWORD", "\"todo\""
+        }
+
+        applicationVariants.all { variant ->
+            def flavors = variant.productFlavors
+            def client = flavors[0]
+            def server = flavors[1]
+
+            project.ext.set("buildTypeName", ${variant.buildType.name})
+            project.ext.set("serverName", ${server.name})
+            variant.buildConfigField "String", "BASE_URL", "\"${client[server.name]}\""
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<resources>
+	<!--Shared-->
+	<dimen name="font_big">20sp</dimen>
+	<dimen name="font_mid">14sp</dimen>
+	<dimen name="font_large">15sp</dimen>
+	<dimen name="default_padding">8dp</dimen>
+	<dimen name="medium_padding">16dp</dimen>
+	<dimen name="default_elevation">8dp</dimen>
+	<dimen name="no_elevation">0dp</dimen>
+	<dimen name="elevation_small">1dp</dimen>
+
+	<!--Permission dialog-->
+	<dimen name="permission_dialog_font">16sp</dimen>
+
+	<!--MAIN BUTTON-->
+	<dimen name="main_button_margin">7dp</dimen>
+	<dimen name="main_button_height">52dp</dimen>
+	<dimen name="main_button_text_size">14sp</dimen>
+	<dimen name="power_by_margin_bottom">40dp</dimen>
+
+	<!--chips -->
+	<dimen name="chip_font_size">14sp</dimen>
+	<dimen name="filter_font_title">18sp</dimen>
+	<dimen name="filter_font_heading">25sp</dimen>
+
+	<dimen name="new_radius">10dp</dimen>
+	<dimen name="new_size">14sp</dimen>
+	<dimen name="custom_width">30dp</dimen>
+	<dimen name="custom_height">30dp</dimen>
+
+</resources>

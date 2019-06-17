@@ -1,0 +1,138 @@
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:windowAnimationStyle">@style/AppTheme.Animation</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:actionMenuTextColor">@color/button_blue_color</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="windowActionModeOverlay">true</item>
+        <item name="md_color_button_text">@color/pf_blue_dark</item>
+        <item name="md_color_widget">@color/pf_blue_dark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+
+    <style name="AppTheme.Animation" parent="android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Solid" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.checkbox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="colorAccent">@color/button_blue_color</item>
+    </style>
+
+    <style name="AppTheme.spinner">
+        <!-- Color when pressed -->
+        <item name="colorAccent">@color/charcoalGrey</item>
+        <!-- Default color for the dropdown arrow and line -->
+        <item name="colorControlNormal">@color/light_grey</item>
+    </style>
+
+    <style name="chipTextStyle">
+        <item name="android:textSize">@dimen/chip_font_size</item>
+        <item name="android:textColor">@color/charcoalGrey</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PropertyList">
+        <item name="android:background">@color/background_grey</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+
+    <style name="AppTheme.MainButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_height">@dimen/main_button_height</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">@dimen/medium_padding</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">@dimen/main_button_margin</item>
+        <item name="android:layout_marginBottom">@dimen/main_button_margin</item>
+        <item name="android:textSize">@dimen/main_button_text_size</item>
+    </style>
+
+    <style name="AppTheme.MainButton_theme" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.RaisedButtonCandy" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">@dimen/medium_padding</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginBottom">7dp</item>
+        <item name="android:theme">@style/AppTheme.Button.CandyOverlay</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="colorControlHighlight">@color/light_grey</item>
+        <item name="colorAccent">@color/light_grey</item>
+    </style>
+
+    <style name="AppTheme.RaisedButton.Fb" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:drawableStart">@drawable/ic_fb_logo_compat</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/fb_btn_login</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginBottom">7dp</item>
+        <item name="android:theme">@style/AppTheme.Button.FbBlueOverlay</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LoginAlertTextView">
+        <item name="android:background">@drawable/rounded_background_red</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Button.FbBlueOverlay" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorAccent">@color/fb_blue</item>
+    </style>
+
+    <style name="AppTheme.Button.CandyOverlay" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <color name="fb_blue">#3b5998</color>
+
+</resources>

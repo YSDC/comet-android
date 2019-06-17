@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../dependencies.gradle'
+apply from: '../publish.gradle'
+apply from: '../jacoco.gradle'
+apply from: 'sonar.gradle'
+apply from: '../linter.gradle'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode Integer.valueOf(appVersionCode)
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            testCoverageEnabled true
+            project.ext.set("buildTypeName", "debug")
+        }
+        release {
+            minifyEnabled false
+            project.ext.set("buildTypeName", "release")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), '.../proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId = "com.ysdc.comet.android-model"
+            artifactId = project.getName()
+            version = android.defaultConfig.versionName
+            // Tell maven to prepare the generated "*.aar" file for publishing
+            artifact("$buildDir/outputs/aar/${project.getName()}-${project.buildTypeName}.aar")
+        }
+    }
+}
+
+artifactoryPublish {
+    publications(publishing.publications.aar)
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation kotlinLibs
+    implementation supportLibs
+    implementation moshi
+    kapt annotationProcessorLibs
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}

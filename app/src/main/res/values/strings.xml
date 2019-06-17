@@ -1,0 +1,12 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<string name="app_name">android-consumer-app</string>
+
+	<!--menu_navigation bar-->
+	<string name="navbar_search">Search</string>
+	<string name="navbar_saved">Saved</string>
+	<string name="navbar_profile">My Account</string>
+
+	<!--fragment saved properties-->
+	<string name="saved_title">Saved Properties</string>
+
+</resources>

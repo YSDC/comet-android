@@ -1,0 +1,26 @@
+<resources>
+	<!--Settings view -->
+	<dimen name="settings_version_padding">8dp</dimen>
+	<dimen name="settings_margin_version">110dp</dimen>
+	<!--property list-->
+	<dimen name="prop_list_empty_text_padding">16dp</dimen>
+
+	<!--Navigation bar-->
+	<dimen name="bottom_navigation_height">56dp</dimen>
+
+	<dimen name="empty_mail_list_picture_top">97dp</dimen>
+
+	<!--Splash screen-->
+	<dimen name="logo_padding">24dp</dimen>
+
+	<!--Account fragment-->
+    <dimen name="account_cardview_padding">16dp</dimen>
+	<dimen name="margin_side_text_signin">63dp</dimen>
+	<dimen name="margin_top_sign_in_google">10dp</dimen>
+	<dimen name="font_size_link">16sp</dimen>
+	<dimen name="card_view_space">20dp</dimen>
+	<dimen name="version_padding">8dp</dimen>
+	<dimen name="profile_info_thumbnail">64dp</dimen>
+	<dimen name="profile_padding">16dp</dimen>
+    <dimen name="login_padding">16dp</dimen>
+</resources>

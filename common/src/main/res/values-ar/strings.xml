@@ -1,0 +1,26 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_login">تسجيل الدخول</string>
+    <string name="dialog_permission_continue">استمرار</string>
+    <string name="error_google_connection">خدمة Google غير متوفرة حاليا، يرجى المحاولة لاحقا.</string>
+    <string name="exception_undefined">الخدمة غير متوفرة، يرجى المحاولة لاحقا.</string>
+    <string name="fb_btn_login">الاستمرار عبر Facebook</string>
+    <string name="update_notification_settings_fail">الرجاء التأكد من إعدادات جهازك ثم إعادة المحاولة مرة أخرى</string>
+    <string name="exception_not_logged">انتهت صلاحية بيانات الاعتماد الخاصة بك ، يرجى تسجيل الدخول مرة أخرى من عرض الملف الشخصي.</string>
+    <string name="action_reset_pwd">إعادة تعيين كلمة المرور</string>
+    <string name="action_download">تحميل</string>
+    <string name="action_save">حفظ</string>
+    <string name="title_sorting">فرز</string>
+    <string name="search_no_results_part_1">لا توجد نتائج مطابقة لبحثك</string>
+    <string name="search_no_results_part_2">يرجى التحقق من الموقع الذي تم إدخاله والمحاولة مرة أخرى</string>
+    <string name="exception_search_error">لا يمكن تحميل العقارات . يرجى التحقق من اتصالك بالإنترنت وإعادة المحاولة</string>
+    <string name="exception_no_connectivity">لا يوجد اتصال بالإنترنت ، يرجى المحاولة مرة أخرى لاحقًا.</string>
+    <string name="search_no_results_location_title">لم يتم العثور على نتائج.</string>
+    <string name="dialog_permission_not_now">ليس الان</string>
+    <string name="search_no_results_location_sub_title">من فضلك ، تحقق من الاسم الذي تم إدخاله وحاول مرة أخرى.</string>
+    <string name="action_ok">موافق</string>
+    <string name="error_update_notification_settings">يرجى التحقق من الإعدادات الخاصة بك وحاول مرة أخرى.</string>
+    <string name="filter_not_applicable">لايمكن تطبيقه</string>
+    <string name="filter_any_name">كل الخيارات</string>
+    <string name="title_price_type">طريقة الدفع</string>
+</resources>

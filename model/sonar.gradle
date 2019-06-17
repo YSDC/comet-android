@@ -1,0 +1,6 @@
+sonarqube {
+    properties {
+        property "sonar.projectName", "Comet Android Lib Model"
+        property "sonar.projectKey", "comet-android-lib-model"
+    }
+}

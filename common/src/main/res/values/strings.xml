@@ -1,0 +1,38 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">android-consumer-app</string>
+
+    <!--Actions-->
+    <string name="action_ok">OK</string>
+    <string name="action_download">Download</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_login">Log In</string>
+    <string name="action_reset_pwd">Reset Password</string>
+
+    <!-- Titles -->
+    <string name="title_sorting">Sorting</string>
+    <string name="title_price_type">Payment type</string>
+
+    <!--Permission dialog-->
+    <string name="dialog_permission_not_now">Not Now</string>
+    <string name="dialog_permission_continue">Continue</string>
+
+    <!--EXCEPTIONS & ERRORS-->
+    <string name="exception_not_logged">Your credentials have expired, please sign in again from the profile view.</string>
+    <string name="exception_no_connectivity">No internet connection, please try again later.</string>
+    <string name="exception_undefined">Service unavailable. Please try again later.</string>
+    <string name="error_update_notification_settings">Please check your settings and try again.</string>
+    <string name="error_google_connection">Google Service unavailable. Please try again later.</string>
+    <string name="exception_search_error">Cannot load properties, Please check your internet connection and retry.</string>
+
+    <string name="search_no_results_part_1">No results matching your search entry</string>
+    <string name="search_no_results_part_2">Please check the entered location &amp; filters and try again</string>
+    <string name="search_no_results_location_title">No Results found for given name.</string>
+    <string name="search_no_results_location_sub_title">Please, check entered name and try once again.</string>
+    <string name="update_notification_settings_fail">please check your settings and try again.</string>
+    <string name="fb_btn_login">Continue with Facebook</string>
+    <string name="filter_any_name">Any</string>
+    <string name="filter_not_applicable">Not Applicable</string>
+
+
+</resources>

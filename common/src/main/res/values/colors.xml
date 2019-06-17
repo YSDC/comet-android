@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">#E0E0E0</color>
+    <color name="colorAccent">#EF5E4E</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+
+    <color name="navbar">#929292</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="textColorPrimary">#DE000000</color>
+    <color name="textColorSecondary">#8A000000</color>
+    <color name="button_blue_color">#4B8DF8</color>
+    <color name="background_grey">#f5f6f7</color>
+    <color name="link">#4a90e2</color>
+    <color name="charcoalGrey">#413C46</color>
+    <color name="light_grey">#A9A9A9</color>
+    <color name="lighter_gray">#efefef</color>
+    <color name="gold">#d5ae39</color>
+
+    <color name="permission_background">#d8e0e5</color>
+
+    <color name="property_details">#96939a</color>
+    <color name="rippleColor">@color/transparent</color>
+    <color name="signin_color">#9e9ea3</color>
+    <color name="submarine">#92989C</color>
+    <color name="separator">#c8c7cc</color>
+    <color name="material_red_light">#f8d7da</color>
+    <color name="pager_active">@color/white</color>
+    <color name="pager_inactive">#50FFFFFF</color>
+    <color name="pf_blue">#3b97ba</color>
+    <color name="pf_blue_dark">#007ea8</color>
+    <color name="pf_blue_light">#e8f4f6</color>
+    <color name="pf_grey_light">#f7f5f5</color>
+
+
+    <color name="buttonActive">#e8f6e9</color>
+    <color name="buttonInactive">#f6e8e8</color>
+    <color name="dark_grey">#403b45</color>
+
+</resources>

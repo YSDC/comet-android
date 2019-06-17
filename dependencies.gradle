@@ -1,0 +1,165 @@
+ext {
+    versions = [
+            multidex       : "2.0.1",
+            kotlin         : "1.3.31",
+            mockk          : '1.9.3',
+            espresso       : '3.2.0',
+            test           : '1.2.0',
+            kotlinKtx      : '1.2.0-alpha02',
+            constraint     : "2.0.0-beta1",
+            appcompatV7    : "1.1.0-beta01",
+            coordLayout    : "1.1.0-beta01",
+            recyclerView   : "1.1.0-alpha06",
+            support        : "1.0.0",
+            supportmaterial: "1.1.0-alpha07",
+            rxJava         : '2.2.9',
+            rxJavaAndroid  : '2.1.1',
+            rxjava2Debug   : '1.4.0',
+            dagger         : '2.23.1',
+            googleAnal     : '16.0.8',
+            crashlytics    : '2.9.8',
+            retrofit       : '2.6.0',
+            moshi          : '1.8.0',
+            okHttp         : "4.0.0-RC1",
+            stetho         : '1.5.1',
+            firebasecore   : '16.0.9',
+            playbase       : '16.0.1',
+            playauth       : '16.0.1',
+            playGcm        : '16.1.0',
+            firebasecrash  : '16.2.1',
+            firebasemsg    : '18.0.0',
+            firebasecfg    : '17.0.0',
+            adapterDelegate: '4.0.0',
+            shimmer        : '0.4.0@aar',
+            lottie         : '3.0.6',
+            dialogs        : '3.0.0-rc4',
+            floating       : '2.1.1',
+            transition     : '2.0.0-beta01',
+            leakcanary     : '2.0-alpha-2',
+            timber         : '1.5.1',
+            glide          : '4.9.0'
+            //lottieBar      : '1.0.1@aar',
+    ]
+
+    mulitdex = [multidex: "androidx.multidex:multidex:$versions.multidex"]
+
+    unitTest = [kotTestJunit: "org.jetbrains.kotlin:kotlin-test:$versions.kotlin",
+                kotTest     : "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin",
+                mockk       : "io.mockk:mockk:$versions.mockk",
+                espresso    : "androidx.test.espresso:espresso-core:$versions.espresso",
+                test        : "androidx.test:core:$versions.test"
+    ]
+
+    kotlinStd = [kotlinStd7   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+                 kotlinStd8   : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
+                 kotlinReflect: "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin",
+    ]
+
+    supportDeps = [
+            kotlinKtx        : "androidx.core:core-ktx:$versions.kotlinKtx",
+            constraint       : "androidx.constraintlayout:constraintlayout:$versions.constraint",
+            cardView         : "androidx.cardview:cardview:$versions.support",
+            appcompatV7      : "androidx.appcompat:appcompat:$versions.appcompatV7",
+            coordLayout      : "androidx.coordinatorlayout:coordinatorlayout:$versions.coordLayout",
+            recyclerView     : "androidx.recyclerview:recyclerview:$versions.recyclerView",
+            supportAnnotation: "androidx.annotation:annotation:$versions.support",
+            preferencev14    : "androidx.legacy:legacy-preference-v14:$versions.support",
+            design           : "com.google.android.material:material:$versions.supportmaterial"
+    ]
+
+    rxJava = [
+            rxJava      : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+            rxAndroid   : "io.reactivex.rxjava2:rxandroid:$versions.rxJavaAndroid",
+            rxjava2Debug: "com.akaita.java:rxjava2-debug:$versions.rxjava2Debug",
+    ]
+
+    dagger = [daggerAndroid       : "com.google.dagger:dagger-android:$versions.dagger",
+              daggerAndroidSupport: "com.google.dagger:dagger-android-support:$versions.dagger"]
+
+    daggerCompiler = [dagger       : "com.google.dagger:dagger-compiler:$versions.dagger",
+                      daggerAndroid: "com.google.dagger:dagger-android-processor:$versions.dagger"]
+
+    analytics = [
+            analytics  : "com.google.android.gms:play-services-analytics:$versions.googleAnal",
+            crashlytics: "com.crashlytics.sdk.android:crashlytics:$versions.crashlytics"
+    ]
+
+    retrofit = [
+            retrofit      : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            rxAdapter     : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+            moshiConverter: "com.squareup.retrofit2:converter-moshi:$versions.retrofit"
+    ]
+    moshi = "com.squareup.moshi:moshi:$versions.moshi"
+    moshiCompiler = "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshi"
+
+    okHttp = [
+            logger       : "com.squareup.okhttp3:logging-interceptor:$versions.okHttp",
+            okhttp       : "com.squareup.okhttp3:okhttp:$versions.okHttp",
+            //TODO: uncomment this plugin when okhttp has fix his bug
+            //TODO: Check if fixed
+            urlconnection: "com.squareup.okhttp3:okhttp-urlconnection:$versions.okHttp"
+    ]
+
+    stetho = [
+            stetho       : "com.facebook.stetho:stetho:$versions.stetho",
+            stethoOkhttp3: "com.facebook.stetho:stetho-okhttp3:$versions.stetho"
+    ]
+
+    firebaseCore = [firebaseCore: "com.google.firebase:firebase-core:$versions.firebasecore"]
+
+    googlePlay = [
+            base             : "com.google.android.gms:play-services-base:$versions.playbase",
+            auth             : "com.google.android.gms:play-services-auth:$versions.playauth",
+            playGcm          : "com.google.android.gms:play-services-gcm:$versions.playGcm",
+            crash            : "com.google.firebase:firebase-crash:$versions.firebasecrash",
+            firebaseMessaging: "com.google.firebase:firebase-messaging:$versions.firebasemsg",
+            firebaseConfig   : "com.google.firebase:firebase-config:$versions.firebasecfg"
+    ] + firebaseCore
+
+    ui = [
+            adapterDelegate: "com.hannesdorfmann:adapterdelegates4:$versions.adapterDelegate",
+            shimmer        : "com.facebook.shimmer:shimmer:$versions.shimmer",
+            //lottieBar      : "ae.propertyfinder.fork:bottomnavbarlib:$versions.lottieBar",
+            lottie         : "com.airbnb.android:lottie:$versions.lottie",
+            dialogs        : "com.afollestad.material-dialogs:core:$versions.dialogs",
+            dialogIn       : "com.afollestad.material-dialogs:input:$versions.dialogs",
+            floating       : "com.robertlevonyan.view:CustomFloatingActionButton:$versions.floating",
+            transition     : "com.andkulikov:transitionseverywhere:$versions.transition"
+    ]
+
+    development = [
+            leakCanary: "com.squareup.leakcanary:leakcanary-android:$versions.leakcanary"
+    ]
+
+    release = []
+
+
+    timber = "com.github.ajalt:timberkt:$versions.timber"
+
+    glide = "com.github.bumptech.glide:glide:$versions.glide"
+    glideCompiler = "com.github.bumptech.glide:compiler:$versions.glide"
+    glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$versions.glide"
+
+    otherCompiler = [glideCompiler: glideCompiler,
+                     moshiCompiler: moshiCompiler]
+
+    mulitdexLibs = mulitdex.values()
+    unitTestLibs = unitTest.values()
+    kotlinLibs = kotlinStd.values()
+    supportLibs = supportDeps.values()
+    rxJavaLibs = rxJava.values()
+    analyticsLibs = analytics.values()
+    networkLibs = retrofit.values() + okHttp.values() + moshi
+    stethoLibs = stetho.values()
+    googlePlayLibs = googlePlay.values()
+
+    uiLibs = ui.values()
+    developmentLibs = development.values()
+    releaseLibs = release.values()
+    daggerLibs = dagger.values()
+    glideLibs = [glide, glideOkhttp]
+
+    annotationProcessorLibs = otherCompiler.values()
+    daggerProcessorLibs = daggerCompiler.values()
+
+}
