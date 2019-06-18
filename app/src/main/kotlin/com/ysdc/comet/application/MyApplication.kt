@@ -10,11 +10,13 @@ import com.akaita.java.rxjava2debug.RxJava2Debug
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.core.CrashlyticsCore
 import com.facebook.stetho.Stetho
+import com.ysdc.comet.BuildConfig
 import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.utils.AppConstants.CONFIG_CHANGE_LOCALE
 import com.ysdc.comet.common.utils.CrashlyticsUtils
 import com.ysdc.comet.di.component.ApplicationComponent
+import com.ysdc.comet.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -67,7 +69,7 @@ class MyApplication : MultiDexApplication(), HasActivityInjector, HasSupportFrag
             Timber.plant(Timber.DebugTree())
             //Init Stetho debug bridge
             initStetho()
-            RxJava2Debug.enableRxJava2AssemblyTracking(arrayOf("ae.propertyfinder"))
+            RxJava2Debug.enableRxJava2AssemblyTracking(arrayOf("com.ysdc.comet"))
 
         } else {
             Timber.plant(CrashlyticsUtils.CrashlyticsTree())

@@ -3,8 +3,11 @@ package com.ysdc.comet.application
 import android.app.Application
 import android.content.pm.PackageManager
 import com.squareup.moshi.Moshi
+import com.ysdc.comet.BuildConfig
 import com.ysdc.comet.common.application.GeneralConfig
+import com.ysdc.comet.common.utils.AppConstants
 import com.ysdc.comet.model.Version
+import com.ysdc.comet.utils.AppConstants.PREFERENCES_FILENAME
 import timber.log.Timber
 import java.util.*
 
@@ -33,10 +36,6 @@ class AppConfig(private val application: Application) : GeneralConfig {
 
     override fun flavor(): String {
         return BuildConfig.FLAVOR
-    }
-
-    override fun dimension(): ProjectDimension {
-        return ProjectDimension.fromId(BuildConfig.FLAVOR_server)
     }
 
     override fun versionName(): String {

@@ -20,10 +20,8 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-#PF
--keep class ae.propertyfinder.model.** {*; }
--keep class ae.propertyfinder.search.data.model.** {*; }
--keep class ae.propertyfinder.search.network.model.** {*; }
+#Comet
+-keep class com.ysdc.comet.model.** {*; }
 
 # Okio
 -keep class sun.misc.Unsafe { *; }
@@ -96,9 +94,6 @@
 -dontwarn retrofit2.**
 -keep class retrofit2.** { *; }
 -keep class retrofit2.converter.gson.** { *; }
--keep class ae.propertyfinder.consumer.data.remote.** { *;}
--keep class ae.propertyfinder.data.database.configuration.** { *;}
--keep class ae.propertyfinder.broker.model.api.** { *;}
 -keepattributes Signature
 -keepattributes Exceptions
 -keepclasseswithmembers class * {

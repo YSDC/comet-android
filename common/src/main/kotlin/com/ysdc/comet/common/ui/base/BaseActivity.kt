@@ -1,31 +1,22 @@
 package com.ysdc.comet.common.ui.base
 
-import com.ysdc.comet.common.R
-import com.ysdc.comet.common.application.GeneralConfig
-import com.ysdc.comet.common.exception.*
-import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
-import com.ysdc.comet.common.utils.AppConstants.LOGGING_CATEGORY_ACTIVITY_LIFECYCLE
-import com.ysdc.comet.common.utils.AppConstants.LOGGING_CATEGORY_INTERACTIONS
-import com.ysdc.comet.common.utils.CrashlyticsUtils
-import com.ysdc.comet.common.utils.NetworkUtils
-import com.ysdc.comet.common.ui.utils.DialogBuilder
-import com.ysdc.comet.model.Animation
 import android.content.Context
 import android.content.Intent
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.util.Pair
-import androidx.fragment.app.Fragment
+import com.ysdc.comet.common.R
+import com.ysdc.comet.common.application.GeneralConfig
+import com.ysdc.comet.common.exception.NoConnectivityException
+import com.ysdc.comet.common.ui.utils.DialogBuilder
+import com.ysdc.comet.common.utils.CrashlyticsUtils
+import com.ysdc.comet.common.utils.NetworkUtils
 import dagger.android.AndroidInjection
 import timber.log.Timber
 import javax.inject.Inject
@@ -49,27 +40,11 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         AndroidInjection.inject(this)
     }
 
-    override fun onStart() {
-        super.onStart()
-        crashlyticsUtils.log(LOGGING_CATEGORY_ACTIVITY_LIFECYCLE, "onStart", this.javaClass.simpleName, 0)
-    }
-
     override fun onStop() {
-        crashlyticsUtils.log(LOGGING_CATEGORY_ACTIVITY_LIFECYCLE, "onStop", this.javaClass.simpleName, 0)
         if (versionDialog != null) {
             versionDialog!!.dismiss()
         }
         super.onStop()
-    }
-
-    override fun onRestart() {
-        crashlyticsUtils.log(LOGGING_CATEGORY_ACTIVITY_LIFECYCLE, "onRestart", this.javaClass.simpleName, 0)
-        super.onRestart()
-    }
-
-    override fun onDestroy() {
-        crashlyticsUtils.log(LOGGING_CATEGORY_ACTIVITY_LIFECYCLE, "onDestroy", this.javaClass.simpleName, 0)
-        super.onDestroy()
     }
 
     override fun onError(throwable: Throwable) {

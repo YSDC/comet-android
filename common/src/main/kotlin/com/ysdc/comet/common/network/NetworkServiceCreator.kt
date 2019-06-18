@@ -1,20 +1,15 @@
 package com.ysdc.comet.common.network
 
+import android.app.Application
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.network.config.NetworkConfig
 import com.ysdc.comet.common.network.config.NetworkConstants.TIMEOUT_IN_SECONDS
-import com.ysdc.comet.common.network.interceptor.AuthorizationInterceptor
 import com.ysdc.comet.common.network.interceptor.ConnectivityInterceptor
-import com.ysdc.comet.common.network.interceptor.NetworkInterceptor
-import com.ysdc.comet.common.network.interceptor.UserAgentInterceptor
-import com.ysdc.comet.common.utils.CrashlyticsUtils
 import com.ysdc.comet.common.utils.NetworkUtils
-import android.app.Application
-import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.Interceptor
 import okhttp3.JavaNetCookieJar
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -31,7 +26,6 @@ abstract class NetworkServiceCreator(
     private val networkConfig: NetworkConfig,
     generalConfig: GeneralConfig,
     application: Application,
-    crashlyticsUtils: CrashlyticsUtils,
     networkUtils: NetworkUtils
 ) {
     private var retrofit: Retrofit? = null
@@ -45,12 +39,8 @@ abstract class NetworkServiceCreator(
         cookieManager.setCookiePolicy(CookiePolicy.ACCEPT_ALL)
         httpClient.cookieJar(JavaNetCookieJar(cookieManager))
 
-        val httpLoggingInterceptor = HttpLoggingInterceptor { message -> Timber.d(message) }
         if (generalConfig.isDebug()) {
-            httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
             httpClient.addNetworkInterceptor(StethoInterceptor())
-        } else {
-            httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.NONE
         }
         this.httpClient.addInterceptor(ConnectivityInterceptor(application.applicationContext, networkUtils))
     }
@@ -71,7 +61,7 @@ abstract class NetworkServiceCreator(
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(MoshiConverterFactory.create())
                 .build()
-        }else{
+        } else {
             Timber.d("buildRetrofit: exist")
         }
         return retrofit!!

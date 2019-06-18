@@ -1,82 +1,82 @@
 <resources>
 
-    <style name="AppTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
-        <item name="android:windowAnimationStyle">@style/AppTheme.Animation</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:actionMenuTextColor">@color/button_blue_color</item>
-    </style>
+	<style name="AppTheme.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorPrimary">@color/textColorPrimary</item>
+		<item name="android:textColorSecondary">@color/textColorSecondary</item>
+		<item name="android:windowAnimationStyle">@style/AppTheme.Animation</item>
+		<item name="android:windowBackground">@color/white</item>
+		<item name="android:actionMenuTextColor">@color/button_blue_color</item>
+	</style>
 
-    <style name="AppTheme" parent="AppTheme.Base">
-        <item name="windowActionModeOverlay">true</item>
-        <item name="md_color_button_text">@color/pf_blue_dark</item>
-        <item name="md_color_widget">@color/pf_blue_dark</item>
-    </style>
+	<style name="AppTheme" parent="AppTheme.Base">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="md_color_button_text">@color/pf_blue_dark</item>
+		<item name="md_color_widget">@color/pf_blue_dark</item>
+	</style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light"/>
 
-    <style name="AppTheme.Animation" parent="android:style/Animation.Activity">
-        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
-        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
-        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
-        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
-    </style>
+	<style name="AppTheme.Animation" parent="android:style/Animation.Activity">
+		<item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+		<item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+		<item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+		<item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+	</style>
 
-    <style name="AppTheme.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
-        <item name="android:windowNoTitle">true</item>
-    </style>
+	<style name="AppTheme.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog">
+		<item name="android:windowNoTitle">true</item>
+	</style>
 
-    <style name="AppTheme.Solid" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+	<style name="AppTheme.Solid" parent="AppTheme">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimary</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
 
-    <style name="AppTheme.checkbox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
-        <item name="colorAccent">@color/button_blue_color</item>
-    </style>
+	<style name="AppTheme.checkbox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+		<item name="colorAccent">@color/button_blue_color</item>
+	</style>
 
-    <style name="AppTheme.spinner">
-        <!-- Color when pressed -->
-        <item name="colorAccent">@color/charcoalGrey</item>
-        <!-- Default color for the dropdown arrow and line -->
-        <item name="colorControlNormal">@color/light_grey</item>
-    </style>
+	<style name="AppTheme.spinner">
+		<!-- Color when pressed -->
+		<item name="colorAccent">@color/charcoalGrey</item>
+		<!-- Default color for the dropdown arrow and line -->
+		<item name="colorControlNormal">@color/light_grey</item>
+	</style>
 
-    <style name="chipTextStyle">
-        <item name="android:textSize">@dimen/chip_font_size</item>
-        <item name="android:textColor">@color/charcoalGrey</item>
-    </style>
+	<style name="chipTextStyle">
+		<item name="android:textSize">@dimen/chip_font_size</item>
+		<item name="android:textColor">@color/charcoalGrey</item>
+	</style>
 
-    <style name="AlertDialogCustom" parent="Theme.MaterialComponents.Light.Dialog.Alert">
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+	<style name="AlertDialogCustom" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
 
-    <style name="PropertyList">
-        <item name="android:background">@color/background_grey</item>
-        <item name="android:scrollbars">none</item>
-    </style>
+	<style name="PropertyList">
+		<item name="android:background">@color/background_grey</item>
+		<item name="android:scrollbars">none</item>
+	</style>
 
 
-    <style name="AppTheme.MainButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:layout_height">@dimen/main_button_height</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:padding">@dimen/medium_padding</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:layout_marginTop">@dimen/main_button_margin</item>
-        <item name="android:layout_marginBottom">@dimen/main_button_margin</item>
-        <item name="android:textSize">@dimen/main_button_text_size</item>
-    </style>
+	<style name="AppTheme.MainButton" parent="Widget.AppCompat.Button.Colored">
+		<item name="android:layout_height">@dimen/main_button_height</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:textAlignment">center</item>
+		<item name="android:padding">@dimen/medium_padding</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:layout_marginTop">@dimen/main_button_margin</item>
+		<item name="android:layout_marginBottom">@dimen/main_button_margin</item>
+		<item name="android:textSize">@dimen/main_button_text_size</item>
+	</style>
 
-    <style name="AppTheme.MainButton_theme" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:textColor">@color/white</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>>
+	<style name="AppTheme.MainButton_theme" parent="Widget.AppCompat.Button.Colored">
+		<item name="android:textColor">@color/white</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
 
 </resources>

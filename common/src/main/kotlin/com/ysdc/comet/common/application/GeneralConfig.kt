@@ -1,9 +1,7 @@
 package com.ysdc.comet.common.application
 
 
-import com.ysdc.comet.model.ProjectDimension
 import com.ysdc.comet.model.Version
-import com.snowplowanalytics.snowplow.tracker.emitter.RequestSecurity
 import com.squareup.moshi.Moshi
 
 /**
@@ -34,11 +32,6 @@ interface GeneralConfig {
      * @return the name of the flavor selected
      */
     fun flavor(): String
-
-    /**
-     * @return the project dimension
-     */
-    fun dimension() : ProjectDimension
 
     /**
      * @return the version name of the application

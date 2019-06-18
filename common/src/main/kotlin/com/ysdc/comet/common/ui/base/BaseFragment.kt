@@ -63,24 +63,9 @@ abstract class BaseFragment : Fragment(), MvpView {
         setUp(view)
     }
 
-    override fun onStart() {
-        crashlyticsUtils.log(AppConstants.LOGGING_CATEGORY_FRAGMENT_LIFECYCLE, "onStart", javaClass.simpleName, 0)
-        super.onStart()
-    }
-
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
         colorStatusBar(R.color.colorPrimaryDark)
-    }
-
-    override fun onStop() {
-        crashlyticsUtils.log(AppConstants.LOGGING_CATEGORY_FRAGMENT_LIFECYCLE, "onStop", javaClass.simpleName, 0)
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        crashlyticsUtils.log(AppConstants.LOGGING_CATEGORY_FRAGMENT_LIFECYCLE, "onDestroy", javaClass.simpleName, 0)
-        super.onDestroy()
     }
 
     override fun onAttach(context: Context) {
@@ -190,8 +175,6 @@ abstract class BaseFragment : Fragment(), MvpView {
         } catch (e: Exception) {
             crashlyticsUtils.logException(e)
         }
-
-        crashlyticsUtils.log(AppConstants.LOGGING_CATEGORY_INTERACTIONS, "click", viewText)
     }
 
     protected abstract fun setUp(view: View)

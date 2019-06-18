@@ -114,20 +114,5 @@ abstract class BaseBottomSheetFragment : BottomSheetDialogFragment(), MvpView {
         return resources
     }
 
-    protected fun logInteractionOnCrashlytics(v: View) {
-        var viewText = AppConstants.EMPTY_STRING
-        try {
-            when (v) {
-                is Button -> viewText = v.text.toString()
-                is TextView -> viewText = v.text.toString()
-                is ImageButton -> viewText = v.tag.toString()
-            }
-        } catch (e: Exception) {
-            crashlyticsUtils.logException(e)
-        }
-
-        crashlyticsUtils.log(AppConstants.LOGGING_CATEGORY_INTERACTIONS, "click", viewText)
-    }
-
     protected abstract fun setUp(view: View)
 }
