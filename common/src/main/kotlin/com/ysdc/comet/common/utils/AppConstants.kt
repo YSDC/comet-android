@@ -6,7 +6,6 @@ package com.ysdc.comet.common.utils
 
 object AppConstants {
 
-    //SharedFragmentModule
     const val EMPTY_STRING = ""
     const val EMPTY_FIELD = "-"
     const val SPACE_STRING = " "
@@ -14,4 +13,6 @@ object AppConstants {
 
     //Configuration Change happened
     const val CONFIG_CHANGE_LOCALE = "CONFIG_CHANGE.LOCALE"
+
+    const val AUTHENTICATION_TIMOUT = 60L
 }

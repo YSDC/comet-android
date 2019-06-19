@@ -1,0 +1,14 @@
+package com.ysdc.comet.common.authentication
+
+enum class PhoneAuthenticationStatus {
+    STATE_EMPTY,
+    STATE_INITIALIZED,
+    STATE_VERIFY_FAILED,
+    STATE_VERIFY_FAILED_PHONE,
+    STATE_VERIFY_FAILED_QUOTA,
+    STATE_VERIFY_FAILED_CODE,
+    STATE_VERIFY_SUCCESS,
+    STATE_CODE_SENT,
+    STATE_SIGNIN_FAILED,
+    STATE_SIGNIN_SUCCESS
+}

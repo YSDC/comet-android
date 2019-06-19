@@ -28,6 +28,7 @@ ext {
             playGcm        : '16.1.0',
             firebasecrash  : '16.2.1',
             firebasemsg    : '18.0.0',
+            firebaseAuth   : '18.0.0',
             firebasecfg    : '17.0.0',
             adapterDelegate: '4.0.0',
             shimmer        : '0.4.0@aar',
@@ -113,7 +114,8 @@ ext {
             playGcm          : "com.google.android.gms:play-services-gcm:$versions.playGcm",
             crash            : "com.google.firebase:firebase-crash:$versions.firebasecrash",
             firebaseMessaging: "com.google.firebase:firebase-messaging:$versions.firebasemsg",
-            firebaseConfig   : "com.google.firebase:firebase-config:$versions.firebasecfg"
+            firebaseConfig   : "com.google.firebase:firebase-config:$versions.firebasecfg",
+            firebaseAuth     : "com.google.firebase:firebase-auth:$versions.firebaseAuth"
     ]+ firebaseCore
 
     ui = [

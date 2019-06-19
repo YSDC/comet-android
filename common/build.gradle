@@ -73,6 +73,7 @@ dependencies {
     implementation stethoLibs
     implementation timber
     implementation daggerLibs
+    implementation googlePlayLibs
     testImplementation unitTestLibs
     implementation uiLibs
 
