@@ -1,1 +1,1 @@
-include ':analytics', ':model',':common',  ':app'
+include ':analytics', ':model',':common',  ':app', ':authentication'

@@ -1,4 +1,4 @@
-package com.ysdc.comet.common.authentication
+package com.ysdc.comet.authentication.model
 
 enum class PhoneAuthenticationStatus {
     STATE_EMPTY,

@@ -1,4 +1,4 @@
-package com.ysdc.comet.common.authentication
+package com.ysdc.comet.authentication.manager
 
 import android.app.Activity
 import com.github.ajalt.timberkt.Timber
@@ -8,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import com.ysdc.comet.authentication.model.PhoneAuthenticationStatus
 import com.ysdc.comet.common.utils.AppConstants.AUTHENTICATION_TIMOUT
 import io.reactivex.subjects.BehaviorSubject
 import java.util.concurrent.TimeUnit
@@ -39,7 +40,6 @@ class PhoneAuthenticationManager(private val activity: Activity) {
             activity, // Activity (for callback binding)
             callbacks
         )
-
         verificationInProgress = true
     }
 
