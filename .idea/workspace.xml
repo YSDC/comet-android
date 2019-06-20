@@ -7,51 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a06f6a78-feb5-4941-952c-32859548b44b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/sonar.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/teamFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/teamMvpPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/teamMvpView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/teamPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateMvpPresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateMvpView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidatePresenter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/activity_authentication.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_register.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/analytics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/analytics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/navbar_account.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/navbar_save.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/navbar_search.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comet-android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/comet-android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/authentication/PhoneAuthenticationManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/manager/PhoneAuthenticationManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/authentication/PhoneAuthenticationStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/model/PhoneAuthenticationStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#39#180#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -98,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+              <caret line="2" column="22" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -107,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="3" selection-end-column="50" />
+              <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="50" />
               <folding>
                 <element signature="e#51#148#0" expanded="true" />
               </folding>
@@ -117,12 +71,12 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -183,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/common/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/signing.gradle" />
@@ -234,11 +187,12 @@
         <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpPresenter.kt" />
         <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt" />
         <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-17" />
+    <option name="x" value="-21" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="994" />
@@ -248,7 +202,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -400,6 +354,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -426,7 +381,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -601,36 +555,36 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-17" y="23" width="1920" height="994" extended-state="0" />
+    <frame x="-21" y="23" width="1920" height="994" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4951857" visible="true" weight="0.19648562" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49322033" visible="true" weight="0.19669509" />
       <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Build Variants" order="3" sideWeight="0.5048143" side_tool="true" visible="true" weight="0.19648562" />
+      <window_info id="Build Variants" order="3" sideWeight="0.5067797" side_tool="true" visible="true" weight="0.19669509" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="SonarLint" />
-      <window_info anchor="bottom" id="SonarQube" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3298969" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.3287827" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.17292377" />
-      <window_info anchor="right" id="Viewer" side_tool="true" />
-      <window_info anchor="right" id="lottie-idea" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.17292377" />
+      <window_info anchor="bottom" id="SonarQube" order="8" />
+      <window_info anchor="bottom" id="SonarLint" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info active="true" anchor="right" id="Preview" order="5" visible="true" weight="0.32960597" />
+      <window_info anchor="right" id="Preview" order="5" visible="true" weight="0.32942432" />
+      <window_info anchor="right" id="lottie-idea" order="6" side_tool="true" />
+      <window_info anchor="right" id="Viewer" order="7" side_tool="true" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -666,8 +620,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/res/layout/dialog_permission.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/utils/DialogBuilder.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -812,20 +766,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-end-line="7" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/sonar.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -870,12 +824,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/common/gradle.properties">
       <provider selected="true" editor-type-id="text-editor" />
@@ -932,8 +886,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/activity_authentication.xml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -951,11 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#39#180#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -969,14 +920,14 @@
     <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-end-line="3" />
+          <caret line="2" column="22" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="3" selection-end-column="50" />
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="50" />
           <folding>
             <element signature="e#51#148#0" expanded="true" />
           </folding>
@@ -984,12 +935,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>
