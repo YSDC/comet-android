@@ -1,6 +1,6 @@
 package com.ysdc.comet.authentication
 
-import ae.propertyfinder.common.ui.base.MvpPresenter
+import com.ysdc.comet.common.ui.base.MvpPresenter
 
 interface ValidateMvpPresenter<V : ValidateMvpView> : MvpPresenter<V> {
 

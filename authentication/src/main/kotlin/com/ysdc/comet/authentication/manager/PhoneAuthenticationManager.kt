@@ -10,6 +10,7 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import com.ysdc.comet.authentication.model.PhoneAuthenticationStatus
 import com.ysdc.comet.common.utils.AppConstants.AUTHENTICATION_TIMOUT
+import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import java.util.concurrent.TimeUnit
 
@@ -48,15 +49,8 @@ class PhoneAuthenticationManager(private val activity: Activity) {
         signInWithPhoneAuthCredential(credential)
     }
 
-    private fun resendVerificationCode(phoneNumber: String) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            phoneNumber, // Phone number to verify
-            AUTHENTICATION_TIMOUT, // Timeout duration
-            TimeUnit.SECONDS, // Unit of timeout
-            activity, // Activity (for callback binding)
-            callbacks, // OnVerificationStateChangedCallbacks
-            resendToken
-        )
+    fun getAuthenticationStatus() : Observable<PhoneAuthenticationStatus>{
+        return authenticationStatus
     }
 
     fun signOut() {
@@ -127,5 +121,15 @@ class PhoneAuthenticationManager(private val activity: Activity) {
                     }
                 }
             }
+    }
+    private fun resendVerificationCode(phoneNumber: String) {
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+            phoneNumber, // Phone number to verify
+            AUTHENTICATION_TIMOUT, // Timeout duration
+            TimeUnit.SECONDS, // Unit of timeout
+            activity, // Activity (for callback binding)
+            callbacks, // OnVerificationStateChangedCallbacks
+            resendToken
+        )
     }
 }

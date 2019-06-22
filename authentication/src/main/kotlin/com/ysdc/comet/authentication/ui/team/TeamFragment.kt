@@ -1,22 +1,21 @@
 package com.ysdc.comet.authentication
 
-import ae.propertyfinder.common.ui.base.BaseFragment
-import ae.propertyfinder.common.utils.AppConstants.EMPTY_STRING
 import android.os.Bundle
-import ae.propertyfinder.authentication.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ysdc.comet.common.ui.base.BaseFragment
+import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import javax.inject.Inject
 
-class teamFragment : BaseFragment(), teamMvpView {
+class TeamFragment : BaseFragment(), TeamMvpView {
 
     override val customTitle: String = EMPTY_STRING
     override val screenName: String = "todo"
     override val isActionBarVisible: Boolean = false
 
     @Inject
-    lateinit var presenter: teamMvpPresenter<teamMvpView>
+    lateinit var presenter: TeamMvpPresenter<TeamMvpView>
 
     override fun shouldToolbarBeElevated(): Boolean {
         return true
@@ -28,8 +27,6 @@ class teamFragment : BaseFragment(), teamMvpView {
         presenter.onAttach(this)
         if (baseActivity != null) {
             baseActivity!!.supportActionBar?.title = customTitle
-        } else if (defaultActivity != null) {
-            defaultActivity!!.supportActionBar?.title = customTitle
         }
         return view
     }
@@ -47,8 +44,8 @@ class teamFragment : BaseFragment(), teamMvpView {
     companion object {
         private const val EXTRA_TAB = "EXTRA_TAB"
 
-        fun newInstance(): teamFragment {
-            return teamFragment()
+        fun newInstance(): TeamFragment {
+            return TeamFragment()
         }
     }
 }

@@ -1,7 +1,7 @@
 package com.ysdc.comet.authentication
 
-import ae.propertyfinder.common.data.ErrorHandler
-import ae.propertyfinder.common.ui.base.BasePresenter
+import com.ysdc.comet.common.data.ErrorHandler
+import com.ysdc.comet.common.ui.base.BasePresenter
 
 class ValidatePresenter<V : ValidateMvpView>(
     errorHandler: ErrorHandler

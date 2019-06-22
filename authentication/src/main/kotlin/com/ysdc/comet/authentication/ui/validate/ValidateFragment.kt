@@ -1,9 +1,9 @@
 package com.ysdc.comet.authentication
 
-import ae.propertyfinder.common.ui.base.BaseFragment
-import ae.propertyfinder.common.utils.AppConstants.EMPTY_STRING
+import com.ysdc.comet.common.ui.base.BaseFragment
+import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import android.os.Bundle
-import ae.propertyfinder.authentication.R
+import com.ysdc.comet.authentication.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,8 +28,6 @@ class ValidateFragment : BaseFragment(), ValidateMvpView {
         presenter.onAttach(this)
         if (baseActivity != null) {
             baseActivity!!.supportActionBar?.title = customTitle
-        } else if (defaultActivity != null) {
-            defaultActivity!!.supportActionBar?.title = customTitle
         }
         return view
     }

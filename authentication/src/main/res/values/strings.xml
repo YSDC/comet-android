@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">authentication</string>
+    <string name="error_authentication_phone">The phone number is invalid, please verify and try again</string>
+    <string name="error_authentication_quota">You have reach the limit of attempt, please try again later</string>
+    <string name="error_authentication_code">An error occured, please verify your information and connection and try again later</string>
+    <string name="error_authentication_verify">Unable to verify your phone number</string>
+    <string name="error_authentication_sign">Unable to sign in</string>
+    <string name="team_welcome">Choisir l equipe</string>
+    <string name="team_field_placeholder">Team code here</string>
+    <string name="action_next">Next</string>
 </resources>
