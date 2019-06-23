@@ -49,7 +49,7 @@ android {
 publishing {
     publications {
         aar(MavenPublication) {
-            groupId = "com.ysdc.comet.android-authentication"
+            groupId = "com.ysdc.comet.android-data"
             artifactId = project.getName()
             version = android.defaultConfig.versionName
             // Tell maven to prepare the generated "*.aar" file for publishing
@@ -68,21 +68,15 @@ dependencies {
     implementation analyticsLibs
     implementation kotlinLibs
     implementation supportLibs
-    implementation networkLibs
     implementation rxJavaLibs
-    implementation stethoLibs
     implementation timber
-    implementation daggerLibs
-    implementation googlePlayLibs
+    implementation firebaseStorageLibs
     testImplementation unitTestLibs
-    implementation uiLibs
 
-    kapt daggerProcessorLibs
     kapt annotationProcessorLibs
 
     implementation project(':model')
     implementation project(':common')
-    implementation project(':data')
 }
 
 task sourcesJar(type: Jar) {

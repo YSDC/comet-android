@@ -4,6 +4,7 @@ import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.network.config.NetworkConfig
 import com.ysdc.comet.common.utils.CrashlyticsUtils
 import com.ysdc.comet.common.utils.NetworkUtils
+import com.ysdc.comet.common.utils.ProfileValidationUtils
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -21,5 +22,11 @@ open class SharedUtilsModule {
     @Singleton
     fun provideNetworkUtils(): NetworkUtils {
         return NetworkUtils()
+    }
+
+    @Provides
+    @Singleton
+    fun provideProfileValidationUtils() : ProfileValidationUtils{
+        return ProfileValidationUtils()
     }
 }

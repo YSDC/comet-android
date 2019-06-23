@@ -22,6 +22,7 @@ import javax.inject.Singleton
         NetworkModule::class,
         RepositoryModule::class,
         SharedNetworkModule::class,
+        DataModule::class,
         SharedUtilsModule::class]
 )
 interface ApplicationComponent {

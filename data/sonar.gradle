@@ -1,0 +1,6 @@
+sonarqube {
+    properties {
+        property "sonar.projectName", "Comet Android data"
+        property "sonar.projectKey", "comet-android-data"
+    }
+}

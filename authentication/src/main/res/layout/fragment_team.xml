@@ -45,15 +45,20 @@
             app:layout_constraintTop_toTopOf="@+id/guide_title"
             android:gravity="center"
             android:text="@string/team_welcome"/>
+
     <androidx.appcompat.widget.AppCompatEditText
-            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:id="@+id/team_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
             app:layout_constraintEnd_toEndOf="@+id/endConstraint"
             app:layout_constraintTop_toTopOf="@+id/guide_field"
             android:hint="@string/team_field_placeholder"/>
 
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-
+    <Button
+            android:id="@+id/validate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
             app:layout_constraintEnd_toEndOf="@+id/endConstraint"
             app:layout_constraintTop_toTopOf="@id/guide_button"

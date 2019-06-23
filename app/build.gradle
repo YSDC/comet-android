@@ -91,6 +91,7 @@ dependencies {
     implementation uiLibs
     implementation daggerLibs
     implementation timber
+    implementation firebaseStorageLibs
 
     debugImplementation developmentLibs
 
@@ -101,6 +102,7 @@ dependencies {
 
     implementation project(':common')
     implementation project(':analytics')
-    implementation project(':model')
+    implementation project(':authentication')
+    implementation project(':data')
 }
 apply plugin: 'com.google.gms.google-services'

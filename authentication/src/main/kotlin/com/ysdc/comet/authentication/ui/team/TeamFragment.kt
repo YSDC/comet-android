@@ -6,9 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.ysdc.comet.common.ui.base.BaseFragment
 import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
+import kotlinx.android.synthetic.main.fragment_team.*
 import javax.inject.Inject
 
 class TeamFragment : BaseFragment(), TeamMvpView {
+    override fun teamValidated() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     override val customTitle: String = EMPTY_STRING
     override val screenName: String = "todo"
@@ -37,13 +41,13 @@ class TeamFragment : BaseFragment(), TeamMvpView {
     }
 
     override fun setUp(view: View) {
-
+        validate_btn.setOnClickListener {
+            presenter.validateTeamCode(team_field.text.toString())
+        }
     }
 
 
     companion object {
-        private const val EXTRA_TAB = "EXTRA_TAB"
-
         fun newInstance(): TeamFragment {
             return TeamFragment()
         }

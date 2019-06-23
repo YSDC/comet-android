@@ -30,10 +30,12 @@ ext {
             firebasemsg    : '18.0.0',
             firebaseAuth   : '18.0.0',
             firebasecfg    : '17.0.0',
+            firebaseStore  : '19.0.0',
             adapterDelegate: '4.0.0',
             shimmer        : '0.4.0@aar',
             lottie         : '3.0.6',
             dialogs        : '3.0.0-rc4',
+            lottieDialog   : '1.2',
             floating       : '2.1.1',
             transition     : '2.0.0-beta01',
             leakcanary     : '2.0-alpha-2',
@@ -116,7 +118,10 @@ ext {
             firebaseMessaging: "com.google.firebase:firebase-messaging:$versions.firebasemsg",
             firebaseConfig   : "com.google.firebase:firebase-config:$versions.firebasecfg",
             firebaseAuth     : "com.google.firebase:firebase-auth:$versions.firebaseAuth"
+
     ]+ firebaseCore
+
+    firebaseStorage = [firebaseStore    : "com.google.firebase:firebase-firestore:$versions.firebaseStore"]
 
     ui = [
             adapterDelegate: "com.hannesdorfmann:adapterdelegates4:$versions.adapterDelegate",
@@ -125,6 +130,7 @@ ext {
             lottie         : "com.airbnb.android:lottie:$versions.lottie",
             dialogs        : "com.afollestad.material-dialogs:core:$versions.dialogs",
             dialogIn       : "com.afollestad.material-dialogs:input:$versions.dialogs",
+            lottieDialog   : "com.github.mayuce:LottieAlertDialog:$versions.lottieDialog",
             floating       : "com.robertlevonyan.view:CustomFloatingActionButton:$versions.floating",
             transition     : "com.andkulikov:transitionseverywhere:$versions.transition"
     ]
@@ -158,5 +164,6 @@ ext {
 
     annotationProcessorLibs = otherCompiler.values()
     daggerProcessorLibs = daggerCompiler.values()
+    firebaseStorageLibs = firebaseStorage.values()
 
 }
