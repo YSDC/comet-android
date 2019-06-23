@@ -3,13 +3,11 @@ package com.ysdc.comet.authentication.ui.activity
 import android.os.Bundle
 import com.github.ajalt.timberkt.Timber
 import com.ysdc.comet.authentication.R
-import com.ysdc.comet.authentication.TeamFragment
 import com.ysdc.comet.authentication.ValidateFragment
 import com.ysdc.comet.authentication.ui.register.RegisterFragment
-import com.ysdc.comet.common.application.GeneralConfig
+import com.ysdc.comet.authentication.ui.team.TeamFragment
 import com.ysdc.comet.common.ui.base.BaseActivity
 import com.ysdc.comet.common.ui.utils.FragmentAdapter
-import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activity_authentication.*
 import javax.inject.Inject
 
@@ -19,7 +17,6 @@ import javax.inject.Inject
  */
 
 class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
-    val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     private lateinit var adapter: FragmentAdapter
     @Inject
@@ -32,24 +29,21 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
-
         presenter.onAttach(this)
-
         initView()
     }
 
     override fun onDestroy() {
-        compositeDisposable.dispose()
         presenter.onDetach()
         super.onDestroy()
     }
 
     override fun initialize() {
-        Timber.d{"Authentication manager start initialisation"}
+        Timber.d { "Authentication manager start initialisation" }
     }
 
     override fun initialisationDone() {
-        Timber.d{"Authentication manager initialized"}
+        Timber.d { "Authentication manager initialized" }
     }
 
     override fun verificationSucceed() {
@@ -61,13 +55,13 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
     }
 
     override fun authenticationDone() {
-        Timber.d{"authenticated"}
+        Timber.d { "authenticated" }
         //TODO move to home activity
     }
 
     override fun onBackPressed() {
-        if(authenticationContainer.currentItem > 0){
-            authenticationContainer.currentItem = authenticationContainer.currentItem-1
+        if (authenticationContainer.currentItem > 0) {
+            authenticationContainer.currentItem = authenticationContainer.currentItem - 1
         }
         //super.onBackPressed()
     }

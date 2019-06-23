@@ -8,5 +8,18 @@ interface RegisterMvpPresenter<V : RegisterMvpView> : MvpPresenter<V> {
     fun isLastNameValid(value : String) : Boolean
     fun isPhoneValid(value : String) : Boolean
     fun isEmailValid(value : String) : Boolean
-    fun isRoleValid(role : UserRole)
+    fun isRoleValid(role : UserRole) : Boolean
+    fun getRoles(): Array<String>
+    fun getRoleSelected(): UserRole
+    fun setRoleSelected(index: Int)
+    fun getIndexRoleSelected(): Int
+    fun getFirstName(): String
+    fun getLastName(): String
+    fun getPhone(): String
+    fun getEmail(): String
+    fun setFirstName(value: String)
+    fun setLastName(value: String)
+    fun setPhone(value: String)
+    fun setEmail(value: String)
+    fun startAuthentication()
 }

@@ -14,13 +14,18 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import java.util.concurrent.TimeUnit
 
-class PhoneAuthenticationManager(private val activity: Activity) {
+class PhoneAuthenticationManager {
 
     private val authenticationStatus = BehaviorSubject.createDefault(PhoneAuthenticationStatus.STATE_EMPTY)
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private var verificationInProgress = false
     private var storedVerificationId: String? = ""
+    private lateinit var activity: Activity
     private lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
+
+    fun setActivity(activity: Activity){
+        this.activity = activity
+    }
 
     fun initialize(phoneNumber: String) {
         if (auth.currentUser != null) {
@@ -29,11 +34,11 @@ class PhoneAuthenticationManager(private val activity: Activity) {
             authenticationStatus.onNext(PhoneAuthenticationStatus.STATE_INITIALIZED)
         }
         if (verificationInProgress) {
-            StartAuthentication(phoneNumber)
+            startAuthentication(phoneNumber)
         }
     }
 
-    fun StartAuthentication(phoneNumber: String) {
+    fun startAuthentication(phoneNumber: String) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
             phoneNumber, // Phone number to verify
             AUTHENTICATION_TIMOUT, // Timeout duration

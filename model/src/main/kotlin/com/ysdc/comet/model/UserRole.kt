@@ -6,12 +6,11 @@ enum class UserRole constructor(
     val id: String, @param:StringRes @field:StringRes
     val key: Int
 ) {
+    UNDEFINED("", R.string.empty_string),
     PLAYER("player", R.string.role_player),
     GOALIE("goalie", R.string.role_goalie),
     TRAINER("trainer", R.string.role_trainer),
-    OTHER("other", R.string.role_other),
-    UNDEFINED("", R.string.empty_string);
-
+    OTHER("other", R.string.role_other);
 
     companion object {
         fun fromId(id: String): UserRole {

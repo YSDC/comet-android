@@ -1,4 +1,4 @@
-package com.ysdc.comet.authentication
+package com.ysdc.comet.authentication.ui.team
 
 import com.ysdc.comet.common.ui.base.MvpView
 

@@ -20,7 +20,7 @@ class ProfileValidationUtils {
         return value.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(value).matches()
     }
 
-    fun isRoleValid(role: UserRole) {
-        role != UserRole.UNDEFINED
+    fun isRoleValid(role: UserRole) : Boolean {
+        return role != UserRole.UNDEFINED
     }
 }

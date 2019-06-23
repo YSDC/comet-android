@@ -14,20 +14,18 @@ import io.reactivex.schedulers.Schedulers
  */
 
 class AuthenticationPresenter<V : AuthenticationMvpView>(
-    errorHandler: ErrorHandler
+    errorHandler: ErrorHandler,
+    private val phoneAuthenticationManager: PhoneAuthenticationManager
 ) : BasePresenter<V>(errorHandler), AuthenticationMvpPresenter<V> {
 
-    private lateinit var authenticationManager: PhoneAuthenticationManager
-
     override fun initAuthenticationManager(activity: Activity) {
-        authenticationManager = PhoneAuthenticationManager(activity)
-
+        phoneAuthenticationManager.setActivity(activity)
         subscribeAuthenticationStatus()
     }
 
     private fun subscribeAuthenticationStatus() {
         compositeDisposable.add(
-            authenticationManager.getAuthenticationStatus()
+            phoneAuthenticationManager.getAuthenticationStatus()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe { status ->

@@ -1,5 +1,6 @@
-package com.ysdc.comet.authentication
+package com.ysdc.comet.authentication.ui.team
 
+import com.ysdc.comet.authentication.R
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.data.prefs.PrefsConstants.TEAM_CODE

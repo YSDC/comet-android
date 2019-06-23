@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import com.ysdc.comet.authentication.R
 import com.ysdc.comet.common.ui.base.BaseFragment
 import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import kotlinx.android.synthetic.main.fragment_register.*
+import timber.log.Timber
 import javax.inject.Inject
 
 class RegisterFragment : BaseFragment(), RegisterMvpView {
@@ -37,10 +40,28 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
     }
 
     override fun setUp(view: View) {
+        val roleAdapter = ArrayAdapter(activity, R.layout.support_simple_spinner_dropdown_item, presenter.getRoles())
+        role_spinner.adapter = roleAdapter
+        role_spinner.setSelection(presenter.getIndexRoleSelected())
+        role_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>, view: View, index: Int, l: Long) {
+                presenter.setRoleSelected(index)
+            }
 
+            override fun onNothingSelected(adapterView: AdapterView<*>) {
+                Timber.d("Role: nothing selected")
+            }
+        }
+
+        validate_btn.setOnClickListener {
+            if(arefieldsValid()){
+                presenter.startAuthentication()
+                //tODO progress view?
+            }
+        }
     }
 
-    private fun fieldsValid() : Boolean{
+    private fun arefieldsValid() : Boolean{
         var hasErrors = false
 
         if(!presenter.isFirstNameValid(register_firstName_content.text.toString())){
@@ -67,8 +88,8 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
         }else{
             register_email_layout.error = null
         }
-        if(!presenter.isRoleValid(register_email_content.text.toString())){
-            register_email_layout.error = getString(R.string.error_email)
+        if(!presenter.isRoleValid(presenter.getRoleSelected())){
+            //TODO: add error dialog
             hasErrors = true
         }else{
             register_email_layout.error = null

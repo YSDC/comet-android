@@ -1,9 +1,10 @@
-package com.ysdc.comet.authentication
+package com.ysdc.comet.authentication.ui.team
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ysdc.comet.authentication.R
 import com.ysdc.comet.common.ui.base.BaseFragment
 import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import kotlinx.android.synthetic.main.fragment_team.*
