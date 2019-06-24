@@ -105,5 +105,6 @@ dependencies {
     implementation project(':analytics')
     implementation project(':authentication')
     implementation project(':data')
+    implementation project(':network')
 }
 apply plugin: 'com.google.gms.google-services'

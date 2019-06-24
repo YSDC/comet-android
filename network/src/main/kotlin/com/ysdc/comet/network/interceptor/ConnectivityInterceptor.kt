@@ -1,4 +1,4 @@
-package com.ysdc.comet.common.network.interceptor
+package com.ysdc.comet.network.interceptor
 
 import com.ysdc.comet.common.exception.NoConnectivityException
 import android.content.Context

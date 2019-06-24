@@ -1,6 +1,6 @@
 package com.ysdc.comet.di.module
 
-import com.ysdc.comet.common.network.config.NetworkConfig
+import com.ysdc.comet.network.config.NetworkConfig
 import com.ysdc.comet.network.config.AppNetworkConfig
 import dagger.Module
 import dagger.Provides
@@ -12,7 +12,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideNetworkConfig(): NetworkConfig {
+    fun provideNetworkConfig(): com.ysdc.comet.network.config.NetworkConfig {
         return AppNetworkConfig()
     }
 }

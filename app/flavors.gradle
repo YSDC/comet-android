@@ -14,15 +14,24 @@ android {
             buildConfigField("String", "ANDROID_RECOMMENDED_APP_VERSION", "\"android_comet_recommended_version\"")
             buildConfigField("String", "ANDROID_REQUIRED_APP_VERSION", "\"android_comet_required_version\"")
             ext {
-                production = "todo"
+                production = "\"https://api-v2.swissunihockey.ch\""
+                staging = "\"https://api-staging.swissunihockey.ch\""
+
             }
         }
 
         production {
             dimension "server"
 
-            buildConfigField "String", "BASE_AUTH_USERNAME", "\"todo\""
-            buildConfigField "String", "BASE_AUTH_PASSWORD", "\"todo\""
+            buildConfigField "String", "API_KEY", "\"gf2YM+SjxGo=\""
+            buildConfigField "String", "API_SECRET", "\"86Zsm3cINGiuRuN7L8llJA==\""
+        }
+
+        production {
+            dimension "server"
+
+            buildConfigField "String", "API_KEY", "\"gf2YM+SjxGo=\""
+            buildConfigField "String", "API_SECRET", "\"86Zsm3cINGiuRuN7L8llJA==\""
         }
 
         applicationVariants.all { variant ->

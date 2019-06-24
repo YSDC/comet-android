@@ -1,9 +1,9 @@
-package com.ysdc.comet.common.network
+package com.ysdc.comet.network
 
 import android.app.Application
 import com.ysdc.comet.common.application.GeneralConfig
-import com.ysdc.comet.common.network.config.NetworkConfig
 import com.ysdc.comet.common.utils.NetworkUtils
+import com.ysdc.comet.network.config.NetworkConfig
 
 /**
  * Basic implementation of the network service

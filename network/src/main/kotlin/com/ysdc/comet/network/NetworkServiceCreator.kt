@@ -1,11 +1,11 @@
-package com.ysdc.comet.common.network
+package com.ysdc.comet.network
 
 import android.app.Application
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.ysdc.comet.common.application.GeneralConfig
-import com.ysdc.comet.common.network.config.NetworkConfig
-import com.ysdc.comet.common.network.config.NetworkConstants.TIMEOUT_IN_SECONDS
-import com.ysdc.comet.common.network.interceptor.ConnectivityInterceptor
+import com.ysdc.comet.network.config.NetworkConfig
+import com.ysdc.comet.network.config.NetworkConstants.TIMEOUT_IN_SECONDS
+import com.ysdc.comet.network.interceptor.ConnectivityInterceptor
 import com.ysdc.comet.common.utils.NetworkUtils
 import okhttp3.Interceptor
 import okhttp3.JavaNetCookieJar
