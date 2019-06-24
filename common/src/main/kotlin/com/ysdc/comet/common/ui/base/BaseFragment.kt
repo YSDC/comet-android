@@ -29,6 +29,8 @@ import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import com.labters.lottiealertdialoglibrary.DialogTypes
+import com.labters.lottiealertdialoglibrary.LottieAlertDialog
 import com.ysdc.comet.common.R
 import com.ysdc.comet.common.utils.AppConstants
 import dagger.android.support.AndroidSupportInjection
@@ -56,6 +58,20 @@ abstract class BaseFragment : Fragment(), MvpView {
                 actionBar.setHomeAsUpIndicator(backArrow)
             }
         }
+    }
+
+    override fun hideAlert(){
+        baseActivity?.hideAlert()
+    }
+
+    override fun displayLoading(messageId : Int){
+        hideAlert()
+        baseActivity?.alertDialog = LottieAlertDialog.Builder(baseActivity, DialogTypes.TYPE_LOADING)
+            .setTitle(getString(R.string.action_loading))
+            .setDescription(getString(messageId))
+            .build()
+        baseActivity?.alertDialog!!.setCancelable(false)
+        baseActivity?.alertDialog!!.show()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -115,6 +131,7 @@ abstract class BaseFragment : Fragment(), MvpView {
 
     override fun onDetach() {
         baseActivity = null
+        hideAlert()
         super.onDetach()
     }
 

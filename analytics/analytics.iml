@@ -34,18 +34,18 @@
           <option name="moduleName" value="analytics_debug" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
-          <option name="languageVersion" value="1.3" />
-          <option name="apiVersion" value="1.3" />
           <option name="pluginOptions">
             <array>
               <option value="plugin:org.jetbrains.kotlin.android:experimental=true" />
               <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
               <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
+              <option value="plugin:org.jetbrains.kotlin.android:configuration=rO0ABXoAAAQAAAAABQAIZmVhdHVyZXMAAAABAA92aWV3cyxwYXJjZWxpemUADGV4cGVyaW1lbnRhbAAAAAEABHRydWUAGmRlZmF1bHRDYWNoZUltcGxlbWVudGF0aW9uAAAAAQAHaGFzaE1hcAAHcGFja2FnZQAAAAEAGGNvbS55c2RjLmNvbWV0LmFuYWx5dGljcwAHdmFyaWFudAAAAAIFD21haW47L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvMTBkMTk3Mzg2MGEwMmI4MDI3YWFkMWNjOTE1Y2Q1NTQvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzA0NmEyZDkzNWJmOTNhMmMwMTRiZTE0ZDNjZDc2N2ZlL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS8wNzZkYjM5ZjA1ZjQzMzZjZGEwOWFmZWMxMWVjNGE5NS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvYjg3ZGQ5MjVlNDE3NjZhY2ZlNGJjM2UwYWIyMWRmNmUvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xL2JhNzY4NGZhZDg4ZjYyMDYyNmY5MTc5MmRmY2JiMjA3L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9jMTdjMzZlNTI3MGYzYzAxNzlmYzA2YzNkN2RmNzBhYS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvMzFiN2RmM2ZmZjAyNGMyZjQ5MTI1YzE2YjliYzQ5NmEvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzY2Mjg3NjY0ODM3ODY4MDdlY2M4ZmQzZGI2MjU1NmEyL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS84ODM5YzU2ZDUzM2Y5M2EwY2E0ODU1ZTk3MWRhMDM4Yy9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNTY2ZWFmMDZkNTQyNDNkMTA1M2M1NnoAAAHsNmJhNDkyMDQwOC9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvOTYyNzc1ZjBhMTBhMDI0MGU0OTIzMmZiOGQ0N2QxMDYvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzliOTYzYmJlNDM4MWJmMTJmMTUzYzNiMmNiYjEwZjY4L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9jYzgxMWNlNTk0YmNmMGZkMzI5OTg4NzA5Njc4MmQwNS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvYzgxZWFlMTcxZDA4MjFiOTNiM2MxZTdjZTk1MjI3OTMvcmVzOy9Vc2Vycy9kYXZpZC9Qcm9qZWN0cy9jb21ldC1hbmRyb2lkL2FuYWx5dGljcy9zcmMvbWFpbi9yZXMAQWRlYnVnOy9Vc2Vycy9kYXZpZC9Qcm9qZWN0cy9jb21ldC1hbmRyb2lkL2FuYWx5dGljcy9zcmMvZGVidWcvcmVz" />
             </array>
           </option>
           <option name="pluginClasspaths">
             <array>
               <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.31/57bdeb88c9265052448a7a8422ed64ad92e9b262/kotlin-android-extensions-1.3.31.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.31/e6e76345392e660078aaf08a5f2886be4d1f6a2/kotlin-annotation-processing-gradle-1.3.31.jar" />
             </array>
           </option>
           <option name="errors">
@@ -125,6 +125,9 @@
       <excludeFolder url="file://$MODULE_DIR$/build/generated/source/r" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/aapt_friendly_merged_manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotation_processor_list" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations_typedef_file" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations_zip" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check_manifest_result" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compile_library_classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/compile_only_not_namespaced_r_class_jar" />
@@ -132,12 +135,14 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/intermediate-jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco_instrumented_classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javac" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/library_and_local_jars_jni" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/library_assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/library_java_res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/library_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_jni_libs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/merged_shaders" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/packaged-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/packaged_res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/public_res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
@@ -214,6 +219,7 @@
     <orderEntry type="library" name="Gradle: com.google.auto.value:auto-value-annotations:1.6@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks:16.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-sdk-api:16.5.0@aar" level="project" />
+    <orderEntry type="module" module-name="model" />
     <orderEntry type="module" module-name="model" />
   </component>
   <component name="sonarModuleSettings">

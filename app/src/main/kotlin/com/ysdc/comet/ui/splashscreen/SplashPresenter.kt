@@ -1,9 +1,12 @@
 package com.ysdc.comet.ui.splashscreen
 
+import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.common.data.ErrorHandler
+import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.ui.base.BasePresenter
-import io.reactivex.Completable
 import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 /**
@@ -11,18 +14,25 @@ import java.util.concurrent.TimeUnit
  */
 
 class SplashPresenter<V : SplashMvpView>(
-    errorHandler: ErrorHandler
+    errorHandler: ErrorHandler,
+    private val preferences: MyPreferences,
+    private val phoneAuthenticationManager: PhoneAuthenticationManager
 ) : BasePresenter<V>(errorHandler), SplashMvpPresenter<V> {
 
-    override fun onAttach(mvpView: V) {
-        super.onAttach(mvpView)
-    }
-
-    override fun loadConfiguration(): Completable {
-        TODO("not implemented")
-    }
-
-    override fun fakeLoad() : Observable<Long> {
-            return Observable.interval(3, TimeUnit.SECONDS)
+    override fun loadConfiguration() {
+        compositeDisposable.add(
+            Observable.interval(3, TimeUnit.SECONDS)
+                .filter { it < 3 }
+                .firstOrError()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe { _ ->
+                    if (phoneAuthenticationManager.isLoggedIn()) {
+                        mvpView?.openHomeActivity()
+                    } else {
+                        mvpView?.openAuthenticationActivity()
+                    }
+                }
+        )
     }
 }

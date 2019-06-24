@@ -10,6 +10,5 @@ import io.reactivex.Observable
  */
 
 interface SplashMvpPresenter<V : SplashMvpView> : MvpPresenter<V> {
-    fun loadConfiguration(): Completable
-    fun fakeLoad() : Observable<Long>
+    fun loadConfiguration()
 }

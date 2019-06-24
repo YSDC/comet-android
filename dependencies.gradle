@@ -40,8 +40,8 @@ ext {
             transition     : '2.0.0-beta01',
             leakcanary     : '2.0-alpha-2',
             timber         : '1.5.1',
-            glide          : '4.9.0'
-            //lottieBar      : '1.0.1@aar',
+            glide          : '4.9.0',
+            lottieBar      : '1.0.1@aar',
     ]
 
     mulitdex = [multidex: "androidx.multidex:multidex:$versions.multidex"]
@@ -126,7 +126,7 @@ ext {
     ui = [
             adapterDelegate: "com.hannesdorfmann:adapterdelegates4:$versions.adapterDelegate",
             shimmer        : "com.facebook.shimmer:shimmer:$versions.shimmer",
-            //lottieBar      : "com.ysdc.comet.fork:bottomnavbarlib:$versions.lottieBar",
+            lottieBar      : "ae.propertyfinder.fork:bottomnavbarlib:$versions.lottieBar",
             lottie         : "com.airbnb.android:lottie:$versions.lottie",
             dialogs        : "com.afollestad.material-dialogs:core:$versions.dialogs",
             dialogIn       : "com.afollestad.material-dialogs:input:$versions.dialogs",

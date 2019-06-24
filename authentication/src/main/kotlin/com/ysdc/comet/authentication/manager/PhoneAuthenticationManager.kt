@@ -14,6 +14,7 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import java.util.concurrent.TimeUnit
 
+
 class PhoneAuthenticationManager {
 
     private val authenticationStatus = BehaviorSubject.createDefault(PhoneAuthenticationStatus.STATE_EMPTY)
@@ -23,7 +24,11 @@ class PhoneAuthenticationManager {
     private lateinit var activity: Activity
     private lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
 
-    fun setActivity(activity: Activity){
+    fun isLoggedIn(): Boolean {
+        return auth.currentUser != null
+    }
+
+    fun setActivity(activity: Activity) {
         this.activity = activity
     }
 
@@ -50,15 +55,15 @@ class PhoneAuthenticationManager {
     }
 
     fun verifyPhoneNumberWithCode(code: String) {
-        if(storedVerificationId != null) {
+        if (storedVerificationId != null) {
             val credential = PhoneAuthProvider.getCredential(storedVerificationId!!, code)
             signInWithPhoneAuthCredential(credential)
-        }else{
+        } else {
             authenticationStatus.onNext(PhoneAuthenticationStatus.STATE_VERIFY_FAILED)
         }
     }
 
-    fun getAuthenticationStatus() : Observable<PhoneAuthenticationStatus>{
+    fun getAuthenticationStatus(): Observable<PhoneAuthenticationStatus> {
         return authenticationStatus
     }
 
@@ -120,6 +125,7 @@ class PhoneAuthenticationManager {
 
                     val user = task.result?.user
                     authenticationStatus.onNext(PhoneAuthenticationStatus.STATE_SIGNIN_SUCCESS)
+
                 } else {
                     // Sign in failed, display a message and update the UI
                     Timber.e(task.exception)
@@ -131,6 +137,7 @@ class PhoneAuthenticationManager {
                 }
             }
     }
+
     fun resendVerificationCode(phoneNumber: String) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
             phoneNumber, // Phone number to verify

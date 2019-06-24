@@ -1,5 +1,6 @@
 package com.ysdc.comet.authentication.ui.register
 
+import com.ysdc.comet.authentication.R
 import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
@@ -9,13 +10,13 @@ import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_MAIL
 import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_PHONE
 import com.ysdc.comet.common.ui.base.BasePresenter
 import com.ysdc.comet.common.utils.AppConstants
-import com.ysdc.comet.common.utils.ProfileValidationUtils
+import com.ysdc.comet.common.utils.ValidationUtils
 import com.ysdc.comet.model.UserRole
 
 class RegisterPresenter<V : RegisterMvpView>(
     errorHandler: ErrorHandler,
     private val preferences: MyPreferences,
-    private val validationUtils: ProfileValidationUtils,
+    private val validationUtils: ValidationUtils,
     private val phoneAuthenticationManager: PhoneAuthenticationManager
 ) : BasePresenter<V>(errorHandler), RegisterMvpPresenter<V> {
 
@@ -97,6 +98,7 @@ class RegisterPresenter<V : RegisterMvpView>(
     }
 
     override fun startAuthentication(){
+        mvpView?.displayLoading(R.string.phone_code_request)
         phoneAuthenticationManager.startAuthentication(preferences.getAsString(USER_PHONE, AppConstants.EMPTY_STRING))
     }
 }

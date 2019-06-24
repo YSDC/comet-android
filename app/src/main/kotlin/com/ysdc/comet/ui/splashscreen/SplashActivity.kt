@@ -3,10 +3,9 @@ package com.ysdc.comet.ui.splashscreen
 import android.os.Bundle
 import com.ysdc.comet.R
 import com.ysdc.comet.common.application.GeneralConfig
+import com.ysdc.comet.common.navigation.NavigationManager
 import com.ysdc.comet.common.ui.base.BaseActivity
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_splash.*
 import javax.inject.Inject
 
@@ -23,6 +22,8 @@ class SplashActivity : BaseActivity(), SplashMvpView {
     internal lateinit var presenter: SplashMvpPresenter<SplashMvpView>
     @Inject
     internal lateinit var appConfig: GeneralConfig
+    @Inject
+    internal lateinit var navigationManager: NavigationManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,33 +42,15 @@ class SplashActivity : BaseActivity(), SplashMvpView {
 
     override fun onStart() {
         super.onStart()
-        compositeDisposable.add(
-            presenter.fakeLoad()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({
-                }, { t: Throwable? ->
-                    t?.let { onError(it) }
-                }, { openAuthenticationActivity() })
-//            presenter.loadConfiguration()
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe({
-//                    openHomeActivity()
-//                }, { t: Throwable? ->
-//                    t?.let { onError(it) }
-//                })
-        )
+        presenter.loadConfiguration()
     }
 
     override fun openHomeActivity() {
-        TODO("not implemented")
-//        startActivity(MainActivity.newInstance(this))
-//        finish()
+        navigationManager.displayMainView(this)
     }
 
     override fun openAuthenticationActivity() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        navigationManager.displayAuthenticationView(this)
     }
 
     private fun initView() {

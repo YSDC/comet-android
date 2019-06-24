@@ -9,24 +9,23 @@ import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.annotation.StringRes
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.labters.lottiealertdialoglibrary.ClickListener
+import com.labters.lottiealertdialoglibrary.DialogTypes
+import com.labters.lottiealertdialoglibrary.LottieAlertDialog
 import com.ysdc.comet.common.R
 import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.exception.NoConnectivityException
-import com.ysdc.comet.common.ui.utils.DialogBuilder
+import com.ysdc.comet.common.exception.ValidationException
 import com.ysdc.comet.common.utils.CrashlyticsUtils
 import com.ysdc.comet.common.utils.NetworkUtils
 import dagger.android.AndroidInjection
 import timber.log.Timber
 import javax.inject.Inject
 
-private const val STATE_CURRENT_TAB_ID = "STATE_CURRENT_TAB_ID"
-private const val STATE_BACK_STACK_MANAGER = "STATE_BACK_STACK_MANAGER"
-
 abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callback {
 
-    private var versionDialog: AlertDialog? = null
+    var alertDialog: LottieAlertDialog? = null
 
     @Inject
     protected lateinit var crashlyticsUtils: CrashlyticsUtils
@@ -41,8 +40,8 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     }
 
     override fun onStop() {
-        if (versionDialog != null) {
-            versionDialog!!.dismiss()
+        if (alertDialog != null) {
+            alertDialog!!.dismiss()
         }
         super.onStop()
     }
@@ -50,10 +49,10 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     override fun onError(throwable: Throwable) {
         crashlyticsUtils.logException(throwable)
         Timber.e(throwable, "An Error occurred")
-        if (throwable is NoConnectivityException) {
-            onError(getString(R.string.exception_no_connectivity))
-        } else {
-            onError(getString(R.string.exception_undefined))
+        when (throwable) {
+            is NoConnectivityException -> onError(getString(R.string.exception_no_connectivity))
+            is ValidationException -> onError(throwable.message ?: getString(R.string.exception_validation))
+            else -> onError(getString(R.string.exception_undefined))
         }
     }
 
@@ -69,6 +68,18 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
 
     override fun showMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+        alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_ERROR)
+            .setTitle(getString(R.string.error))
+            .setDescription(message)
+            .setPositiveText(getString(R.string.action_ok))
+            .setPositiveListener(object : ClickListener {
+                override fun onClick(dialog: LottieAlertDialog) {
+                    dialog.dismiss()
+                }
+            })
+            .build()
+        alertDialog!!.show()
     }
 
     override fun showMessage(@StringRes resId: Int) {
@@ -97,9 +108,45 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
 
     override fun showVersionDialog(title: String, content: String, cancelable: Boolean) {
         if (!isDestroyed) {
-            val dialogBuilder = DialogBuilder()
-            versionDialog =
-                dialogBuilder.displayVersionDialog(this, title, content, cancelable, generalConfig.storeUrl())
+            val builder = LottieAlertDialog.Builder(this, DialogTypes.TYPE_WARNING)
+                .setTitle(title)
+                .setDescription(content)
+                .setPositiveText(getString(R.string.action_download))
+                .setPositiveListener(object : ClickListener {
+                    override fun onClick(dialog: LottieAlertDialog) {
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(generalConfig.storeUrl())))
+                        dialog.dismiss()
+                    }
+                })
+            if (cancelable) {
+                builder.setNegativeText(getString(R.string.action_ok))
+                    .setNegativeListener(object : ClickListener {
+                        override fun onClick(dialog: LottieAlertDialog) {
+                            onVersionDialogClosed()
+                            dialog.dismiss()
+                        }
+                    })
+            }
+            alertDialog = builder.build()
+            alertDialog!!.setCancelable(cancelable)
+            alertDialog!!.show()
+        }
+    }
+
+    override fun displayLoading(messageId : Int){
+        hideAlert()
+        alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_LOADING)
+            .setTitle(getString(R.string.action_loading))
+            .setDescription(getString(messageId))
+            .build()
+        alertDialog!!.setCancelable(false)
+        alertDialog!!.show()
+    }
+
+    override fun hideAlert() {
+        if(alertDialog != null){
+            alertDialog!!.dismiss()
+            alertDialog = null
         }
     }
 

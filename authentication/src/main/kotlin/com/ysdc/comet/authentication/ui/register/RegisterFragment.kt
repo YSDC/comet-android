@@ -22,8 +22,6 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
     override val screenName: String = "todo"
     override val isActionBarVisible: Boolean = false
 
-    private var alertDialog: LottieAlertDialog? = null
-
     @Inject
     lateinit var presenter: RegisterMvpPresenter<RegisterMvpView>
 
@@ -41,7 +39,7 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
 
     override fun onDestroyView() {
         presenter.onDetach()
-        alertDialog?.let { it.dismiss() }
+        baseActivity?.alertDialog?.let { it.dismiss() }
         super.onDestroyView()
     }
 
@@ -104,8 +102,8 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
     }
 
     private fun showMissingRole() {
-        alertDialog = LottieAlertDialog.Builder(baseActivity, DialogTypes.TYPE_ERROR)
-            .setTitle("Error")
+        baseActivity?.alertDialog = LottieAlertDialog.Builder(baseActivity, DialogTypes.TYPE_ERROR)
+            .setTitle(getString(R.string.error))
             .setDescription(getString(R.string.error_missing_role))
             .setPositiveText(getString(R.string.action_ok))
             .setPositiveListener(object : ClickListener {
@@ -114,7 +112,7 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
                 }
             })
             .build()
-        alertDialog!!.show()
+        baseActivity?.alertDialog!!.show()
     }
 
     companion object {

@@ -6,15 +6,14 @@ import com.ysdc.comet.data.utils.DataConstants.TEAM_CODE
 import com.ysdc.comet.data.utils.DataConstants.TEAM_COLLECTION
 import io.reactivex.Single
 
-class FirestoreDataManager (private val firebaseFirestore: FirebaseFirestore) : DataManager {
+class FirestoreDataManager(private val firebaseFirestore: FirebaseFirestore) : DataManager {
 
     override fun teamExist(code: String): Single<Boolean> {
-        return Single.create {
+        return Single.create { emitter ->
             firebaseFirestore.collection(TEAM_COLLECTION).whereEqualTo(TEAM_CODE, code).get()
-                .addOnSuccessListener { result -> Single.just(!result.isEmpty) }
-                .addOnFailureListener { exception -> Single.error<Boolean> { exception } }
-                .addOnCanceledListener {  Single.error<Boolean> { OperationCanceledException() } }
+                .addOnSuccessListener { result -> emitter.onSuccess(!result.isEmpty) }
+                .addOnFailureListener { exception -> emitter.onError(exception) }
+                .addOnCanceledListener { emitter.onError(OperationCanceledException()) }
         }
     }
-
 }

@@ -4,33 +4,33 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent">
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_percent="0.10"
             android:orientation="horizontal"/>
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_percent="0.50"
             android:orientation="horizontal"/>
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_percent="0.80"
             android:orientation="horizontal"/>
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
             android:id="@+id/startConstraint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_begin="32dp"
             android:orientation="vertical"/>
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
             android:id="@+id/endConstraint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,6 +53,10 @@
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
             app:layout_constraintEnd_toEndOf="@+id/endConstraint"
             app:layout_constraintTop_toTopOf="@+id/guide_field"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="text"
             android:hint="@string/team_field_placeholder"/>
 
     <Button

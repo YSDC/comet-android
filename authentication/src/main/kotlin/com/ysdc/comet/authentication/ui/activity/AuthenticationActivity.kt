@@ -1,5 +1,7 @@
 package com.ysdc.comet.authentication.ui.activity
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import com.github.ajalt.timberkt.Timber
 import com.labters.lottiealertdialoglibrary.ClickListener
@@ -9,6 +11,7 @@ import com.ysdc.comet.authentication.R
 import com.ysdc.comet.authentication.ValidateFragment
 import com.ysdc.comet.authentication.ui.register.RegisterFragment
 import com.ysdc.comet.authentication.ui.team.TeamFragment
+import com.ysdc.comet.common.navigation.NavigationManager
 import com.ysdc.comet.common.ui.base.BaseActivity
 import com.ysdc.comet.common.ui.utils.FragmentAdapter
 import kotlinx.android.synthetic.main.activity_authentication.*
@@ -24,8 +27,8 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
     private lateinit var adapter: FragmentAdapter
     @Inject
     internal lateinit var presenter: AuthenticationMvpPresenter<AuthenticationMvpView>
-
-    private var alertDialog: LottieAlertDialog? = null
+    @Inject
+    internal lateinit var navigationManager: NavigationManager
 
     private val teamFragment = TeamFragment.newInstance()
     private val registerFragment = RegisterFragment.newInstance()
@@ -61,7 +64,7 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
 
     override fun authenticationDone() {
         Timber.d { "authenticated" }
-        //TODO move to home activity
+        navigationManager.displayMainView(this)
     }
 
     fun onTeamValidated(){
@@ -70,7 +73,7 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
 
     override fun onVerificationCodeError() {
         alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_ERROR)
-            .setTitle("Error")
+            .setTitle(getString(R.string.error))
             .setDescription(getString(R.string.error_wrong_code))
             .setPositiveText(getString(R.string.action_check_phone))
             .setPositiveListener(object : ClickListener {
@@ -106,5 +109,13 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
         authenticationContainer.adapter = adapter
         authenticationContainer.offscreenPageLimit = adapter.count
         authenticationContainer.setPagingEnabled(false)
+    }
+
+    companion object {
+        fun newInstance(context: Context): Intent {
+            val intent = Intent(context, AuthenticationActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            return intent
+        }
     }
 }

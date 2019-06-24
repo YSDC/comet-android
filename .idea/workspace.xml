@@ -5,35 +5,79 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a06f6a78-feb5-4941-952c-32859548b44b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/comet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/model/NavigationItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventMvpPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventMvpView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainMvpPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainMvpView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/profile/ProfileFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/profile/ProfileMvpPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/profile/ProfileMvpView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/profile/ProfilePresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/ranking/RankingFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/ranking/RankingMvpPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/ranking/RankingMvpView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/ranking/RankingPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/settings/SettingsFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/settings/SettingsMvpPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/settings/SettingsMvpView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/settings/SettingsPresenter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_events.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_ranking.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_event.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_ranking.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/exception/ValidationException.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analytics/analytics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/analytics.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityBindings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityBindings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ApplicationModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ApplicationModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentBindings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentBindings.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/navigation/NavigationManagerImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/navigation/NavigationManagerImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/manager/PhoneAuthenticationManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/manager/PhoneAuthenticationManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationMvpView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationMvpView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationPresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateMvpPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateMvpPresenter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidatePresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidatePresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamPresenter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamPresenter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedApplicationModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedApplicationModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedUtilsModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedUtilsModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/navigation/NavigationManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/navigation/NavigationManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/MvpView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/MvpView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ProfileValidationUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ValidationUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,21 +100,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common/src/main/res/values/colors.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+            <state relative-caret-position="341">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#0#611#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="135">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/MvpView.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="34" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+              <folding>
+                <element signature="e#39#956#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="114" column="30" lean-forward="true" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+              <folding>
+                <element signature="e#51#670#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -80,43 +168,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Splash</find>
-      <find>ae.propertyfinder.</find>
-      <find>showProgress</find>
-      <find>com.airbnb.android:lottie</find>
-      <find>_error</find>
-      <find>subscribe</find>
-      <find>spinner</find>
-      <find>STATE_VERIFY_FAILED</find>
-      <find>empty_string</find>
-      <find>role_player</find>
-      <find>PhoneAuthent</find>
-      <find>initAuthenticationManager</find>
-      <find>compositeDisposable</find>
-      <find>initialize(</find>
-      <find>activity</find>
-      <find>verificationInProgress</find>
-      <find>verifyPhoneNumberWithCode</find>
-      <find>storedVerificationId</find>
-      <find>resendVerificationCode</find>
-      <find>STATE_VERIFY_FAILED_CODE</find>
-      <find>teamValidated</find>
-      <find>verificationSucceed</find>
-      <find>action_change_phone</find>
-      <find>action_resend</find>
-      <find>FirebaseFirestore</find>
-      <find>ProfileValidationUtils</find>
-      <find>PhoneAuthenticationManager</find>
       <find>SearchFragmentModule</find>
       <find>FFD628</find>
       <find>guide</find>
+      <find>app_name</find>
+      <find>LottieBottomNavbar</find>
+      <find>NoSwipePager</find>
+      <find>shouldToolbarBeElevated</find>
+      <find>distributionUrl</find>
+      <find>STATE_SIGNIN_SUCCESS</find>
+      <find>lottieBar</find>
+      <find>getIdToken</find>
+      <find>NavigationManager</find>
+      <find>Guideline</find>
+      <find>android.support.constraint.Guideline</find>
+      <find>AppCompatEditText</find>
+      <find>LottieDi</find>
+      <find>Lottiealert</find>
+      <find>teamExist</find>
+      <find>Error</find>
+      <find>setTitle(&quot;Error&quot;)</find>
+      <find>ValidationUtils</find>
+      <find>provideteampre</find>
+      <find>alertDialog: LottieAlertDialog?</find>
+      <find>alertDialog!!.</find>
+      <find>action_loading</find>
+      <find>displayLoading</find>
+      <find>loading</find>
+      <find>hideAlert</find>
+      <find>hideAlert()</find>
+      <find>isTeamCodeFormatValid</find>
     </findStrings>
     <replaceStrings>
       <replace>com.ysdc.comet.common.</replace>
@@ -124,6 +212,8 @@
       <replace>import com.ysdc.comet</replace>
       <replace>Authentication</replace>
       <replace>com.ysdc.comet.</replace>
+      <replace>androidx.constraintlayout.widget.Guideline</replace>
+      <replace>setTitle(getString(R.string.error))</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/model</dir>
@@ -135,67 +225,68 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/SplashActivity.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/SplashMvpView.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationMvpPresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateFragment.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/activity_authentication.xml" />
-        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml" />
-        <option value="$PROJECT_DIR$/dependencies.gradle" />
-        <option value="$PROJECT_DIR$/data/build.gradle" />
-        <option value="$PROJECT_DIR$/data/sonar.gradle" />
-        <option value="$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/utils/DataConstants.kt" />
-        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/exception/OperationCanceledException.kt" />
-        <option value="$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/DataManager.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/component/ApplicationComponent.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/DataModule.kt" />
-        <option value="$PROJECT_DIR$/authentication/build.gradle" />
-        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_register.xml" />
-        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/AppConstants.kt" />
-        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedUtilsModule.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpPresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpView.kt" />
-        <option value="$PROJECT_DIR$/model/src/main/kotlin/com/ysdc/comet/model/UserRole.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpPresenter.kt" />
-        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ProfileValidationUtils.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamPresenter.kt" />
-        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/data/prefs/PrefsConstants.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/manager/PhoneAuthenticationManager.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidatePresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateMvpPresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationMvpView.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationPresenter.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt" />
-        <option value="$PROJECT_DIR$/authentication/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedApplicationModule.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ApplicationModule.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentModule.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityBindings.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentBindings.kt" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/application/AppConfig.kt" />
         <option value="$PROJECT_DIR$/common/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/comet.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainMvpPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainMvpView.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/debug/ui/event/EventFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/debug/ui/event/EventMvpPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/debug/ui/event/EventMvpView.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/debug/ui/event/EventPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/shouldToolbarBeElevated.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/model/NavigationItem.kt" />
+        <option value="$PROJECT_DIR$/dependencies.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_events.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_ranking.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpPresenter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/navigation/NavigationManagerImpl.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/manager/PhoneAuthenticationManager.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/navigation/NavigationManager.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml" />
+        <option value="$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/exception/ValidationException.kt" />
+        <option value="$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ProfileValidationUtils.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/validationUtils.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ValidationUtils.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedUtilsModule.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentModule.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/MvpView.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamPresenter.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpView.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseFragment.kt" />
+        <option value="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseActivity.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt" />
+        <option value="$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="988" />
+    <option name="width" value="1920" />
+    <option name="height" value="991" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -231,255 +322,168 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="comet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="activity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="comet" type="462c0819:PsiDirectoryNode" />
               <item name="di" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="comet" type="462c0819:PsiDirectoryNode" />
               <item name="di" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="data" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="authentication" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="model" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="model" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="model" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="model" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
               <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="model" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="di" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comet-android" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comet-android" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="common" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView">
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="comet-android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="comet-android" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
             </path>
             <path>
-              <item name="comet-android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="comet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="comet-android" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="comet-android" type="58d84e3e:PackageViewProjectNode" />
+              <item name="app" type="616d4139:PackageViewModuleNode" />
+              <item name="drawable-v24" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="samsung-sm_g965f-23f202e4050c7ece" />
+    <property name="DEBUGGABLE_PROCESS" value="com.ysdc.comet.debug" />
+    <property name="DEBUGGER_ID" value="Auto" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="device.picker.selection" value="23f202e4050c7ece" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/common/src/test/kotlin" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.ysdc.comet.ui.event" />
+      <recent name="com.ysdc.comet.ui.main" />
       <recent name="com.ysdc.comet.ui.splashscreen" />
       <recent name="com.ysdc.comet.authentication.model" />
       <recent name="com.ysdc.comet.authentication.manager" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen" />
       <recent name="$PROJECT_DIR$/authentication" />
-      <recent name="$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/network/interceptor" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
-      <recent name="$PROJECT_DIR$/common/src/test/kotlin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -539,7 +543,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -677,27 +681,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="991" extended-state="6" />
+    <frame x="5" y="23" width="1920" height="991" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6819407" visible="true" weight="0.22547974" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.67731094" visible="true" weight="0.22547974" />
       <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Build Variants" order="3" sideWeight="0.3180593" side_tool="true" weight="0.22547974" />
+      <window_info id="Build Variants" order="3" sideWeight="0.3226891" side_tool="true" visible="true" weight="0.22547974" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="0" />
+      <window_info anchor="bottom" id="Debug" order="0" sideWeight="0.49816626" weight="0.33920187" />
       <window_info anchor="bottom" id="Run" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3298969" />
-      <window_info anchor="bottom" id="Logcat" order="3" />
+      <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.49840087" weight="0.32990867" />
       <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Find" order="6" sideWeight="0.4987775" weight="0.3298122" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298969" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.15296803" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.4989339" visible="true" weight="0.15296803" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.32077625" />
+      <window_info active="true" anchor="bottom" id="Build" order="9" sideWeight="0.4978678" visible="true" weight="0.32077625" />
       <window_info anchor="bottom" id="SonarQube" order="10" />
       <window_info anchor="bottom" id="SonarLint" order="11" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -710,401 +715,432 @@
       <window_info anchor="right" id="Viewer" order="7" side_tool="true" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt</url>
+          <line>13</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt</url>
+          <line>14</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt</url>
+          <line>15</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/src/main/res/values/styles.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventMvpPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/NetworkUtils.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventMvpView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/AppConstants.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/shouldToolbarBeElevated.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="45">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpView.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ProfileValidationUtils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="285">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
           <folding>
-            <element signature="e#37#102#0" expanded="true" />
+            <element signature="e#39#322#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/38c819c7c7fa261df0ba473854472477/jars/classes.jar!/com/google/android/gms/tasks/Task.class" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/ranking/RankingFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/event/EventPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_ranking.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_events.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/model/NavigationItem.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.subkhansarif.libs/bottomnavbarlib/1.2.0/26439d2659966b41b942c9c07dfe11f02603f06e/bottomnavbarlib-1.2.0-sources.jar!/com/subkhansarif/bottomnavbar/LottieBottomNavbar.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="327" column="23" selection-start-line="327" selection-start-column="23" selection-end-line="327" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/data/prefs/PrefsConstants.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="e#51#137#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BasePresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
+        <state relative-caret-position="135">
           <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/data/prefs/MyPreferences.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-902">
-          <caret line="20" column="68" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="68" />
+        <state relative-caret-position="150">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_register.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/main/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="149" column="50" selection-start-line="149" selection-start-column="50" selection-end-line="149" selection-end-column="50" />
+        <state relative-caret-position="665">
+          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/navigation/NavigationManagerImpl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#1969#1995#0" expanded="true" />
-            <element signature="e#2207#2230#0" expanded="true" />
-            <element signature="e#2271#2294#0" expanded="true" />
-            <element signature="e#3038#3061#0" expanded="true" />
-            <element signature="e#3364#3404#0" expanded="true" />
-            <element signature="e#4026#4049#0" expanded="true" />
-            <element signature="e#4516#4555#0" expanded="true" />
-            <element signature="e#5009#5032#0" expanded="true" />
-            <element signature="e#5545#5581#0" expanded="true" />
-            <element signature="e#5986#6009#0" expanded="true" />
-            <element signature="e#6534#6570#0" expanded="true" />
-            <element signature="e#6924#6947#0" expanded="true" />
-            <element signature="e#7290#7325#0" expanded="true" />
-            <element signature="e#7734#7769#0" expanded="true" />
-            <element signature="e#8653#8674#0" expanded="true" />
+            <element signature="e#35#293#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/manager/PhoneAuthenticationManager.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="133" column="30" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="37" column="77" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidateMvpPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/validate/ValidatePresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mayuce/LottieAlertDialog/1.2/db9588c0efc76a7e80647e6737ff592982dac0e9/LottieAlertDialog-1.2-sources.jar!/com/labters/lottiealertdialoglibrary/LottieAlertDialog.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationMvpView.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="50" />
+        <state relative-caret-position="78">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#47#341#0" expanded="true" />
+            <element signature="e#47#690#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-279">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
-          <folding>
-            <element signature="e#2634#2675#0" expanded="true" />
-            <element signature="e#2913#2953#0" expanded="true" />
-            <element signature="e#3181#3218#0" expanded="true" />
-            <element signature="e#3443#3480#0" expanded="true" />
-            <element signature="e#3998#4036#1" expanded="true" />
-            <element signature="e#4067#4096#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/DataManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="90" lean-forward="true" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedAnalyticsModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedApplicationModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedNetworkModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedUtilsModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ApplicationModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="62" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="62" />
-          <folding>
-            <element signature="e#34#895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="82" column="65" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityBindings.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#34#285#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentBindings.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#34#338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/kotlin/com/ysdc/comet/model/UserRole.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/kotlin/com/ysdc/comet/model/Animation.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/src/main/kotlin/com/ysdc/comet/model/Version.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="102" column="34" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/application/AppConfig.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="479">
+          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
           <folding>
             <element signature="e#36#418#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/comet.xml">
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/navigation/NavigationManager.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ApplicationModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/kapt/cometProductionRelease/com/ysdc/comet/di/component/DaggerApplicationComponent.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="e#34#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/kapt/cometProductionDebug/com/ysdc/comet/di/component/DaggerApplicationComponent.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_validate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="257">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/res/values/colors.xml">
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_team.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/d16c788b755be19bf8a7eace113755519a1d7182/kotlin-stdlib-1.3.31-sources.jar!/kotlin/TypeAliases.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/exception/NoConnectivityException.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/exception/ValidationException.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dependencies.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/utils/DialogBuilder.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="63" selection-end-column="17" />
+          <folding>
+            <element signature="e#1981#2024#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/kotlin/com/ysdc/comet/data/FirestoreDataManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="93" lean-forward="true" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/ValidationUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/FragmentModule.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamPresenter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+          <folding>
+            <element signature="e#1546#1591#1" expanded="true" />
+            <element signature="e#1904#1985#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterMvpView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamMvpView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <caret line="100" column="52" lean-forward="true" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+          <folding>
+            <element signature="e#51#719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/MvpView.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#611#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/activity/AuthenticationActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/ui/base/BaseActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+          <folding>
+            <element signature="e#39#956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/register/RegisterFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="114" column="30" lean-forward="true" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+          <folding>
+            <element signature="e#51#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/src/main/kotlin/com/ysdc/comet/authentication/ui/team/TeamFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
         </state>
       </provider>
     </entry>

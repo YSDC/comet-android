@@ -31,4 +31,8 @@ interface MvpView {
     fun provideResources(): Resources
 
     fun onBackPressed()
+
+    fun hideAlert()
+
+    fun displayLoading(messageId : Int)
 }

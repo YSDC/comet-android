@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">authentication</string>
-
     <string name="action_next">Next</string>
     <string name="action_resend">Resend</string>
     <string name="action_finish">Finish</string>
@@ -30,4 +28,7 @@
     <string name="register_role_placeholder">Role</string>
     <string name="code_validation">Enter the received code</string>
     <string name="phone_code_field_placeholder">Enter code here</string>
+
+    <string name="team_code_verification">Verification of the team code...</string>
+    <string name="phone_code_request">Send a phone code request...</string>
 </resources>
