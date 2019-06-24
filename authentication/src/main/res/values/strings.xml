@@ -13,7 +13,7 @@
     <string name="error_authentication_team_format">Something is wrong with the team code entered</string>
     <string name="error_wrong_firstname">Error: Cannot be empty and should contains only letters</string>
     <string name="error_wrong_lastname">Error: Cannot be empty and should contains only letters</string>
-    <string name="error_wrong_phone">Error: Phone number invalid</string>
+    <string name="error_wrong_phone">Error: Phone number invalid. Ex. +41791234567</string>
     <string name="error_wrong_email">Error: Email number invalid</string>
     <string name="error_missing_role">Please select a role in order to continue</string>
     <string name="error_wrong_code">The code entered is wrong, what do you want to do?</string>
@@ -29,6 +29,6 @@
     <string name="code_validation">Enter the received code</string>
     <string name="phone_code_field_placeholder">Enter code here</string>
 
-    <string name="team_code_verification">Verification of the team code...</string>
-    <string name="phone_code_request">Send a phone code request...</string>
+    <string name="team_code_verification">Verification of the team code…</string>
+    <string name="phone_code_request">Send a phone code request…</string>
 </resources>

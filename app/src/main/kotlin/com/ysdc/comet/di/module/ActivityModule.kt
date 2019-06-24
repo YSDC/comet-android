@@ -21,9 +21,10 @@ class ActivityModule {
     @ActivityScope
     fun provideAuthenticationPresenter(
         errorHandler: ErrorHandler,
-        phoneAuthenticationManager: PhoneAuthenticationManager
+        phoneAuthenticationManager: PhoneAuthenticationManager,
+        preferences: MyPreferences
     ): AuthenticationMvpPresenter<AuthenticationMvpView> {
-        return AuthenticationPresenter(errorHandler, phoneAuthenticationManager)
+        return AuthenticationPresenter(errorHandler, phoneAuthenticationManager, preferences)
     }
 
     @Provides

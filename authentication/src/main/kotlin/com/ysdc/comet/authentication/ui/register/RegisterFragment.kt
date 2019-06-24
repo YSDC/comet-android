@@ -59,9 +59,26 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
 
         validate_btn.setOnClickListener {
             if (areFieldsValid()) {
+                storeFields()
                 presenter.startAuthentication()
             }
         }
+
+        fillFields()
+    }
+
+    private fun fillFields(){
+        register_firstName_content.setText(presenter.getFirstName())
+        register_lastName_content.setText(presenter.getLastName())
+        register_phone_content.setText(presenter.getPhone())
+        register_email_content.setText(presenter.getEmail())
+    }
+
+    private fun storeFields(){
+        presenter.setFirstName(register_firstName_content.text.toString())
+        presenter.setLastName(register_lastName_content.text.toString())
+        presenter.setPhone(register_phone_content.text.toString())
+        presenter.setEmail(register_email_content.text.toString())
     }
 
     private fun areFieldsValid(): Boolean {
@@ -73,11 +90,11 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
         } else {
             register_firstName_layout.error = null
         }
-        if (!presenter.isLastNameValid(register_lastname_content.text.toString())) {
-            register_lastname_layout.error = getString(R.string.error_wrong_lastname)
+        if (!presenter.isLastNameValid(register_lastName_content.text.toString())) {
+            register_lastName_layout.error = getString(R.string.error_wrong_lastname)
             hasErrors = true
         } else {
-            register_lastname_layout.error = null
+            register_lastName_layout.error = null
         }
         if (!presenter.isPhoneValid(register_phone_content.text.toString())) {
             register_phone_layout.error = getString(R.string.error_wrong_phone)
@@ -98,7 +115,7 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
             register_email_layout.error = null
         }
 
-        return hasErrors
+        return !hasErrors
     }
 
     private fun showMissingRole() {

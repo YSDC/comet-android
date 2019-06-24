@@ -45,7 +45,7 @@ class TeamPresenter<V : TeamMvpView>(
                         })
             )
         } else {
-            mvpView?.onError(ValidationException(mvpView?.provideResources()?.getString(R.string.error_authentication_team_format)))
+            mvpView?.displayError(R.string.error_authentication_team_format)
         }
     }
 }

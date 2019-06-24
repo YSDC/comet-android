@@ -7,7 +7,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import com.labters.lottiealertdialoglibrary.ClickListener
@@ -67,9 +66,7 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     }
 
     override fun showMessage(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-
-        alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_ERROR)
+        val builder = LottieAlertDialog.Builder(this, DialogTypes.TYPE_ERROR)
             .setTitle(getString(R.string.error))
             .setDescription(message)
             .setPositiveText(getString(R.string.action_ok))
@@ -78,8 +75,12 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
                     dialog.dismiss()
                 }
             })
-            .build()
-        alertDialog!!.show()
+        if (alertDialog != null) {
+            alertDialog!!.changeDialog(builder)
+        } else {
+            alertDialog = builder.build()
+            alertDialog!!.show()
+        }
     }
 
     override fun showMessage(@StringRes resId: Int) {
@@ -133,7 +134,7 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         }
     }
 
-    override fun displayLoading(messageId : Int){
+    override fun displayLoading(messageId: Int) {
         hideAlert()
         alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_LOADING)
             .setTitle(getString(R.string.action_loading))
@@ -144,7 +145,7 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
     }
 
     override fun hideAlert() {
-        if(alertDialog != null){
+        if (alertDialog != null) {
             alertDialog!!.dismiss()
             alertDialog = null
         }

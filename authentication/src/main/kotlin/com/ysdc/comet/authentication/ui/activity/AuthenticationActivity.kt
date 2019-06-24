@@ -109,6 +109,12 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
         authenticationContainer.adapter = adapter
         authenticationContainer.offscreenPageLimit = adapter.count
         authenticationContainer.setPagingEnabled(false)
+
+        if(presenter.hasTeamCode()){
+            authenticationContainer.currentItem = 1
+        }else{
+            authenticationContainer.currentItem = 0
+        }
     }
 
     companion object {

@@ -8,8 +8,10 @@ import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_FIRSTNAME
 import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_LASTNAME
 import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_MAIL
 import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_PHONE
+import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_ROLE
 import com.ysdc.comet.common.ui.base.BasePresenter
 import com.ysdc.comet.common.utils.AppConstants
+import com.ysdc.comet.common.utils.FormatterUtils
 import com.ysdc.comet.common.utils.ValidationUtils
 import com.ysdc.comet.model.UserRole
 
@@ -17,10 +19,9 @@ class RegisterPresenter<V : RegisterMvpView>(
     errorHandler: ErrorHandler,
     private val preferences: MyPreferences,
     private val validationUtils: ValidationUtils,
-    private val phoneAuthenticationManager: PhoneAuthenticationManager
+    private val phoneAuthenticationManager: PhoneAuthenticationManager,
+    private val formatterUtils: FormatterUtils
 ) : BasePresenter<V>(errorHandler), RegisterMvpPresenter<V> {
-
-    private var roleSelected: UserRole = UserRole.UNDEFINED
 
     override fun onAttach(mvpView: V) {
         super.onAttach(mvpView)
@@ -52,7 +53,7 @@ class RegisterPresenter<V : RegisterMvpView>(
     }
 
     override fun setPhone(value : String) {
-        return preferences.setString(USER_PHONE, value)
+        return preferences.setString(USER_PHONE, formatterUtils.formatPhoneNumber(value))
     }
 
     override fun setEmail(value : String) {
@@ -86,15 +87,16 @@ class RegisterPresenter<V : RegisterMvpView>(
     }
 
     override fun getIndexRoleSelected(): Int {
-        return roleSelected.ordinal
+        return preferences.getAsInt(USER_ROLE, UserRole.UNDEFINED.ordinal)
     }
 
     override fun getRoleSelected(): UserRole {
-        return roleSelected
+        return UserRole.values()[preferences.getAsInt(USER_ROLE, UserRole.UNDEFINED.ordinal)]
+
     }
 
     override fun setRoleSelected(index: Int) {
-        roleSelected = UserRole.values()[index]
+        preferences.setInt(USER_ROLE, index)
     }
 
     override fun startAuthentication(){

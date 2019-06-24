@@ -78,14 +78,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/register_lastname_layout"
+                    android:id="@+id/register_lastName_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:errorEnabled="true"
                     android:layout_marginTop="@dimen/default_margin">
 
                 <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/register_lastname_content"
+                        android:id="@+id/register_lastName_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:focusable="true"

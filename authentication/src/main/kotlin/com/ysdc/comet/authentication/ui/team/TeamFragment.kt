@@ -46,10 +46,12 @@ class TeamFragment : BaseFragment(), TeamMvpView {
     }
     override fun setUp(view: View) {
         validate_btn.setOnClickListener {
+            hideKeyboard()
             presenter.validateTeamCode(team_field.text.toString())
         }
         team_field.setOnEditorActionListener { v, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
+                hideKeyboard()
                 presenter.validateTeamCode(v.text.toString())
                 true
             } else{

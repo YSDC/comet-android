@@ -12,6 +12,7 @@ object PrefsConstants {
     const val USER_MAIL = "USER_MAIL"
     const val USER_FIRSTNAME = "USER_FIRSTNAME"
     const val USER_LASTNAME = "USER_LASTNAME"
+    const val USER_ROLE = "USER_ROLE"
 
     //Authentication
     const val AUTHENTICATION_TOKEN = "AUTHENTICATION_TOKEN"

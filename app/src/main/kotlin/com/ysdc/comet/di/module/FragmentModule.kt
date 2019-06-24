@@ -13,6 +13,7 @@ import com.ysdc.comet.authentication.ui.team.TeamPresenter
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.di.annotation.FragmentScope
+import com.ysdc.comet.common.utils.FormatterUtils
 import com.ysdc.comet.common.utils.ValidationUtils
 import com.ysdc.comet.data.DataManager
 import com.ysdc.comet.ui.event.EventMvpPresenter
@@ -45,9 +46,10 @@ class FragmentModule {
         errorHandler: ErrorHandler,
         preferences: MyPreferences,
         validationUtils: ValidationUtils,
-        phoneAuthenticationManager: PhoneAuthenticationManager
+        phoneAuthenticationManager: PhoneAuthenticationManager,
+        formatterUtils: FormatterUtils
     ): RegisterMvpPresenter<RegisterMvpView> {
-        return RegisterPresenter(errorHandler, preferences, validationUtils, phoneAuthenticationManager)
+        return RegisterPresenter(errorHandler, preferences, validationUtils, phoneAuthenticationManager, formatterUtils)
     }
 
     @Provides

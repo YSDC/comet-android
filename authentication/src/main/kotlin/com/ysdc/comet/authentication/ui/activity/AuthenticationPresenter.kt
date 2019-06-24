@@ -5,7 +5,10 @@ import com.ysdc.comet.authentication.R
 import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.authentication.model.PhoneAuthenticationStatus.*
 import com.ysdc.comet.common.data.ErrorHandler
+import com.ysdc.comet.common.data.prefs.MyPreferences
+import com.ysdc.comet.common.data.prefs.PrefsConstants.TEAM_CODE
 import com.ysdc.comet.common.ui.base.BasePresenter
+import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -15,12 +18,17 @@ import io.reactivex.schedulers.Schedulers
 
 class AuthenticationPresenter<V : AuthenticationMvpView>(
     errorHandler: ErrorHandler,
-    private val phoneAuthenticationManager: PhoneAuthenticationManager
+    private val phoneAuthenticationManager: PhoneAuthenticationManager,
+    private val preferences: MyPreferences
 ) : BasePresenter<V>(errorHandler), AuthenticationMvpPresenter<V> {
 
     override fun initAuthenticationManager(activity: Activity) {
         phoneAuthenticationManager.setActivity(activity)
         subscribeAuthenticationStatus()
+    }
+
+    override fun hasTeamCode(): Boolean {
+        return preferences.getAsString(TEAM_CODE, EMPTY_STRING).isNotEmpty()
     }
 
     private fun subscribeAuthenticationStatus() {
