@@ -15,11 +15,7 @@ class SharedApplicationModule {
 
     @Provides
     @Singleton
-    fun provideMyPreferences(
-        @ApplicationContext context: Context,
-        crashlyticsUtils: CrashlyticsUtils,
-        generalConfig: GeneralConfig
-    ): MyPreferences {
+    fun provideMyPreferences(@ApplicationContext context: Context, crashlyticsUtils: CrashlyticsUtils, generalConfig: GeneralConfig): MyPreferences {
         return MyPreferences(context, crashlyticsUtils, generalConfig.getPreferencesFileName())
     }
 

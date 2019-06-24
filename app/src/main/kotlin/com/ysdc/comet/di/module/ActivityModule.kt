@@ -1,39 +1,33 @@
 package com.ysdc.comet.di.module
 
+import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
+import com.ysdc.comet.authentication.ui.activity.AuthenticationMvpPresenter
+import com.ysdc.comet.authentication.ui.activity.AuthenticationMvpView
+import com.ysdc.comet.authentication.ui.activity.AuthenticationPresenter
+import com.ysdc.comet.common.data.ErrorHandler
+import com.ysdc.comet.common.di.annotation.ActivityScope
+import com.ysdc.comet.ui.splashscreen.SplashMvpPresenter
+import com.ysdc.comet.ui.splashscreen.SplashMvpView
+import com.ysdc.comet.ui.splashscreen.SplashPresenter
 import dagger.Module
+import dagger.Provides
 
 
 @Module
 class ActivityModule {
-/*
 
     @Provides
     @ActivityScope
-    fun provideMainPresenter(errorHandler: ErrorHandler, propertyFinderPreferences: PropertyFinderPreferences): MainMvpPresenter<MainMvpView> {
-        return MainPresenter(errorHandler, propertyFinderPreferences)
-    }
-
-    @Provides
-    @ActivityScope
-    fun provideSplashPresenter(
+    fun provideAuthenticationPresenter(
         errorHandler: ErrorHandler,
-        propertyFinderPreferences: PropertyFinderPreferences,
-        configurationRepository: ConfigurationRepository,
-        searchRepository: SearchRepository
-    ): SplashMvpPresenter<SplashMvpView> {
-        return SplashPresenter(errorHandler, propertyFinderPreferences, configurationRepository, searchRepository)
+        phoneAuthenticationManager: PhoneAuthenticationManager
+    ): AuthenticationMvpPresenter<AuthenticationMvpView> {
+        return AuthenticationPresenter(errorHandler, phoneAuthenticationManager)
     }
 
     @Provides
     @ActivityScope
-    fun provideLoginPresenter(errorHandler: ErrorHandler, userRepository: UserRepository): LoginMvpPresenter<LoginMvpView> {
-        return LoginPresenter(errorHandler, userRepository)
+    fun provideSplashPresenter(errorHandler: ErrorHandler): SplashMvpPresenter<SplashMvpView> {
+        return SplashPresenter(errorHandler)
     }
-
-    @Provides
-    @ActivityScope
-    fun provideResetPresenter(errorHandler: ErrorHandler, userRepository: UserRepository): ResetMvpPresenter<ResetMvpView> {
-        return ResetPresenter(errorHandler, userRepository)
-    }
- */
 }

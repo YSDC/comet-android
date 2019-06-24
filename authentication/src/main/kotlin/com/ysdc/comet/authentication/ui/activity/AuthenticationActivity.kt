@@ -2,6 +2,9 @@ package com.ysdc.comet.authentication.ui.activity
 
 import android.os.Bundle
 import com.github.ajalt.timberkt.Timber
+import com.labters.lottiealertdialoglibrary.ClickListener
+import com.labters.lottiealertdialoglibrary.DialogTypes
+import com.labters.lottiealertdialoglibrary.LottieAlertDialog
 import com.ysdc.comet.authentication.R
 import com.ysdc.comet.authentication.ValidateFragment
 import com.ysdc.comet.authentication.ui.register.RegisterFragment
@@ -21,6 +24,8 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
     private lateinit var adapter: FragmentAdapter
     @Inject
     internal lateinit var presenter: AuthenticationMvpPresenter<AuthenticationMvpView>
+
+    private var alertDialog: LottieAlertDialog? = null
 
     private val teamFragment = TeamFragment.newInstance()
     private val registerFragment = RegisterFragment.newInstance()
@@ -47,16 +52,40 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
     }
 
     override fun verificationSucceed() {
-        authenticationContainer.currentItem = 2
+        Timber.d { "verificationSucceed" }
     }
 
     override fun codeSent() {
-        authenticationContainer.currentItem = 1
+        authenticationContainer.currentItem = 2
     }
 
     override fun authenticationDone() {
         Timber.d { "authenticated" }
         //TODO move to home activity
+    }
+
+    fun onTeamValidated(){
+        authenticationContainer.currentItem = 1
+    }
+
+    override fun onVerificationCodeError() {
+        alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_ERROR)
+            .setTitle("Error")
+            .setDescription(getString(R.string.error_wrong_code))
+            .setPositiveText(getString(R.string.action_check_phone))
+            .setPositiveListener(object : ClickListener {
+                override fun onClick(dialog: LottieAlertDialog) {
+                    authenticationContainer.currentItem = 1
+                }
+            })
+            .setNegativeText(getString(R.string.action_resend))
+            .setNegativeListener(object : ClickListener{
+                override fun onClick(dialog: LottieAlertDialog) {
+                    registerFragment.presenter.startAuthentication()
+                }
+            })
+            .build()
+        alertDialog!!.show()
     }
 
     override fun onBackPressed() {

@@ -46,7 +46,7 @@ class AuthenticationPresenter<V : AuthenticationMvpView>(
                             mvpView?.onError(R.string.error_authentication_quota)
                         }
                         STATE_VERIFY_FAILED_CODE -> {
-                            mvpView?.onError(R.string.error_authentication_code)
+                            mvpView?.onVerificationCodeError()
                         }
                         STATE_VERIFY_SUCCESS -> {
                             mvpView?.verificationSucceed()

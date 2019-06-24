@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import com.labters.lottiealertdialoglibrary.ClickListener
+import com.labters.lottiealertdialoglibrary.DialogTypes
+import com.labters.lottiealertdialoglibrary.LottieAlertDialog
 import com.ysdc.comet.authentication.R
 import com.ysdc.comet.common.ui.base.BaseFragment
 import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
@@ -18,6 +21,8 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
     override val customTitle: String = EMPTY_STRING
     override val screenName: String = "todo"
     override val isActionBarVisible: Boolean = false
+
+    private var alertDialog: LottieAlertDialog? = null
 
     @Inject
     lateinit var presenter: RegisterMvpPresenter<RegisterMvpView>
@@ -36,6 +41,7 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
 
     override fun onDestroyView() {
         presenter.onDetach()
+        alertDialog?.let { it.dismiss() }
         super.onDestroyView()
     }
 
@@ -54,49 +60,63 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
         }
 
         validate_btn.setOnClickListener {
-            if(arefieldsValid()){
+            if (areFieldsValid()) {
                 presenter.startAuthentication()
-                //tODO progress view?
             }
         }
     }
 
-    private fun arefieldsValid() : Boolean{
+    private fun areFieldsValid(): Boolean {
         var hasErrors = false
 
-        if(!presenter.isFirstNameValid(register_firstName_content.text.toString())){
-            register_firstName_layout.error = getString(R.string.error_firstname)
+        if (!presenter.isFirstNameValid(register_firstName_content.text.toString())) {
+            register_firstName_layout.error = getString(R.string.error_wrong_firstname)
             hasErrors = true
-        }else{
+        } else {
             register_firstName_layout.error = null
         }
-        if(!presenter.isLastNameValid(register_lastname_content.text.toString())){
-            register_lastname_layout.error = getString(R.string.error_lastname)
+        if (!presenter.isLastNameValid(register_lastname_content.text.toString())) {
+            register_lastname_layout.error = getString(R.string.error_wrong_lastname)
             hasErrors = true
-        }else{
+        } else {
             register_lastname_layout.error = null
         }
-        if(!presenter.isPhoneValid(register_phone_content.text.toString())){
-            register_phone_layout.error = getString(R.string.error_phone)
+        if (!presenter.isPhoneValid(register_phone_content.text.toString())) {
+            register_phone_layout.error = getString(R.string.error_wrong_phone)
             hasErrors = true
-        }else{
+        } else {
             register_phone_layout.error = null
         }
-        if(!presenter.isEmailValid(register_email_content.text.toString())){
-            register_email_layout.error = getString(R.string.error_email)
+        if (!presenter.isEmailValid(register_email_content.text.toString())) {
+            register_email_layout.error = getString(R.string.error_wrong_email)
             hasErrors = true
-        }else{
+        } else {
             register_email_layout.error = null
         }
-        if(!presenter.isRoleValid(presenter.getRoleSelected())){
-            //TODO: add error dialog
+        if (!presenter.isRoleValid(presenter.getRoleSelected())) {
+            showMissingRole()
             hasErrors = true
-        }else{
+        } else {
             register_email_layout.error = null
         }
 
         return hasErrors
     }
+
+    private fun showMissingRole() {
+        alertDialog = LottieAlertDialog.Builder(baseActivity, DialogTypes.TYPE_ERROR)
+            .setTitle("Error")
+            .setDescription(getString(R.string.error_missing_role))
+            .setPositiveText(getString(R.string.action_ok))
+            .setPositiveListener(object : ClickListener {
+                override fun onClick(dialog: LottieAlertDialog) {
+                    dialog.dismiss()
+                }
+            })
+            .build()
+        alertDialog!!.show()
+    }
+
     companion object {
         fun newInstance(): RegisterFragment {
             return RegisterFragment()

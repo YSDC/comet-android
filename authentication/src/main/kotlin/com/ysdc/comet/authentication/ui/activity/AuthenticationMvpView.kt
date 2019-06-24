@@ -9,5 +9,6 @@ interface AuthenticationMvpView : MvpView {
     fun verificationSucceed()
     fun codeSent()
     fun authenticationDone()
+    fun onVerificationCodeError()
 
 }

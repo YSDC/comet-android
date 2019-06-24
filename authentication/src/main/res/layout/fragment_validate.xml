@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent">
+    <android.support.constraint.Guideline
+            android:id="@+id/guide_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.10"
+            android:orientation="horizontal"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guide_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.50"
+            android:orientation="horizontal"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/startConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="32dp"
+            android:orientation="vertical"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/endConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="32dp"
+            android:orientation="vertical"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guide_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.80"
+            android:orientation="horizontal"/>
+
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/startConstraint"
+            app:layout_constraintEnd_toEndOf="@+id/endConstraint"
+            app:layout_constraintTop_toTopOf="@+id/guide_title"
+            android:gravity="center"
+            android:text="@string/code_validation"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/team_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/startConstraint"
+            app:layout_constraintEnd_toEndOf="@+id/endConstraint"
+            app:layout_constraintTop_toTopOf="@+id/guide_field"
+            android:hint="@string/phone_code_field_placeholder"/>
+
+    <Button
+            android:id="@+id/validate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/startConstraint"
+            app:layout_constraintEnd_toEndOf="@+id/endConstraint"
+            app:layout_constraintTop_toTopOf="@id/guide_button"
+            android:text="@string/action_finish"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

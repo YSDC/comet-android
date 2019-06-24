@@ -49,9 +49,13 @@ class PhoneAuthenticationManager {
         verificationInProgress = true
     }
 
-    fun verifyPhoneNumberWithCode(verificationId: String?, code: String) {
-        val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
-        signInWithPhoneAuthCredential(credential)
+    fun verifyPhoneNumberWithCode(code: String) {
+        if(storedVerificationId != null) {
+            val credential = PhoneAuthProvider.getCredential(storedVerificationId!!, code)
+            signInWithPhoneAuthCredential(credential)
+        }else{
+            authenticationStatus.onNext(PhoneAuthenticationStatus.STATE_VERIFY_FAILED)
+        }
     }
 
     fun getAuthenticationStatus() : Observable<PhoneAuthenticationStatus>{
@@ -127,7 +131,7 @@ class PhoneAuthenticationManager {
                 }
             }
     }
-    private fun resendVerificationCode(phoneNumber: String) {
+    fun resendVerificationCode(phoneNumber: String) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
             phoneNumber, // Phone number to verify
             AUTHENTICATION_TIMOUT, // Timeout duration

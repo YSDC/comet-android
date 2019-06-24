@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">authentication</string>
+
+    <string name="action_next">Next</string>
+    <string name="action_resend">Resend</string>
+    <string name="action_finish">Finish</string>
+    <string name="action_check_phone">Check phone number</string>
+
     <string name="error_authentication_phone">The phone number is invalid, please verify and try again</string>
     <string name="error_authentication_quota">You have reach the limit of attempt, please try again later</string>
     <string name="error_authentication_code">An error occurred, please verify your information and connection and try again later</string>
@@ -7,17 +13,21 @@
     <string name="error_authentication_sign">Unable to sign in</string>
     <string name="error_authentication_team_validation">The team code entered is invalid, please check and try again</string>
     <string name="error_authentication_team_format">Something is wrong with the team code entered</string>
+    <string name="error_wrong_firstname">Error: Cannot be empty and should contains only letters</string>
+    <string name="error_wrong_lastname">Error: Cannot be empty and should contains only letters</string>
+    <string name="error_wrong_phone">Error: Phone number invalid</string>
+    <string name="error_wrong_email">Error: Email number invalid</string>
+    <string name="error_missing_role">Please select a role in order to continue</string>
+    <string name="error_wrong_code">The code entered is wrong, what do you want to do?</string>
+
     <string name="team_welcome">Choisir l equipe</string>
     <string name="team_field_placeholder">Team code here</string>
-    <string name="action_next">Next</string>
     <string name="register_welcome">Add data about you</string>
     <string name="register_firstName_placeholder">Firstname</string>
     <string name="register_lastName_placeholder">LastName</string>
     <string name="register_phone_placeholder">Phone</string>
     <string name="register_email_placeholder">Email</string>
     <string name="register_role_placeholder">Role</string>
-    <string name="error_firstname">Error: Cannot be empty and should contains only letters</string>
-    <string name="error_lastname">Error: Cannot be empty and should contains only letters</string>
-    <string name="error_phone">Error: Phone number invalid</string>
-    <string name="error_email">Error: Email number invalid</string>
+    <string name="code_validation">Enter the received code</string>
+    <string name="phone_code_field_placeholder">Enter code here</string>
 </resources>

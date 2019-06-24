@@ -36,9 +36,11 @@
     <color name="pf_blue_light">#e8f4f6</color>
     <color name="pf_grey_light">#f7f5f5</color>
 
-
     <color name="buttonActive">#e8f6e9</color>
     <color name="buttonInactive">#f6e8e8</color>
     <color name="dark_grey">#403b45</color>
+
+    <color name="comet_black">#2C2C2B</color>
+    <color name="comet_yellow">#FFD628</color>
 
 </resources>

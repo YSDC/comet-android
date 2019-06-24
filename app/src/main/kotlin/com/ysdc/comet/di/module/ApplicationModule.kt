@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import com.ysdc.comet.application.AppConfig
 import com.ysdc.comet.application.MyApplication
+import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.di.annotation.ApplicationContext
 import com.ysdc.comet.common.navigation.NavigationManager
@@ -37,4 +38,12 @@ class ApplicationModule {
     fun provideNavigationManager(): NavigationManager {
         return NavigationManagerImpl()
     }
+
+    @Provides
+    @Singleton
+    fun providePhoneAuthenticationManager(): PhoneAuthenticationManager {
+        return PhoneAuthenticationManager()
+    }
+
+
 }

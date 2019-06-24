@@ -1,41 +1,23 @@
 package com.ysdc.comet.di.module
 
+import com.ysdc.comet.authentication.ValidateFragment
+import com.ysdc.comet.authentication.ui.register.RegisterFragment
+import com.ysdc.comet.authentication.ui.team.TeamFragment
+import com.ysdc.comet.common.di.annotation.FragmentScope
 import dagger.Module
+import dagger.android.ContributesAndroidInjector
 
 @Module
 abstract class FragmentBindings {
-/*
+    @FragmentScope
+    @ContributesAndroidInjector(modules = [FragmentModule::class])
+    abstract fun provideRegisterFragment(): RegisterFragment
 
     @FragmentScope
     @ContributesAndroidInjector(modules = [FragmentModule::class])
-    abstract fun provideAccountFragment(): AccountFragment
+    abstract fun provideTeamFragment(): TeamFragment
 
     @FragmentScope
     @ContributesAndroidInjector(modules = [FragmentModule::class])
-    abstract fun provideSaveFragment(): SaveFragment
-
-    @FragmentScope
-    @ContributesAndroidInjector(modules = [MapFragmentModule::class])
-    abstract fun provideMapFragment(): MapFragment
-
-    @FragmentScope
-    @ContributesAndroidInjector(modules = [SearchFragmentModule::class])
-    abstract fun provideSearchFragment(): SearchFragment
-
-    @FragmentScope
-    @ContributesAndroidInjector(modules = [SearchFragmentModule::class])
-    abstract fun provideSearchListFragment(): SearchListFragment
-
-    @FragmentScope
-    @ContributesAndroidInjector(modules = [SearchFragmentModule::class])
-    abstract fun provideCategoryFragment(): CategoryFragment
-
-    @FragmentScope
-    @ContributesAndroidInjector(modules = [SearchFragmentModule::class])
-    abstract fun provideLocationFragment(): LocationFragment
-
-    @FragmentScope
-    @ContributesAndroidInjector(modules = [SearchFragmentModule::class])
-    abstract fun provideFilterFragment(): FilterFragment
- */
+    abstract fun provideValidateFragment(): ValidateFragment
 }
