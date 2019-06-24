@@ -11,4 +11,5 @@ interface AuthenticationMvpPresenter<V : AuthenticationMvpView> : MvpPresenter<V
 
     fun initAuthenticationManager(activity: Activity)
     fun hasTeamCode() : Boolean
+    fun resendCode()
 }

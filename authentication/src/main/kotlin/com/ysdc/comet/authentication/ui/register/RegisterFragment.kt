@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.labters.lottiealertdialoglibrary.ClickListener
@@ -61,6 +62,15 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
             if (areFieldsValid()) {
                 storeFields()
                 presenter.startAuthentication()
+            }
+        }
+
+        register_email_content.setOnEditorActionListener { v, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                hideKeyboard()
+                true
+            } else{
+                false
             }
         }
 

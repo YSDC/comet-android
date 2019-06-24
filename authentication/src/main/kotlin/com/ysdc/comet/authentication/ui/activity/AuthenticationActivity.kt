@@ -59,6 +59,7 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
     }
 
     override fun codeSent() {
+        hideAlert()
         authenticationContainer.currentItem = 2
     }
 
@@ -84,7 +85,8 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
             .setNegativeText(getString(R.string.action_resend))
             .setNegativeListener(object : ClickListener{
                 override fun onClick(dialog: LottieAlertDialog) {
-                    registerFragment.presenter.startAuthentication()
+                    displayLoading(R.string.phone_code_request)
+                    presenter.resendCode()
                 }
             })
             .build()

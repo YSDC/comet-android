@@ -48,12 +48,16 @@
             android:text="@string/code_validation"/>
 
     <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/team_field"
+            android:id="@+id/phone_code_field"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
             app:layout_constraintEnd_toEndOf="@+id/endConstraint"
             app:layout_constraintTop_toTopOf="@+id/guide_field"
+            android:maxLength="6"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:inputType="number"
             android:hint="@string/phone_code_field_placeholder"/>
 
     <Button

@@ -16,8 +16,4 @@ class ValidatePresenter<V : ValidateMvpView>(
     override fun validateCode(code : String){
         phoneAuthenticationManager.verifyPhoneNumberWithCode(code)
     }
-
-    override fun resendCode(){
-        phoneAuthenticationManager.resendVerificationCode(preferences.getAsString(PrefsConstants.USER_PHONE, AppConstants.EMPTY_STRING))
-    }
 }

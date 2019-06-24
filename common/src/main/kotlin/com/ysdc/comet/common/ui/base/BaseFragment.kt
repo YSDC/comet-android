@@ -65,13 +65,7 @@ abstract class BaseFragment : Fragment(), MvpView {
     }
 
     override fun displayLoading(messageId : Int){
-        hideAlert()
-        baseActivity?.alertDialog = LottieAlertDialog.Builder(baseActivity, DialogTypes.TYPE_LOADING)
-            .setTitle(getString(R.string.action_loading))
-            .setDescription(getString(messageId))
-            .build()
-        baseActivity?.alertDialog!!.setCancelable(false)
-        baseActivity?.alertDialog!!.show()
+        baseActivity?.displayLoading(messageId)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

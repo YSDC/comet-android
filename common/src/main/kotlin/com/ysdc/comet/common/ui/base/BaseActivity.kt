@@ -128,20 +128,32 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
                         }
                     })
             }
-            alertDialog = builder.build()
-            alertDialog!!.setCancelable(cancelable)
-            alertDialog!!.show()
+
+            if (alertDialog != null) {
+                alertDialog!!.changeDialog(builder)
+                alertDialog!!.setCancelable(false)
+            } else {
+                alertDialog = builder.build()
+                alertDialog!!.setCancelable(false)
+                alertDialog!!.show()
+            }
         }
     }
 
     override fun displayLoading(messageId: Int) {
-        hideAlert()
-        alertDialog = LottieAlertDialog.Builder(this, DialogTypes.TYPE_LOADING)
+        val builder = LottieAlertDialog.Builder(this, DialogTypes.TYPE_LOADING)
             .setTitle(getString(R.string.action_loading))
             .setDescription(getString(messageId))
-            .build()
-        alertDialog!!.setCancelable(false)
-        alertDialog!!.show()
+
+        if (alertDialog != null) {
+            alertDialog!!.changeDialog(builder)
+            alertDialog!!.setCancelable(false)
+        } else {
+            alertDialog = builder.build()
+            alertDialog!!.setCancelable(false)
+            alertDialog!!.show()
+        }
+
     }
 
     override fun hideAlert() {

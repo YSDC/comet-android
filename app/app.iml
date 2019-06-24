@@ -33,18 +33,18 @@
           <option name="moduleName" value="app_cometProductionDebug" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
           <option name="pluginOptions">
             <array>
               <option value="plugin:org.jetbrains.kotlin.android:experimental=true" />
               <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
               <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
-              <option value="plugin:org.jetbrains.kotlin.android:configuration=rO0ABXoAAAQAAAAABQAIZmVhdHVyZXMAAAABAA92aWV3cyxwYXJjZWxpemUADGV4cGVyaW1lbnRhbAAAAAEABHRydWUAGmRlZmF1bHRDYWNoZUltcGxlbWVudGF0aW9uAAAAAQAHaGFzaE1hcAAHcGFja2FnZQAAAAEADmNvbS55c2RjLmNvbWV0AAd2YXJpYW50AAAABAmCbWFpbjsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS84OTM1MjZhNDRmY2NjZThlYjczNmI2YzExZmVjNzNkYS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNmJjZjFlMzZjN2FiZjMyZWQwZDlkMDU3Njc3NDBiMmUvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzA3NmRiMzlmMDVmNDMzNmNkYTA5YWZlYzExZWM0YTk1L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9hNzU0NTJjOWY1ZWI2ODgyYzAxYWMzMTBjYWFlMjMzMi9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvYjg3ZGQ5MjVlNDE3NjZhY2ZlNGJjM2UwYWIyMWRmNmUvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xL2JhNzY4NGZhZDg4ZjYyMDYyNmY5MTc5MmRmY2JiMjA3L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS85Njg5YTlkMmI2ZGM5MmViZTFlZjJhMmYwNjc0ZDk1Zi9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvYzE3YzM2ZTUyNzBmM2MwMTc5ZmMwNmMzZDdkZjcwYWEvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzMxYjdkZjNmZmYwMjRjMmY0OTEyNWMxNmI5YmM0OTZhL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS82NjI4NzY2NDgzNzg2ODA3ZWNjOGZkM2RiNjI1NTZhMnoAAAQAL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS84ODM5YzU2ZDUzM2Y5M2EwY2E0ODU1ZTk3MWRhMDM4Yy9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNTY2ZWFmMDZkNTQyNDNkMTA1M2M1NjZiYTQ5MjA0MDgvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzhlOWFlOWY1NmM0YjZhMjRlODVhMDQwMDZhNDliZjYzL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9kZWRiMmIwNWYwODU0NWFiYWVmZWE5Yjc0ZGNlNDI2YS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNzkyZTIwYjM3NjViZDEyZWZkMzZiMjBkZTA2Y2QyMGIvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzc2ZTFmYjFlNjZhOGFlYTcwM2M0MzgxMWI3MTg5N2JjL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9mNzgwZWM4ZDI0MjlmNTAwZjc5NjI0YzRkYzc2NGYwNS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNWU4YTE0Mzk0YWE3Y2Y0MzdhY2Q4YTRhZjY1MDA0M2UvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xL2JjNjIxNzJlNjBiZTJmYWUyYjRiMDhkMDU5ODFlNWEyL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS85NjI3NzVmMGExMGEwMjQwZTQ5MjMyZmI4ZDQ3ZDEwNi9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNzg4YmMyNDUzN2RkYWYzYTgyZTk4MTIzMDk4ZGMxYmMvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xL3oAAAL7YzgxZWFlMTcxZDA4MjFiOTNiM2MxZTdjZTk1MjI3OTMvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xL2JhOWQyMDFjZWRjZmNlZDBkNjA4YmRiZWY3ZThkYzRjL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9lMmMwZDYyYjUzZmY1MDM2ZDEwMjAxNzc1NmU0MTU4Zi9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNGNkYjc5MDIxN2M0MTY2MjA4MWI5NTU3YjQyYzdlMDkvcmVzOy9Vc2Vycy9kYXZpZC9Qcm9qZWN0cy9jb21ldC1hbmRyb2lkL2FwcC9zcmMvbWFpbi9yZXM7L1VzZXJzL2RhdmlkL1Byb2plY3RzL2NvbWV0LWFuZHJvaWQvYXBwL3NyYy9wcm9kdWN0aW9uL3JlczsvVXNlcnMvZGF2aWQvUHJvamVjdHMvY29tZXQtYW5kcm9pZC9hcHAvc3JjL2NvbWV0L3JlczsvVXNlcnMvZGF2aWQvUHJvamVjdHMvY29tZXQtYW5kcm9pZC9hcHAvc3JjL2NvbWV0UHJvZHVjdGlvbi9yZXMAO2RlYnVnOy9Vc2Vycy9kYXZpZC9Qcm9qZWN0cy9jb21ldC1hbmRyb2lkL2FwcC9zcmMvZGVidWcvcmVzAE9jb21ldFByb2R1Y3Rpb247L1VzZXJzL2RhdmlkL1Byb2plY3RzL2NvbWV0LWFuZHJvaWQvYXBwL3NyYy9jb21ldFByb2R1Y3Rpb24vcmVzAFljb21ldFByb2R1Y3Rpb25EZWJ1ZzsvVXNlcnMvZGF2aWQvUHJvamVjdHMvY29tZXQtYW5kcm9pZC9hcHAvc3JjL2NvbWV0UHJvZHVjdGlvbkRlYnVnL3Jlcw==" />
             </array>
           </option>
           <option name="pluginClasspaths">
             <array>
               <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.31/57bdeb88c9265052448a7a8422ed64ad92e9b262/kotlin-android-extensions-1.3.31.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.31/e6e76345392e660078aaf08a5f2886be4d1f6a2/kotlin-annotation-processing-gradle-1.3.31.jar" />
             </array>
           </option>
           <option name="errors">
@@ -227,8 +227,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/metadata_feature_manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/processed_res" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard-files" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard-rules" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shader_assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/signing_config" />
@@ -255,8 +253,9 @@
     <orderEntry type="library" name="Gradle: com.google.dagger:dagger:2.23.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.objenesis:objenesis:3.0.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: io.mockk:mockk:1.9.3@jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.customview:customview:1.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-analyzer:2.0-alpha-2@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-core:16.0.9@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
@@ -269,6 +268,7 @@
     <orderEntry type="library" name="Gradle: com.crashlytics.sdk.android:crashlytics:2.9.8@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.0-rc01@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.crashlytics.sdk.android:answers:1.4.6@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leaksentry:2.0-alpha-2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth:16.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid:18.0.0@aar" level="project" />
@@ -279,6 +279,7 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.3.31@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-haha:2.0-alpha-2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.afollestad.material-dialogs:core:3.0.0-rc4@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.viewpager:viewpager:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth:18.0.0@aar" level="project" />
@@ -292,8 +293,8 @@
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.1.0-beta01@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.moshi:moshi:1.8.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0-beta01@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: io.mockk:mockk-dsl:1.9.3@jar" level="project" />
     <orderEntry type="library" name="Gradle: io.grpc:grpc-okhttp:1.16.1@jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.mockk:mockk-dsl:1.9.3@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.auto.value:auto-value-annotations:1.6.3@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
@@ -324,6 +325,7 @@
     <orderEntry type="library" name="Gradle: com.google.android.material:material:1.1.0-alpha07@aar" level="project" />
     <orderEntry type="library" name="Gradle: ae.propertyfinder.fork:bottomnavbarlib:1.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp:okhttp:2.7.5@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-log:2.0-alpha-2@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.7@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar" level="project" />
@@ -366,10 +368,12 @@
     <orderEntry type="library" name="Gradle: com.airbnb.android:lottie:3.0.6@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat-resources:1.1.0-beta01@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.1.0-beta01@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android-core:2.0-alpha-2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common:18.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.activity:activity:1.0.0-beta01@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid-interop:16.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement:17.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android:2.0-alpha-2@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.mayuce:LottieAlertDialog:1.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:4.0.0-RC1@jar" level="project" />
@@ -378,26 +382,27 @@
     <orderEntry type="library" scope="TEST" name="Gradle: io.mockk:mockk-agent-jvm:1.9.3@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth-interop:18.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.akaita.java:rxjava2-debug:1.4.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-watcher:2.0-alpha-2@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-stats:16.0.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:logging-interceptor:4.0.0-RC1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-analytics:16.5.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0-beta02@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tagmanager-v4-impl:16.0.8@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.ajalt:timberkt:1.5.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31@jar" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.9@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-flags:17.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.robertlevonyan.view:CustomFloatingActionButton:2.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.1.0-beta01@aar" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.shimmer:shimmer:0.4.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.2.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-analytics-impl:16.0.8@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.preference:preference:1.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-test-junit:1.3.31@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.stetho:stetho-okhttp3:1.5.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.facebook.stetho:stetho-okhttp3:1.5.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.1.0-beta01@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-api:16.5.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.17@jar" level="project" />
@@ -406,18 +411,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: net.bytebuddy:byte-buddy-agent:1.9.10@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.6.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.3.31@jar" level="project" />
-    <orderEntry type="module" module-name="common" />
-    <orderEntry type="module" module-name="data" />
-    <orderEntry type="module" module-name="model" />
-    <orderEntry type="module" module-name="authentication" />
-    <orderEntry type="module" module-name="analytics" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-analyzer:2.0-alpha-2@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leaksentry:2.0-alpha-2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-haha:2.0-alpha-2@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-log:2.0-alpha-2@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android-core:2.0-alpha-2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-android:2.0-alpha-2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.squareup.leakcanary:leakcanary-watcher:2.0-alpha-2@jar" level="project" />
     <orderEntry type="module" module-name="common" />
     <orderEntry type="module" module-name="data" />
     <orderEntry type="module" module-name="authentication" />

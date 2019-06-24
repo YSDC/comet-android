@@ -34,18 +34,18 @@
           <option name="moduleName" value="model_debug" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
           <option name="pluginOptions">
             <array>
               <option value="plugin:org.jetbrains.kotlin.android:experimental=true" />
               <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
               <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
-              <option value="plugin:org.jetbrains.kotlin.android:configuration=rO0ABXoAAAQAAAAABQAIZmVhdHVyZXMAAAABAA92aWV3cyxwYXJjZWxpemUADGV4cGVyaW1lbnRhbAAAAAEABHRydWUAGmRlZmF1bHRDYWNoZUltcGxlbWVudGF0aW9uAAAAAQAHaGFzaE1hcAAHcGFja2FnZQAAAAEAFGNvbS55c2RjLmNvbWV0Lm1vZGVsAAd2YXJpYW50AAAAAgQDbWFpbjsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS8wNzZkYjM5ZjA1ZjQzMzZjZGEwOWFmZWMxMWVjNGE5NS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvYjg3ZGQ5MjVlNDE3NjZhY2ZlNGJjM2UwYWIyMWRmNmUvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xL2JhNzY4NGZhZDg4ZjYyMDYyNmY5MTc5MmRmY2JiMjA3L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9jMTdjMzZlNTI3MGYzYzAxNzlmYzA2YzNkN2RmNzBhYS9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvMzFiN2RmM2ZmZjAyNGMyZjQ5MTI1YzE2YjliYzQ5NmEvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzY2Mjg3NjY0ODM3ODY4MDdlY2M4ZmQzZGI2MjU1NmEyL3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS84ODM5YzU2ZDUzM2Y5M2EwY2E0ODU1ZTk3MWRhMDM4Yy9yZXM7L1VzZXJzL2RhdmlkLy5ncmFkbGUvY2FjaGVzL3RyYW5zZm9ybXMtMi9maWxlcy0yLjEvNTY2ZWFmMDZkNTQyNDNkMTA1M2M1NjZiYTQ5MjA0MDgvcmVzOy9Vc2Vycy9kYXZpZC8uZ3JhZGxlL2NhY2hlcy90cmFuc2Zvcm1zLTIvZmlsZXMtMi4xLzk2Mjc3NWYwYTEwYTAyNDBlNDkyMzJmYjhkNDdkMTA2L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS85Yjk2M2JiZTQzODFiZjEyZjE1M2MzYjJjYnfYYjEwZjY4L3JlczsvVXNlcnMvZGF2aWQvLmdyYWRsZS9jYWNoZXMvdHJhbnNmb3Jtcy0yL2ZpbGVzLTIuMS9jODFlYWUxNzFkMDgyMWI5M2IzYzFlN2NlOTUyMjc5My9yZXM7L1VzZXJzL2RhdmlkL1Byb2plY3RzL2NvbWV0LWFuZHJvaWQvbW9kZWwvc3JjL21haW4vcmVzAD1kZWJ1ZzsvVXNlcnMvZGF2aWQvUHJvamVjdHMvY29tZXQtYW5kcm9pZC9tb2RlbC9zcmMvZGVidWcvcmVz" />
             </array>
           </option>
           <option name="pluginClasspaths">
             <array>
               <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.31/57bdeb88c9265052448a7a8422ed64ad92e9b262/kotlin-android-extensions-1.3.31.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.3.31/e6e76345392e660078aaf08a5f2886be4d1f6a2/kotlin-annotation-processing-gradle-1.3.31.jar" />
             </array>
           </option>
           <option name="errors">

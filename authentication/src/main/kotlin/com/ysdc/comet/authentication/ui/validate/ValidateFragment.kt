@@ -1,12 +1,13 @@
 package com.ysdc.comet.authentication
 
-import com.ysdc.comet.common.ui.base.BaseFragment
-import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import android.os.Bundle
-import com.ysdc.comet.authentication.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import com.ysdc.comet.common.ui.base.BaseFragment
+import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
+import kotlinx.android.synthetic.main.fragment_validate.*
 import javax.inject.Inject
 
 class ValidateFragment : BaseFragment(), ValidateMvpView {
@@ -39,6 +40,20 @@ class ValidateFragment : BaseFragment(), ValidateMvpView {
 
     override fun setUp(view: View) {
 
+        validate_btn.setOnClickListener {
+            hideKeyboard()
+            presenter.validateCode(phone_code_field.text.toString())
+        }
+
+        phone_code_field.setOnEditorActionListener { v, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                hideKeyboard()
+                presenter.validateCode(phone_code_field.text.toString())
+                true
+            } else {
+                false
+            }
+        }
     }
 
 

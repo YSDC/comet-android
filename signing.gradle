@@ -8,10 +8,10 @@ android {
            keyPassword 'android'
        }
        release {
-           storeFile file('../android_release_keystore.jks')
-           storePassword 'kamel5566'
-           keyAlias 'propertyfinder'
-           keyPassword 'kamel5566'
+           storeFile file('../release.keystore')
+           storePassword 're5uyeek'
+           keyAlias 'comet'
+           keyPassword 're5uyeek'
        }
    }
 }

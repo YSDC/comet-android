@@ -128,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:focusable="true"
                         android:focusableInTouchMode="true"
-                        android:imeOptions="actionNext"
+                        android:imeOptions="actionDone"
                         android:inputType="textEmailAddress"
                         android:hint="@string/register_email_placeholder"
                         android:maxLength="25"/>
