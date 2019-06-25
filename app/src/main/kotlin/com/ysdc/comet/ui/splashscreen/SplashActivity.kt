@@ -1,12 +1,19 @@
 package com.ysdc.comet.ui.splashscreen
 
 import android.os.Bundle
+import android.view.View
+import android.view.View.VISIBLE
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import com.ysdc.comet.R
 import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.navigation.NavigationManager
 import com.ysdc.comet.common.ui.base.BaseActivity
+import com.ysdc.comet.model.Team
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activity_splash.*
+import kotlinx.android.synthetic.main.activity_splash.validate_btn
+import timber.log.Timber
 import javax.inject.Inject
 
 
@@ -16,7 +23,7 @@ import javax.inject.Inject
 
 class SplashActivity : BaseActivity(), SplashMvpView {
 
-    val compositeDisposable: CompositeDisposable = CompositeDisposable()
+    private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 
     @Inject
     internal lateinit var presenter: SplashMvpPresenter<SplashMvpView>
@@ -53,7 +60,28 @@ class SplashActivity : BaseActivity(), SplashMvpView {
         navigationManager.displayAuthenticationView(this)
     }
 
+    override fun showSelector(teams: List<String>) {
+        //TODO animation to show the welcome msg, the title, the spinner and the button
+
+        val teamsAdapter = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, teams)
+        team_selection_spinner.adapter = teamsAdapter
+        team_selection_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>, view: View, index: Int, l: Long) {
+                presenter.setTeamSelected(index)
+                validate_btn.visibility = VISIBLE
+            }
+
+            override fun onNothingSelected(adapterView: AdapterView<*>) {
+                Timber.d("Role: nothing selected")
+            }
+        }
+    }
+
     private fun initView() {
         app_version.text = getString(R.string.settings_version, appConfig.versionName(), appConfig.versionCode())
+
+        validate_btn.setOnClickListener {
+            presenter.goToNextStep()
+        }
     }
 }

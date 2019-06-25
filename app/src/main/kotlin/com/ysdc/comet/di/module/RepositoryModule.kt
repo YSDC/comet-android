@@ -1,6 +1,10 @@
 package com.ysdc.comet.di.module
 
+import com.ysdc.comet.network.DefaultNetworkServiceCreator
+import com.ysdc.comet.repository.TeamRepository
 import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
 
 
 /**
@@ -9,14 +13,14 @@ import dagger.Module
 
 @Module
 class RepositoryModule {
-/*
 
     @Provides
     @Singleton
-    fun provideCountryRepository(propertyFinderPreferences: PropertyFinderPreferences): CountryRepository {
-        return CountryRepositoryImpl(propertyFinderPreferences)
+    fun provideTeamRepository(defaultNetworkServiceCreator: DefaultNetworkServiceCreator): TeamRepository {
+        return TeamRepository(defaultNetworkServiceCreator)
     }
 
+/*
     @Provides
     @Singleton
     fun provideUserRepository(propertyFinderPreferences: PropertyFinderPreferences): UserRepository {

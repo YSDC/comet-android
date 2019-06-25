@@ -7,6 +7,7 @@ import com.ysdc.comet.authentication.ui.activity.AuthenticationPresenter
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.di.annotation.ActivityScope
+import com.ysdc.comet.repository.TeamRepository
 import com.ysdc.comet.ui.splashscreen.SplashMvpPresenter
 import com.ysdc.comet.ui.splashscreen.SplashMvpView
 import com.ysdc.comet.ui.splashscreen.SplashPresenter
@@ -31,8 +32,9 @@ class ActivityModule {
     @ActivityScope
     fun provideSplashPresenter(
         errorHandler: ErrorHandler, preferences: MyPreferences,
-        phoneAuthenticationManager: PhoneAuthenticationManager
+        phoneAuthenticationManager: PhoneAuthenticationManager,
+        teamRepository: TeamRepository
     ): SplashMvpPresenter<SplashMvpView> {
-        return SplashPresenter(errorHandler, preferences, phoneAuthenticationManager)
+        return SplashPresenter(errorHandler, preferences, phoneAuthenticationManager, teamRepository)
     }
 }

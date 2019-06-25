@@ -11,4 +11,5 @@ import io.reactivex.Observable
 
 interface SplashMvpPresenter<V : SplashMvpView> : MvpPresenter<V> {
     fun loadConfiguration()
+    fun setTeamSelected(index: Int)
 }

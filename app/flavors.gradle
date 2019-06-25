@@ -8,6 +8,7 @@ android {
             resConfigs "fr", "en"
             dimension "client"
             signingConfig signingConfigs.release
+            buildConfigField('Integer', 'CLUB_CODE', "331")
             buildConfigField('String', 'PRIMARY_LANGUAGE', "\"fr\"")
             buildConfigField('String', 'DEFAULT_LANGUAGE', "\"en\"")
             buildConfigField("String", "ANDROID_STORE_URL", "\"market://details?id=com.ysdc.comet\"")

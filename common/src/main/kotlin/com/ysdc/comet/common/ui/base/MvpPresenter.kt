@@ -25,4 +25,5 @@ interface MvpPresenter<V : MvpView> {
 
     fun onDetach()
 
+    fun goToNextStep()
 }
