@@ -1,5 +1,6 @@
 package com.ysdc.comet.authentication.ui.team
 
+import com.ysdc.comet.authentication.BuildConfig
 import com.ysdc.comet.authentication.R
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
@@ -59,7 +60,7 @@ class TeamPresenter<V : TeamMvpView>(
     }
 
     override fun loadTeams() : Single<List<String>> {
-        return teamRepository.getAvailableTeams()
+        return teamRepository.getAvailableTeams(BuildConfig.CLUB_CODE)
             .subscribeOn(Schedulers.io())
             .map { newTeams ->
                 this.teams = newTeams

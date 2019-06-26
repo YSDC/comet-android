@@ -69,6 +69,7 @@ dependencies {
     implementation kotlinLibs
     implementation supportLibs
     implementation rxJavaLibs
+    implementation googlePlayLibs
     implementation timber
     implementation firebaseStorageLibs
     testImplementation unitTestLibs

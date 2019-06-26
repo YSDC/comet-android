@@ -1,0 +1,10 @@
+android {
+    flavorDimensions "client"
+
+    productFlavors {
+        comet {
+            dimension "client"
+            buildConfigField('Integer', 'CLUB_CODE', "331")
+        }
+    }
+}

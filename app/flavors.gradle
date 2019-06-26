@@ -12,8 +12,6 @@ android {
             buildConfigField('String', 'PRIMARY_LANGUAGE', "\"fr\"")
             buildConfigField('String', 'DEFAULT_LANGUAGE', "\"en\"")
             buildConfigField("String", "ANDROID_STORE_URL", "\"market://details?id=com.ysdc.comet\"")
-            buildConfigField("String", "ANDROID_RECOMMENDED_APP_VERSION", "\"android_comet_recommended_version\"")
-            buildConfigField("String", "ANDROID_REQUIRED_APP_VERSION", "\"android_comet_required_version\"")
             ext {
                 production = "\"https://api-v2.swissunihockey.ch\""
                 staging = "\"https://api-staging.swissunihockey.ch\""

@@ -57,6 +57,18 @@ class TeamFragment : BaseFragment(), TeamMvpView {
 
     override fun setUp(view: View) {
 
+        compositeDisposable.add(
+            presenter.loadTeams()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe { displayLoading(R.string.loading_teams) }
+                .doOnSuccess { hideAlert() }
+                .subscribe({ teams ->
+                    val teamsAdapter = ArrayAdapter(activity, R.layout.support_simple_spinner_dropdown_item, teams)
+                    team_selection_spinner.adapter = teamsAdapter
+                }, { throwable -> onError(throwable) })
+        )
+
         validate_btn.setOnClickListener {
             hideKeyboard()
             presenter.validateTeamCode(team_field.text.toString())
@@ -70,18 +82,6 @@ class TeamFragment : BaseFragment(), TeamMvpView {
                 false
             }
         }
-
-        compositeDisposable.add(
-            presenter.loadTeams()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .doOnSubscribe { displayLoading(R.string.loading_teams) }
-                .doOnSuccess { hideAlert() }
-                .subscribe({ teams ->
-                    val teamsAdapter = ArrayAdapter(activity, R.layout.support_simple_spinner_dropdown_item, teams)
-                    team_selection_spinner.adapter = teamsAdapter
-                }, { throwable -> onError(throwable) })
-        )
 
         team_selection_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(adapterView: AdapterView<*>, view: View, index: Int, l: Long) {
