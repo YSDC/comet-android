@@ -23,7 +23,6 @@ android {
 
         production {
             dimension "server"
-
             buildConfigField "String", "API_KEY", "\"gf2YM+SjxGo=\""
             buildConfigField "String", "API_SECRET", "\"86Zsm3cINGiuRuN7L8llJA==\""
         }

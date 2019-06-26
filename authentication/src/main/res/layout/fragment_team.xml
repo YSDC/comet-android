@@ -14,7 +14,7 @@
             android:id="@+id/guide_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.50"
+            app:layout_constraintGuide_percent="0.30"
             android:orientation="horizontal"/>
     <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guide_button"
@@ -38,6 +38,7 @@
             android:orientation="vertical"/>
 
     <TextView
+            android:id="@+id/welcome_msg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
@@ -46,13 +47,35 @@
             android:gravity="center"
             android:text="@string/team_welcome"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/team_field"
+    <TextView
+            android:id="@+id/team_selection_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
             app:layout_constraintEnd_toEndOf="@+id/endConstraint"
-            app:layout_constraintTop_toTopOf="@+id/guide_field"
+            android:fontFamily="sans-serif"
+            android:text="@string/team_selection"
+            app:layout_constraintTop_toBottomOf="@+id/guide_field"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/team_selection_spinner"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:prompt="@string/register_role_placeholder"
+            app:layout_constraintStart_toStartOf="@+id/startConstraint"
+            app:layout_constraintEnd_toEndOf="@+id/endConstraint"
+            app:layout_constraintTop_toBottomOf="@+id/team_selection_title"
+            android:theme="@style/AppTheme.spinner"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/team_field"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="@+id/startConstraint"
+            app:layout_constraintEnd_toEndOf="@+id/endConstraint"
+            app:layout_constraintTop_toBottomOf="@+id/team_selection_spinner"
+            android:layout_marginTop="@dimen/default_margin"
             android:maxLength="6"
             android:maxLines="1"
             android:imeOptions="actionDone"

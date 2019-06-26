@@ -11,5 +11,4 @@ import com.ysdc.comet.model.Team
 interface SplashMvpView : MvpView {
     fun openHomeActivity()
     fun openAuthenticationActivity()
-    fun showSelector(teams: List<String>)
 }

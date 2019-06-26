@@ -3,7 +3,7 @@
 *.ap_
 
 #sensitive files
-app/signing.gradle
+signing.gradle
 #app/google-services.json
 
 # Files for the ART/Dalvik VM

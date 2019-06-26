@@ -70,7 +70,6 @@ dependencies {
     implementation supportLibs
     implementation networkLibs
     implementation rxJavaLibs
-    implementation stethoLibs
     implementation timber
     implementation daggerLibs
     implementation googlePlayLibs
@@ -83,6 +82,7 @@ dependencies {
     implementation project(':model')
     implementation project(':common')
     implementation project(':data')
+    compile project(path: ':repositories')
 }
 
 task sourcesJar(type: Jar) {

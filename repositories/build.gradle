@@ -49,7 +49,7 @@ android {
 publishing {
     publications {
         aar(MavenPublication) {
-            groupId = "com.ysdc.comet.android-common"
+            groupId = "com.ysdc.comet.android-network"
             artifactId = project.getName()
             version = android.defaultConfig.versionName
             // Tell maven to prepare the generated "*.aar" file for publishing
@@ -65,21 +65,19 @@ artifactoryPublish {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation analyticsLibs
     implementation kotlinLibs
     implementation supportLibs
-    implementation networkLibs
     implementation rxJavaLibs
-    implementation timber
-    implementation daggerLibs
     implementation googlePlayLibs
+    implementation timber
     testImplementation unitTestLibs
-    implementation uiLibs
 
-    kapt daggerProcessorLibs
     kapt annotationProcessorLibs
 
     implementation project(':model')
+    implementation project(':common')
+    implementation project(':network')
+    implementation project(':data')
 }
 
 task sourcesJar(type: Jar) {

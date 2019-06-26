@@ -16,4 +16,5 @@ class FirestoreDataManager(private val firebaseFirestore: FirebaseFirestore) : D
                 .addOnCanceledListener { emitter.onError(OperationCanceledException()) }
         }
     }
+
 }

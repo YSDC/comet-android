@@ -16,6 +16,7 @@ import com.ysdc.comet.common.di.annotation.FragmentScope
 import com.ysdc.comet.common.utils.FormatterUtils
 import com.ysdc.comet.common.utils.ValidationUtils
 import com.ysdc.comet.data.DataManager
+import com.ysdc.comet.repositories.TeamRepository
 import com.ysdc.comet.ui.event.EventMvpPresenter
 import com.ysdc.comet.ui.event.EventMvpView
 import com.ysdc.comet.ui.event.EventPresenter
@@ -36,8 +37,10 @@ class FragmentModule {
 
     @Provides
     @FragmentScope
-    fun provideTeamPresenter(errorHandler: ErrorHandler, preferences: MyPreferences, dataManager: DataManager, validationUtils: ValidationUtils): TeamMvpPresenter<TeamMvpView> {
-        return TeamPresenter(errorHandler, preferences, dataManager, validationUtils)
+    fun provideTeamPresenter(errorHandler: ErrorHandler, preferences: MyPreferences, dataManager: DataManager, validationUtils: ValidationUtils,
+                             teamRepository: com.ysdc.comet.repositories.TeamRepository
+    ): TeamMvpPresenter<TeamMvpView> {
+        return TeamPresenter(errorHandler, preferences, dataManager, validationUtils, teamRepository)
     }
 
     @Provides

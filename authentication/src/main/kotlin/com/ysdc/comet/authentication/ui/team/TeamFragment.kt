@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import com.github.ajalt.timberkt.Timber
 import com.labters.lottiealertdialoglibrary.ClickListener
 import com.labters.lottiealertdialoglibrary.DialogTypes
@@ -13,6 +15,9 @@ import com.ysdc.comet.authentication.R
 import com.ysdc.comet.authentication.ui.activity.AuthenticationActivity
 import com.ysdc.comet.common.ui.base.BaseFragment
 import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_team.*
 import javax.inject.Inject
 
@@ -26,6 +31,8 @@ class TeamFragment : BaseFragment(), TeamMvpView {
     @Inject
     lateinit var presenter: TeamMvpPresenter<TeamMvpView>
 
+    private lateinit var compositeDisposable: CompositeDisposable
+
     override fun shouldToolbarBeElevated(): Boolean {
         return true
     }
@@ -37,14 +44,19 @@ class TeamFragment : BaseFragment(), TeamMvpView {
         if (baseActivity != null) {
             baseActivity!!.supportActionBar?.title = customTitle
         }
+
+        compositeDisposable = CompositeDisposable()
         return view
     }
 
     override fun onDestroyView() {
         presenter.onDetach()
+        compositeDisposable.dispose()
         super.onDestroyView()
     }
+
     override fun setUp(view: View) {
+
         validate_btn.setOnClickListener {
             hideKeyboard()
             presenter.validateTeamCode(team_field.text.toString())
@@ -54,13 +66,36 @@ class TeamFragment : BaseFragment(), TeamMvpView {
                 hideKeyboard()
                 presenter.validateTeamCode(v.text.toString())
                 true
-            } else{
+            } else {
                 false
+            }
+        }
+
+        compositeDisposable.add(
+            presenter.loadTeams()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe { displayLoading(R.string.loading_teams) }
+                .doOnSuccess { hideAlert() }
+                .subscribe({ teams ->
+                    val teamsAdapter = ArrayAdapter(activity, R.layout.support_simple_spinner_dropdown_item, teams)
+                    team_selection_spinner.adapter = teamsAdapter
+                }, { throwable -> onError(throwable) })
+        )
+
+        team_selection_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>, view: View, index: Int, l: Long) {
+                presenter.setTeamSelected(index)
+                validate_btn.visibility = View.VISIBLE
+            }
+
+            override fun onNothingSelected(adapterView: AdapterView<*>) {
+                timber.log.Timber.d("Role: nothing selected")
             }
         }
     }
 
-    override fun displayError(messageId : Int){
+    override fun displayError(messageId: Int) {
         val builder = LottieAlertDialog.Builder(baseActivity, DialogTypes.TYPE_ERROR)
             .setTitle(getString(R.string.error))
             .setDescription(getString(messageId))
@@ -70,9 +105,9 @@ class TeamFragment : BaseFragment(), TeamMvpView {
                     dialog.dismiss()
                 }
             })
-        if( baseActivity?.alertDialog != null){
+        if (baseActivity?.alertDialog != null) {
             baseActivity?.alertDialog!!.changeDialog(builder)
-        }else{
+        } else {
             baseActivity?.alertDialog = builder.build()
             baseActivity?.alertDialog!!.show()
         }
