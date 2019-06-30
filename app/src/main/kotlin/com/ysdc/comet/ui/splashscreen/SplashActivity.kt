@@ -56,4 +56,8 @@ class SplashActivity : BaseActivity(), SplashMvpView {
     private fun initView() {
         app_version.text = getString(R.string.settings_version, appConfig.versionName(), appConfig.versionCode())
     }
+
+    override fun onVersionDialogClosed(){
+        presenter.versionDialogClosed()
+    }
 }

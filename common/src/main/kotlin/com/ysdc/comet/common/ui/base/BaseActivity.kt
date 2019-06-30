@@ -107,11 +107,11 @@ abstract class BaseActivity : AppCompatActivity(), MvpView, BaseFragment.Callbac
         startActivity(intent)
     }
 
-    override fun showVersionDialog(title: String, content: String, cancelable: Boolean) {
+    override fun showVersionDialog(title: Int, content: Int, cancelable: Boolean) {
         if (!isDestroyed) {
             val builder = LottieAlertDialog.Builder(this, DialogTypes.TYPE_WARNING)
-                .setTitle(title)
-                .setDescription(content)
+                .setTitle(getString(title))
+                .setDescription(getString(content))
                 .setPositiveText(getString(R.string.action_download))
                 .setPositiveListener(object : ClickListener {
                     override fun onClick(dialog: LottieAlertDialog) {

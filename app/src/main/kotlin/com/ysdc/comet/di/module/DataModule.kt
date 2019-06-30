@@ -5,8 +5,10 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import com.ysdc.comet.BuildConfig
 import com.ysdc.comet.common.application.GeneralConfig
+import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.data.DataManager
 import com.ysdc.comet.data.FirestoreDataManager
+import com.ysdc.comet.data.RemoteConfigManager
 import com.ysdc.comet.data.utils.DataConstants.REMOTE_CURRENT_SEASON
 import com.ysdc.comet.data.utils.DataConstants.REMOTE_MINIMUM_VERSION
 import com.ysdc.comet.data.utils.DataConstants.REMOTE_RECOMMENDED_VERSION
@@ -41,6 +43,13 @@ class DataModule {
         remoteConfig.setConfigSettingsAsync(configSettings)
         remoteConfig.setDefaults(getRemoteConfigDefault())
         return remoteConfig
+    }
+
+    @Singleton
+    @Provides
+    fun provideRemoteConfigManager(remoteConfig: FirebaseRemoteConfig, generalConfig: GeneralConfig, preferences: MyPreferences): RemoteConfigManager {
+        return RemoteConfigManager(remoteConfig, generalConfig, preferences)
+
     }
 
     private fun getRemoteConfigDefault(): Map<String, Any> {

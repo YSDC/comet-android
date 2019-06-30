@@ -6,4 +6,11 @@
     <string name="navbar_profile">Profile</string>
     <string name="navbar_settings">Settings</string>
     <string name="splash_welcome">Welcome, select your team</string>
+
+    <string name="recommended_update_title">New version available</string>
+    <string name="recommended_update_message">We have a new update with more features and less bugs, update your app!</string>
+
+    <string name="required_update_title">Update required</string>
+    <string name="required_update_message">You need to update your application in order to continue using it, please update it.</string>
+
 </resources>

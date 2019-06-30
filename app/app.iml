@@ -136,13 +136,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/production/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/production/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/production/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestProduction/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestProduction/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestProduction/assets" type="java-test-resource" />
@@ -150,6 +143,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestProduction/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestProduction/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestProduction/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testProduction/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -179,13 +179,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/kotlin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
@@ -193,6 +186,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/generated/not_namespaced_r_class_sources" />
       <excludeFolder url="file://$MODULE_DIR$/build/generated/source/r" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/apk_list" />
@@ -386,13 +386,13 @@
     <orderEntry type="library" scope="TEST" name="Gradle: net.bytebuddy:byte-buddy-agent:1.9.10@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.6.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.3.31@jar" level="project" />
-    <orderEntry type="module" module-name="model" />
-    <orderEntry type="module" module-name="analytics" />
-    <orderEntry type="module" module-name="repositories" />
-    <orderEntry type="module" module-name="authentication" />
-    <orderEntry type="module" module-name="data" />
     <orderEntry type="module" module-name="common" />
+    <orderEntry type="module" module-name="repositories" />
+    <orderEntry type="module" module-name="data" />
     <orderEntry type="module" module-name="network" />
+    <orderEntry type="module" module-name="authentication" />
+    <orderEntry type="module" module-name="analytics" />
+    <orderEntry type="module" module-name="model" />
   </component>
   <component name="sonarModuleSettings">
     <option name="localAnalysisScripName" value="&lt;PROJECT&gt;" />

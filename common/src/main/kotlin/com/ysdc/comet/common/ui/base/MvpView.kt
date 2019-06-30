@@ -24,7 +24,7 @@ interface MvpView {
 
     fun restartApp()
 
-    fun showVersionDialog(title: String, content: String, cancelable: Boolean)
+    fun showVersionDialog(title: Int, content: Int, cancelable: Boolean)
 
     fun onVersionDialogClosed()
 

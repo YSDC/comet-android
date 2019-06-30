@@ -3,6 +3,7 @@ package com.ysdc.comet.di.module
 import android.content.Context
 import com.google.android.gms.analytics.Tracker
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.ysdc.comet.analytics.AnalyticsManager
 import com.ysdc.comet.analytics.AnalyticsManagerImpl
 import com.ysdc.comet.analytics.dispatcher.FirebaseDispatcher
@@ -27,13 +28,9 @@ class AnalyticsModule {
         return GoogleAnalyticsDispatcher(tracker)
     }
 
-
     @Singleton
     @Provides
-    fun provideAnalyticsManager(
-        firebaseDispatcher: FirebaseDispatcher,
-        googleAnalyticsDispatcher: GoogleAnalyticsDispatcher
-    ): AnalyticsManager {
+    fun provideAnalyticsManager(firebaseDispatcher: FirebaseDispatcher, googleAnalyticsDispatcher: GoogleAnalyticsDispatcher): AnalyticsManager {
         return AnalyticsManagerImpl(
             firebaseDispatcher,
             googleAnalyticsDispatcher

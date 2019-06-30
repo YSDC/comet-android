@@ -9,4 +9,5 @@ import com.ysdc.comet.common.ui.base.MvpPresenter
 
 interface SplashMvpPresenter<V : SplashMvpView> : MvpPresenter<V> {
     fun loadConfiguration()
+    fun versionDialogClosed()
 }
