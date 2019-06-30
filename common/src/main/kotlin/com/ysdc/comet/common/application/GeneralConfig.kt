@@ -72,4 +72,9 @@ interface GeneralConfig {
      * @return the store url of the app
      */
     fun storeUrl(): String
+
+    /**
+     * @return the club id
+     */
+    fun clubId(): Int
 }

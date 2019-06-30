@@ -27,7 +27,7 @@ ext {
             playauth       : '16.0.1',
             playGcm        : '16.1.0',
             firebasecrash  : '16.2.1',
-            firebasemsg    : '18.0.0',
+            firebasemsg    : '19.0.0',
             firebaseAuth   : '18.0.0',
             firebasecfg    : '18.0.0',
             firebaseStore  : '19.0.0',

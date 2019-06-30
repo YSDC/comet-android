@@ -16,6 +16,9 @@ import java.util.*
  * @see GeneralConfig
  */
 class AppConfig(private val application: Application) : GeneralConfig {
+    override fun clubId(): Int {
+        return BuildConfig.CLUB_CODE
+    }
 
     override fun localeString(): String {
         val language = Locale.getDefault().language

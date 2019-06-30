@@ -1,20 +1,16 @@
 package com.ysdc.comet.authentication.ui.team
 
-import com.ysdc.comet.authentication.BuildConfig
 import com.ysdc.comet.authentication.R
+import com.ysdc.comet.common.application.GeneralConfig
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.data.prefs.PrefsConstants.TEAM_CODE
-import com.ysdc.comet.common.exception.ValidationException
 import com.ysdc.comet.common.ui.base.BasePresenter
-import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
 import com.ysdc.comet.common.utils.ValidationUtils
 import com.ysdc.comet.data.DataManager
 import com.ysdc.comet.model.Team
 import com.ysdc.comet.repositories.TeamRepository
 import io.reactivex.Single
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
 class TeamPresenter<V : TeamMvpView>(
@@ -22,11 +18,12 @@ class TeamPresenter<V : TeamMvpView>(
     private val preferences: MyPreferences,
     private val dataManager: DataManager,
     private val validationUtils: ValidationUtils,
-    private val teamRepository: TeamRepository
+    private val teamRepository: TeamRepository,
+    private val generalConfig: GeneralConfig
 ) : BasePresenter<V>(errorHandler), TeamMvpPresenter<V> {
 
-    private var teams : List<Team>? = null
-    private var teamSelected : Team? = null
+    private var teams: List<Team>? = null
+    private var teamSelected: Team? = null
 
     override fun getTeamCode(): String? {
         return preferences.getAsString(TEAM_CODE)
@@ -59,8 +56,8 @@ class TeamPresenter<V : TeamMvpView>(
         }
     }
 
-    override fun loadTeams() : Single<List<String>> {
-        return teamRepository.getAvailableTeams(BuildConfig.CLUB_CODE)
+    override fun loadTeams(): Single<List<String>> {
+        return teamRepository.getAvailableTeams(generalConfig.clubId())
             .subscribeOn(Schedulers.io())
             .map { newTeams ->
                 this.teams = newTeams

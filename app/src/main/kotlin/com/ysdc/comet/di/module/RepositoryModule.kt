@@ -1,5 +1,7 @@
 package com.ysdc.comet.di.module
 
+import com.ysdc.comet.common.application.GeneralConfig
+import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.data.RemoteConfigManager
 import com.ysdc.comet.network.DefaultNetworkServiceCreator
 import com.ysdc.comet.repositories.ConfigurationRepository
@@ -18,14 +20,14 @@ class RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideTeamRepository(defaultNetworkServiceCreator: DefaultNetworkServiceCreator): TeamRepository {
-        return TeamRepository(defaultNetworkServiceCreator)
+    fun provideTeamRepository(defaultNetworkServiceCreator: DefaultNetworkServiceCreator, generalConfig: GeneralConfig): TeamRepository {
+        return TeamRepository(defaultNetworkServiceCreator, generalConfig)
     }
 
     @Provides
     @Singleton
-    fun provideConfigurationRepository(remoteConfigManager: RemoteConfigManager): ConfigurationRepository {
-        return ConfigurationRepository(remoteConfigManager)
+    fun provideConfigurationRepository(remoteConfigManager: RemoteConfigManager, preferences: MyPreferences): ConfigurationRepository {
+        return ConfigurationRepository(remoteConfigManager, preferences)
     }
 
 /*
