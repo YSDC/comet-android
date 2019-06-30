@@ -34,7 +34,11 @@ class AuthenticationPresenter<V : AuthenticationMvpView>(
     }
 
     override fun resendCode(){
-        phoneAuthenticationManager.resendVerificationCode(preferences.getAsString(PrefsConstants.USER_PHONE, AppConstants.EMPTY_STRING))
+        phoneAuthenticationManager.resendVerificationCode(preferences.getAsString(PrefsConstants.USER_PHONE, EMPTY_STRING))
+    }
+
+    override fun updateUserDetails() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     private fun subscribeAuthenticationStatus() {

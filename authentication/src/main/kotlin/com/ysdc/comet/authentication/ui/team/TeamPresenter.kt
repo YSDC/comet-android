@@ -7,7 +7,6 @@ import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.data.prefs.PrefsConstants.TEAM_CODE
 import com.ysdc.comet.common.ui.base.BasePresenter
 import com.ysdc.comet.common.utils.ValidationUtils
-import com.ysdc.comet.data.DataManager
 import com.ysdc.comet.model.Team
 import com.ysdc.comet.repositories.TeamRepository
 import io.reactivex.Single
@@ -16,7 +15,6 @@ import io.reactivex.schedulers.Schedulers
 class TeamPresenter<V : TeamMvpView>(
     errorHandler: ErrorHandler,
     private val preferences: MyPreferences,
-    private val dataManager: DataManager,
     private val validationUtils: ValidationUtils,
     private val teamRepository: TeamRepository,
     private val generalConfig: GeneralConfig
@@ -36,7 +34,7 @@ class TeamPresenter<V : TeamMvpView>(
     override fun validateTeamCode(code: String) {
         if (isTeamCodeFormatValid(code)) {
             compositeDisposable.add(
-                dataManager.teamExist(code)
+                teamRepository.teamExist(code)
                     .doOnSubscribe { mvpView?.displayLoading(R.string.team_code_verification) }
                     .subscribe(
                         { isSuccess ->

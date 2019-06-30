@@ -29,8 +29,8 @@ class DataModule {
 
     @Singleton
     @Provides
-    fun provideDataManager(firebaseFirestore: FirebaseFirestore): DataManager {
-        return FirestoreDataManager(firebaseFirestore)
+    fun provideDataManager(firebaseFirestore: FirebaseFirestore, generalConfig: GeneralConfig): DataManager {
+        return FirestoreDataManager(firebaseFirestore, generalConfig)
     }
 
     @Singleton

@@ -110,7 +110,7 @@
                         android:focusable="true"
                         android:focusableInTouchMode="true"
                         android:imeOptions="actionNext"
-                        android:inputType="text"
+                        android:inputType="phone"
                         android:hint="@string/register_phone_placeholder"
                         android:maxLength="25"/>
             </com.google.android.material.textfield.TextInputLayout>

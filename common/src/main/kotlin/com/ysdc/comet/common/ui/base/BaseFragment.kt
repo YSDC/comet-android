@@ -163,7 +163,7 @@ abstract class BaseFragment : Fragment(), MvpView {
         baseActivity!!.restartApp()
     }
 
-    override fun showVersionDialog(title: String, content: String, cancelable: Boolean) {
+    override fun showVersionDialog(title: Int, content: Int, cancelable: Boolean) {
         //TODO
     }
 

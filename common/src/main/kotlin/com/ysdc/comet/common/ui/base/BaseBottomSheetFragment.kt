@@ -98,7 +98,7 @@ abstract class BaseBottomSheetFragment : BottomSheetDialogFragment(), MvpView {
         baseActivity!!.displaySystemView()
     }
 
-    override fun showVersionDialog(title: String, content: String, cancelable: Boolean) {
+    override fun showVersionDialog(title: Int, content: Int, cancelable: Boolean) {
         //TODO
     }
 
