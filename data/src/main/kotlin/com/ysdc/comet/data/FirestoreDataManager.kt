@@ -1,9 +1,10 @@
 package com.ysdc.comet.data
 
+import com.github.ajalt.timberkt.Timber
 import com.google.android.gms.tasks.Tasks
 import com.google.firebase.firestore.FirebaseFirestore
 import com.ysdc.comet.common.application.GeneralConfig
-import com.ysdc.comet.common.exception.OperationCanceledException
+import com.ysdc.comet.common.exception.ValidationException
 import com.ysdc.comet.data.utils.DataConstants.CLUB_ID
 import com.ysdc.comet.data.utils.DataConstants.CLUB_TOKEN
 import com.ysdc.comet.data.utils.DataConstants.COLLECTION_CLUBS
@@ -11,6 +12,7 @@ import com.ysdc.comet.data.utils.DataConstants.COLLECTION_USERS
 import com.ysdc.comet.data.utils.DataConstants.USER_PHONE
 import com.ysdc.comet.data.utils.DataConstants.USER_TEAM
 import com.ysdc.comet.model.User
+import io.reactivex.Completable
 import io.reactivex.Single
 
 class FirestoreDataManager(
@@ -19,17 +21,16 @@ class FirestoreDataManager(
 ) : DataManager {
 
     override fun isClubTokenValid(token: String): Single<Boolean> {
-        return Single.create { emitter ->
-            firebaseFirestore.collection(COLLECTION_CLUBS)
+        return Single.defer {
+            val query = firebaseFirestore.collection(COLLECTION_CLUBS)
                 .whereEqualTo(CLUB_ID, generalConfig.clubId())
-                .whereEqualTo(CLUB_TOKEN, token).get()
-                .addOnSuccessListener { result -> emitter.onSuccess(!result.isEmpty) }
-                .addOnFailureListener { exception -> emitter.onError(exception) }
-                .addOnCanceledListener { emitter.onError(OperationCanceledException()) }
+                .whereEqualTo(CLUB_TOKEN, token)
+            val result = Tasks.await(query.get())
+            Single.just(!result.isEmpty)
         }
     }
 
-    override fun addOrUpdateUser(user: User): Single<User> {
+    override fun addUser(user: User): Single<User> {
         return Single.defer {
             val query = firebaseFirestore.collection(COLLECTION_USERS)
                 .whereEqualTo(USER_TEAM, user.teamId)
@@ -37,17 +38,33 @@ class FirestoreDataManager(
 
             val result = Tasks.await(query.get())
             if (!result.isEmpty) {
+                Timber.d { "User exist" }
                 Single.just(result.documents.first().toObject(User::class.java))
             } else {
+                Timber.d { "New User" }
                 createUser(user)
             }
         }
     }
 
+    override fun updateUser(user: User): Completable {
+        return Completable.defer {
+            if (user.id == null) {
+                Completable.error(ValidationException(""))
+            }
+            val userRef = firebaseFirestore.collection(COLLECTION_USERS).document(user.id!!)
+            userRef.set(user)
+            Completable.complete()
+        }
+    }
+
     private fun createUser(user: User): Single<User> {
-        return Single.create { emitter ->
+        return Single.defer {
             val newUser = firebaseFirestore.collection(COLLECTION_USERS).document()
-            val newUserId = newUser.
+            val newUserId = newUser.id
+            Tasks.await(newUser.set(user))
+            user.id = newUserId
+            Single.just(user)
         }
     }
 

@@ -10,11 +10,6 @@ interface TeamMvpPresenter<V : TeamMvpView> : MvpPresenter<V> {
     fun isTeamCodeFormatValid(code: String): Boolean
 
     /**
-     * Return the team code if we have one
-     */
-    fun getTeamCode(): String?
-
-    /**
      * Verify that the team code exist, or raise an error in case it doesn't
      */
     fun validateTeamCode(code: String)

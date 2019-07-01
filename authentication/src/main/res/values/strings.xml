@@ -33,4 +33,5 @@
     <string name="phone_code_request">Send a phone code request…</string>
     <string name="team_selection">Select your team</string>
     <string name="loading_teams">Loading available teams...</string>
+    <string name="error_team_missing">Select a team in order to continue</string>
 </resources>

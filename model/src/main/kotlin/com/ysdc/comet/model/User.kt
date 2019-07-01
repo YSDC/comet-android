@@ -21,7 +21,7 @@ data class User(
     @field:Json(name = "jersey")
     var jersey: Int = 0,
     @field:Json(name = "role")
-    var role: UserRole = UserRole.OTHER,
+    var role: UserRole = UserRole.default(),
     @field:Json(name = "teamId")
     var teamId: Int = 0,
     @field:Json(name = "validated")

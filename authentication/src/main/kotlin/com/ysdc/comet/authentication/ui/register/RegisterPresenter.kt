@@ -4,60 +4,28 @@ import com.ysdc.comet.authentication.R
 import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
-import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_FIRSTNAME
-import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_LASTNAME
-import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_MAIL
-import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_PHONE
-import com.ysdc.comet.common.data.prefs.PrefsConstants.USER_ROLE
 import com.ysdc.comet.common.ui.base.BasePresenter
-import com.ysdc.comet.common.utils.AppConstants
 import com.ysdc.comet.common.utils.FormatterUtils
 import com.ysdc.comet.common.utils.ValidationUtils
+import com.ysdc.comet.model.User
 import com.ysdc.comet.model.UserRole
+import com.ysdc.comet.repositories.UserRepository
 
 class RegisterPresenter<V : RegisterMvpView>(
     errorHandler: ErrorHandler,
     private val preferences: MyPreferences,
     private val validationUtils: ValidationUtils,
     private val phoneAuthenticationManager: PhoneAuthenticationManager,
-    private val formatterUtils: FormatterUtils
+    private val formatterUtils: FormatterUtils,
+    private val userRepository: UserRepository
 ) : BasePresenter<V>(errorHandler), RegisterMvpPresenter<V> {
+
+    private lateinit var user: User
 
     override fun onAttach(mvpView: V) {
         super.onAttach(mvpView)
-        phoneAuthenticationManager.initialize(preferences.getAsString(USER_PHONE, AppConstants.EMPTY_STRING))
-    }
-
-    override fun getFirstName() : String {
-        return preferences.getAsString(USER_FIRSTNAME, AppConstants.EMPTY_STRING)
-    }
-
-    override fun getLastName() : String {
-        return preferences.getAsString(USER_LASTNAME, AppConstants.EMPTY_STRING)
-    }
-
-    override fun getPhone() : String {
-        return preferences.getAsString(USER_PHONE, AppConstants.EMPTY_STRING)
-    }
-
-    override fun getEmail() : String {
-        return preferences.getAsString(USER_MAIL, AppConstants.EMPTY_STRING)
-    }
-
-    override fun setFirstName(value : String) {
-        return preferences.setString(USER_FIRSTNAME, value)
-    }
-
-    override fun setLastName(value : String) {
-        return preferences.setString(USER_LASTNAME, value)
-    }
-
-    override fun setPhone(value : String) {
-        return preferences.setString(USER_PHONE, formatterUtils.formatPhoneNumber(value))
-    }
-
-    override fun setEmail(value : String) {
-        return preferences.setString(USER_MAIL, value)
+        user = userRepository.getUser()!!
+        phoneAuthenticationManager.initialize(user.phone)
     }
 
     override fun isFirstNameValid(value: String): Boolean {
@@ -76,7 +44,7 @@ class RegisterPresenter<V : RegisterMvpView>(
         return validationUtils.isEmailValid(value)
     }
 
-    override fun isRoleValid(role: UserRole) : Boolean {
+    override fun isRoleValid(role: UserRole): Boolean {
         return validationUtils.isRoleValid(role)
     }
 
@@ -86,21 +54,16 @@ class RegisterPresenter<V : RegisterMvpView>(
         } ?: arrayOf()
     }
 
-    override fun getIndexRoleSelected(): Int {
-        return preferences.getAsInt(USER_ROLE, UserRole.UNDEFINED.ordinal)
+    override fun getUser() : User {
+        return user
     }
 
-    override fun getRoleSelected(): UserRole {
-        return UserRole.values()[preferences.getAsInt(USER_ROLE, UserRole.UNDEFINED.ordinal)]
-
+    override fun updateUser() {
+        userRepository.updateUserLocally(user)
     }
 
-    override fun setRoleSelected(index: Int) {
-        preferences.setInt(USER_ROLE, index)
-    }
-
-    override fun startAuthentication(){
+    override fun startAuthentication() {
         mvpView?.displayLoading(R.string.phone_code_request)
-        phoneAuthenticationManager.startAuthentication(preferences.getAsString(USER_PHONE, AppConstants.EMPTY_STRING))
+        phoneAuthenticationManager.startAuthentication(user.phone)
     }
 }

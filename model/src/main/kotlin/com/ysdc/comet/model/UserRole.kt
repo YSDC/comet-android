@@ -18,7 +18,7 @@ enum class UserRole constructor(
         }
 
         fun default(): UserRole {
-            return UNDEFINED
+            return PLAYER
         }
     }
 }

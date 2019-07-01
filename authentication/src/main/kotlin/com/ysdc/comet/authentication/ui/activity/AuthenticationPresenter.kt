@@ -6,11 +6,8 @@ import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.authentication.model.PhoneAuthenticationStatus.*
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
-import com.ysdc.comet.common.data.prefs.PrefsConstants
-import com.ysdc.comet.common.data.prefs.PrefsConstants.TEAM_CODE
 import com.ysdc.comet.common.ui.base.BasePresenter
-import com.ysdc.comet.common.utils.AppConstants
-import com.ysdc.comet.common.utils.AppConstants.EMPTY_STRING
+import com.ysdc.comet.repositories.UserRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -21,7 +18,7 @@ import io.reactivex.schedulers.Schedulers
 class AuthenticationPresenter<V : AuthenticationMvpView>(
     errorHandler: ErrorHandler,
     private val phoneAuthenticationManager: PhoneAuthenticationManager,
-    private val preferences: MyPreferences
+    private val userRepository: UserRepository
 ) : BasePresenter<V>(errorHandler), AuthenticationMvpPresenter<V> {
 
     override fun initAuthenticationManager(activity: Activity) {
@@ -30,11 +27,11 @@ class AuthenticationPresenter<V : AuthenticationMvpView>(
     }
 
     override fun hasTeamCode(): Boolean {
-        return preferences.getAsString(TEAM_CODE, EMPTY_STRING).isNotEmpty()
+        return userRepository.getUser() != null && userRepository.getUser()!!.teamId != 0
     }
 
-    override fun resendCode(){
-        phoneAuthenticationManager.resendVerificationCode(preferences.getAsString(PrefsConstants.USER_PHONE, EMPTY_STRING))
+    override fun resendCode() {
+        phoneAuthenticationManager.resendVerificationCode(userRepository.getUser()!!.phone)
     }
 
     override fun updateUserDetails() {

@@ -25,7 +25,7 @@ class TeamRepository(
 
     }
 
-    fun teamExist(code : String) : Single<Boolean> {
+    fun validateTeamCode(teamId : Int, code : String) : Single<Boolean> {
         return dataManager.teamExist(code).subscribeOn(Schedulers.io())
     }
 }
