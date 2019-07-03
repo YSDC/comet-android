@@ -2,7 +2,7 @@ package com.ysdc.comet.data.utils
 
 object DataConstants {
     const val COLLECTION_CLUBS = "clubs"
-    const val CLUB_ID = "id"
+    const val CLUB_ID = "clubId"
     const val CLUB_TOKEN = "token"
 
     const val COLLECTION_USERS = "users"
@@ -13,6 +13,9 @@ object DataConstants {
     const val USER_JERSEY = "jersey"
     const val USER_ROLE = "role"
     const val USER_TEAM = "teamId"
+
+    const val COLLECTION_TEAMS = "teams"
+    const val TEAM_ID = "teamId"
 
     //firebase remote config
     const val REMOTE_RECOMMENDED_VERSION = "recommended_version"

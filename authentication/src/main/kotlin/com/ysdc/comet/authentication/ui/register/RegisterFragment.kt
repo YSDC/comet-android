@@ -87,6 +87,7 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
         presenter.getUser().lastName = register_lastName_content.text.toString()
         presenter.getUser().phone = register_phone_content.text.toString()
         presenter.getUser().email = register_email_content.text.toString()
+        presenter.updateUser()
     }
 
     private fun areFieldsValid(): Boolean {

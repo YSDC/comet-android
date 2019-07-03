@@ -65,7 +65,6 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
 
     override fun authenticationDone() {
         Timber.d { "authenticated" }
-        presenter.updateUserDetails()
         navigationManager.displayMainView(this)
     }
 

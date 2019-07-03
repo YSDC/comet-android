@@ -7,6 +7,7 @@ package com.ysdc.comet.common.data.prefs
 object PrefsConstants {
     //User Data
     const val PREFS_USER = "USER"
+    const val PREFS_TEAM = "TEAM"
 
     //Authentication
     const val AUTHENTICATION_TOKEN = "AUTHENTICATION_TOKEN"

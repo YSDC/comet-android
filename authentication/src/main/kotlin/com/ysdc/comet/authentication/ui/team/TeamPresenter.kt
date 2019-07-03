@@ -35,13 +35,14 @@ class TeamPresenter<V : TeamMvpView>(
             mvpView?.displayError(R.string.error_authentication_team_format)
         } else {
             compositeDisposable.add(
-                teamRepository.validateTeamCode(teamSelected!!.id, code)
+                teamRepository.validateActivationCode(code)
                     .doOnSubscribe { mvpView?.displayLoading(R.string.team_code_verification) }
                     .subscribe(
                         { isSuccess ->
                             if (isSuccess) {
                                 user.teamId = teamSelected!!.id
                                 userRepository.updateUserLocally(user)
+                                teamRepository.updateTeamLocally(teamSelected!!)
                                 mvpView?.teamValidated()
                             } else {
                                 mvpView?.displayError(R.string.error_authentication_team_validation)

@@ -13,14 +13,14 @@ data class ClubTeamsResponse(
     @JsonClass(generateAdapter = true)
     data class Entries(
         @Json(name = "text")
-        var teamName: String?,
+        var teamName: String,
         @Json(name = "set_in_context")
-        var msg: EntriesDetail?
+        var attributes: EntriesDetail
     ) {
         @JsonClass(generateAdapter = true)
         data class EntriesDetail(
             @Json(name = "team_id")
-            var teamId: Int?
+            var teamId: Int
         )
     }
 }

@@ -5,6 +5,10 @@ import com.ysdc.comet.network.response.ClubTeamsResponse
 
 class TeamMapper {
     fun mapTeams(clubTeamsResponse: ClubTeamsResponse) : List<Team>{
-        //TODO("not yet implemented")
+        val teams : MutableList<Team> = ArrayList()
+        clubTeamsResponse.entries?.forEach {entry ->
+            teams.add(Team(entry.attributes.teamId, entry.teamName))
+        }
+        return teams
     }
 }

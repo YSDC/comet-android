@@ -46,7 +46,7 @@ class SplashPresenter<V : SplashMvpView>(
                         }
                     }
                 }
-                .subscribe()
+                .subscribe({}, {throwable -> mvpView?.onError(throwable)})
         )
     }
 

@@ -15,7 +15,7 @@ class UserRepository(
 
     fun getUser(): User? {
         val userJson = preferences.getAsString(PREFS_USER)
-        return userJson?.let { generalConfig.getMoshi().adapter(User::class.java).fromJson(userJson) }
+        return userJson?.let { generalConfig.getMoshi().adapter(User::class.java).fromJson(it) }
     }
 
     fun createUser(user: User): Completable {

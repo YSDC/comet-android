@@ -1,5 +1,6 @@
 package com.ysdc.comet.data
 
+import com.ysdc.comet.model.Team
 import com.ysdc.comet.model.User
 import io.reactivex.Completable
 import io.reactivex.Single
@@ -21,4 +22,9 @@ interface DataManager{
      * Update the user. Raise an error if no user found with its ID.
      */
     fun updateUser(user: User): Completable
+
+    /**
+     * Register the team on backend
+     */
+    fun registerTeam(team: Team): Completable
 }

@@ -30,7 +30,7 @@ ext {
             firebasemsg    : '19.0.0',
             firebaseAuth   : '18.0.0',
             firebasecfg    : '18.0.0',
-            firebaseStore  : '19.0.0',
+            firebaseStore  : '20.1.0',
             adapterDelegate: '4.0.0',
             shimmer        : '0.4.0@aar',
             lottie         : '3.0.6',
