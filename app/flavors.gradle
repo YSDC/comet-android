@@ -39,7 +39,7 @@ android {
 
             project.ext.set("buildTypeName", ${variant.buildType.name})
             project.ext.set("serverName", ${server.name})
-            variant.buildConfigField "String", "BASE_URL", "\"${client[server.name]}\""
+            variant.buildConfigField "String", "BASE_URL", "${client[server.name]}"
         }
     }
 }

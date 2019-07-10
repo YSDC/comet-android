@@ -7,6 +7,7 @@ import com.ysdc.comet.data.RemoteConfigManager
 import com.ysdc.comet.network.DefaultNetworkServiceCreator
 import com.ysdc.comet.repositories.ConfigurationRepository
 import com.ysdc.comet.repositories.TeamRepository
+import com.ysdc.comet.repositories.UserRepository
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -34,5 +35,11 @@ class RepositoryModule {
     @Singleton
     fun provideConfigurationRepository(remoteConfigManager: RemoteConfigManager, preferences: MyPreferences): ConfigurationRepository {
         return ConfigurationRepository(remoteConfigManager, preferences)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUserRepository(dataManager: DataManager, preferences: MyPreferences, generalConfig: GeneralConfig): UserRepository {
+        return UserRepository(dataManager, preferences, generalConfig)
     }
 }

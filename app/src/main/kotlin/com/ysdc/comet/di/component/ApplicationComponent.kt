@@ -2,7 +2,6 @@ package com.ysdc.comet.di.component
 
 import com.ysdc.comet.application.MyApplication
 import com.ysdc.comet.common.di.module.SharedApplicationModule
-import com.ysdc.comet.common.di.module.SharedNetworkModule
 import com.ysdc.comet.common.di.module.SharedUtilsModule
 import com.ysdc.comet.di.module.*
 import dagger.BindsInstance
@@ -21,7 +20,6 @@ import javax.inject.Singleton
         FragmentBindings::class,
         NetworkModule::class,
         RepositoryModule::class,
-        SharedNetworkModule::class,
         DataModule::class,
         SharedUtilsModule::class]
 )
