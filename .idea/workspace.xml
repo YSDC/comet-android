@@ -15,17 +15,7 @@
     <list default="true" id="a06f6a78-feb5-4941-952c-32859548b44b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/analytics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/analytics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/flavors.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/flavors.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/component/ApplicationComponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/component/ApplicationComponent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/RepositoryModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/RepositoryModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/repositories/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.keystore" beforeDir="false" afterPath="$PROJECT_DIR$/debug.keystore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/NetworkModule.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -83,11 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/ActivityModule.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="32" column="111" selection-start-line="32" selection-start-column="111" selection-end-line="32" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/signing.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -539,11 +538,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="988" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="988" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6856725" visible="true" weight="0.22527473" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.6856725" visible="true" weight="0.22527473" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" sideWeight="0.31432748" side_tool="true" weight="0.22527473" />
       <window_info id="Image Layers" order="4" />
@@ -560,7 +558,7 @@
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.498779" weight="0.21534938" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50183153" side_tool="true" weight="0.15578465" />
-      <window_info anchor="bottom" id="Build" order="9" sideWeight="0.4981685" visible="true" weight="0.15578465" />
+      <window_info active="true" anchor="bottom" id="Build" order="9" sideWeight="0.4981685" visible="true" weight="0.15578465" />
       <window_info anchor="bottom" id="SonarQube" order="10" />
       <window_info anchor="bottom" id="SonarLint" order="11" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -574,13 +572,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/ui/splashscreen/SplashMvpPresenter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -638,12 +629,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/di/module/SharedNetworkModule.kt" />
     <entry file="file://$PROJECT_DIR$/authentication/src/main/res/layout/fragment_register.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-74">
           <caret line="113" column="73" selection-start-line="113" selection-start-column="73" selection-end-line="113" selection-end-column="73" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/kotlin/com/ysdc/comet/common/utils/FormatterUtils.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -911,7 +902,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/kotlin/com/ysdc/comet/di/module/NetworkModule.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -933,6 +924,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="32" column="111" selection-start-line="32" selection-start-column="111" selection-end-line="32" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signing.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
