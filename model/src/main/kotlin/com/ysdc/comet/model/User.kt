@@ -8,6 +8,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @JsonClass(generateAdapter = true)
 data class User(
+    @Transient
     @field:Json(name = "id")
     var id: String? = null,
     @field:Json(name = "firstName")
