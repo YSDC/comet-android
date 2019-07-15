@@ -68,19 +68,27 @@
             app:layout_constraintTop_toBottomOf="@+id/team_selection_title"
             android:theme="@style/AppTheme.spinner"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/team_field"
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/team_field_layout"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
             app:layout_constraintStart_toStartOf="@+id/startConstraint"
             app:layout_constraintEnd_toEndOf="@+id/endConstraint"
-            app:layout_constraintTop_toBottomOf="@+id/team_selection_spinner"
-            android:layout_marginTop="@dimen/default_margin"
-            android:maxLength="6"
-            android:maxLines="1"
-            android:imeOptions="actionDone"
-            android:inputType="text"
-            android:hint="@string/team_field_placeholder"/>
+            app:layout_constraintTop_toBottomOf="@+id/team_selection_spinner">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/team_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:maxLength="6"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:hint="@string/team_field_placeholder"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
             android:id="@+id/validate_btn"

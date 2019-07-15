@@ -13,7 +13,6 @@ import com.ysdc.comet.authentication.ui.register.RegisterFragment
 import com.ysdc.comet.authentication.ui.team.TeamFragment
 import com.ysdc.comet.common.navigation.NavigationManager
 import com.ysdc.comet.common.ui.base.BaseActivity
-import com.ysdc.comet.common.ui.utils.FragmentAdapter
 import kotlinx.android.synthetic.main.activity_authentication.*
 import javax.inject.Inject
 
@@ -24,15 +23,10 @@ import javax.inject.Inject
 
 class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
 
-    private lateinit var adapter: FragmentAdapter
     @Inject
     internal lateinit var presenter: AuthenticationMvpPresenter<AuthenticationMvpView>
     @Inject
     internal lateinit var navigationManager: NavigationManager
-
-    private val teamFragment = TeamFragment.newInstance()
-    private val registerFragment = RegisterFragment.newInstance()
-    private val validateFragment = ValidateFragment.newInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +54,7 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
 
     override fun codeSent() {
         hideAlert()
-        authenticationContainer.currentItem = 2
+        showValidation()
     }
 
     override fun authenticationDone() {
@@ -68,8 +62,8 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
         navigationManager.displayMainView(this)
     }
 
-    fun onTeamValidated(){
-        authenticationContainer.currentItem = 1
+    fun onTeamValidated() {
+        showRegister()
     }
 
     override fun onVerificationCodeError() {
@@ -79,11 +73,11 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
             .setPositiveText(getString(R.string.action_check_phone))
             .setPositiveListener(object : ClickListener {
                 override fun onClick(dialog: LottieAlertDialog) {
-                    authenticationContainer.currentItem = 1
+                    supportFragmentManager.popBackStack()
                 }
             })
             .setNegativeText(getString(R.string.action_resend))
-            .setNegativeListener(object : ClickListener{
+            .setNegativeListener(object : ClickListener {
                 override fun onClick(dialog: LottieAlertDialog) {
                     displayLoading(R.string.phone_code_request)
                     presenter.resendCode()
@@ -93,30 +87,44 @@ class AuthenticationActivity : BaseActivity(), AuthenticationMvpView {
         alertDialog!!.show()
     }
 
-    override fun onBackPressed() {
-        if (authenticationContainer.currentItem > 0) {
-            authenticationContainer.currentItem = authenticationContainer.currentItem - 1
-        }
-        //super.onBackPressed()
-    }
+//    override fun onBackPressed() {
+//        if (authenticationContainer.currentItem > 0) {
+//            authenticationContainer.currentItem = authenticationContainer.currentItem - 1
+//        }
+//        //super.onBackPressed()
+//    }
 
     private fun initView() {
         presenter.initAuthenticationManager(this)
-
-        adapter = FragmentAdapter(supportFragmentManager)
-        adapter.addFragments(teamFragment)
-        adapter.addFragments(registerFragment)
-        adapter.addFragments(validateFragment)
-
-        authenticationContainer.adapter = adapter
-        authenticationContainer.offscreenPageLimit = adapter.count
-        authenticationContainer.setPagingEnabled(false)
-
-        if(presenter.hasTeamCode()){
-            authenticationContainer.currentItem = 1
-        }else{
-            authenticationContainer.currentItem = 0
+        if (presenter.hasTeamCode()) {
+            showRegister()
+        } else {
+            showTeamSelection()
         }
+    }
+
+    private fun showTeamSelection() {
+        val teamFragment = TeamFragment.newInstance()
+        val tr = supportFragmentManager.beginTransaction()
+        tr.replace(R.id.authenticationContainer, teamFragment, teamFragment.javaClass.name)
+        tr.addToBackStack(null)
+        tr.commit()
+    }
+
+    private fun showValidation() {
+        val validateFragment = ValidateFragment.newInstance()
+        val tr = supportFragmentManager.beginTransaction()
+        tr.replace(R.id.authenticationContainer, validateFragment, validateFragment.javaClass.name)
+        tr.addToBackStack(null)
+        tr.commit()
+    }
+
+    private fun showRegister() {
+        val registerFragment = RegisterFragment.newInstance()
+        val tr = supportFragmentManager.beginTransaction()
+        tr.replace(R.id.authenticationContainer, registerFragment, registerFragment.javaClass.name)
+        tr.addToBackStack(null)
+        tr.commit()
     }
 
     companion object {

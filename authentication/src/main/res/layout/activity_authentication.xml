@@ -5,11 +5,10 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.ysdc.comet.common.ui.utils.NoSwipePager
+
+    <FrameLayout
             android:id="@+id/authenticationContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:background="@color/white"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 </LinearLayout>

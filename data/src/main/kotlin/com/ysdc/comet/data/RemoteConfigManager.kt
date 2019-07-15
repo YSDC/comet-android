@@ -74,4 +74,8 @@ class RemoteConfigManager(
         val remoteRequiredVersion = remoteConfig.getString(REMOTE_MINIMUM_VERSION)
         return -1 == generalConfig.currentAppVersion().compareTo(Version(remoteRequiredVersion))
     }
+
+    fun getInt(key: String): Int {
+        return remoteConfig.getLong(key).toInt()
+    }
 }

@@ -47,7 +47,7 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
         role_spinner.adapter = roleAdapter
         role_spinner.setSelection(presenter.getUser().role.ordinal)
         role_spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(adapterView: AdapterView<*>, view: View, index: Int, l: Long) {
+            override fun onItemSelected(adapterView: AdapterView<*>, view: View?, index: Int, l: Long) {
                 presenter.getUser().role = UserRole.values()[index]
             }
 
@@ -69,6 +69,38 @@ class RegisterFragment : BaseFragment(), RegisterMvpView {
                 true
             } else {
                 false
+            }
+        }
+
+        register_firstName_content.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                register_firstName_layout.hint = getString(R.string.register_firstName)
+            } else {
+                register_firstName_layout.hint = getString(R.string.register_firstName_placeholder)
+            }
+        }
+
+        register_lastName_content.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                register_lastName_layout.hint = getString(R.string.register_lastName)
+            } else {
+                register_lastName_layout.hint = getString(R.string.register_lastName_placeholder)
+            }
+        }
+
+        register_phone_content.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                register_phone_layout.hint = getString(R.string.register_phone)
+            } else {
+                register_phone_layout.hint = getString(R.string.register_phone_placeholder)
+            }
+        }
+
+        register_email_content.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                register_email_layout.hint = getString(R.string.register_email)
+            } else {
+                register_email_layout.hint = getString(R.string.register_email_placeholder)
             }
         }
 
