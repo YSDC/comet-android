@@ -24,9 +24,9 @@ class TeamRepository(
         return teamJson?.let { generalConfig.getMoshi().adapter(Team::class.java).fromJson(it) }
     }
 
-    fun getAvailableTeams(season: Int): Single<List<Team>> {
+    fun getAvailableTeams(clubId : Int, season: Int): Single<List<Team>> {
         return Single.defer {
-            defaultNetworkServiceCreator.getSwissFloorballService().getClubTeams(generalConfig.clubId(), season)
+            defaultNetworkServiceCreator.getSwissFloorballService().getClubTeams(clubId, season)
                 .subscribeOn(Schedulers.io())
                 .map { clubTeamResponse ->
                     val mapper = TeamMapper()

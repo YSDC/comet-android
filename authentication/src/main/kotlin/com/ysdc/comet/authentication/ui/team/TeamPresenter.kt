@@ -7,9 +7,11 @@ import com.ysdc.comet.common.ui.base.BasePresenter
 import com.ysdc.comet.common.utils.ValidationUtils
 import com.ysdc.comet.model.Team
 import com.ysdc.comet.model.User
+import com.ysdc.comet.repositories.ConfigurationRepository
 import com.ysdc.comet.repositories.TeamRepository
 import com.ysdc.comet.repositories.UserRepository
 import io.reactivex.Single
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class TeamPresenter<V : TeamMvpView>(
@@ -17,6 +19,7 @@ class TeamPresenter<V : TeamMvpView>(
     private val userRepository: UserRepository,
     private val validationUtils: ValidationUtils,
     private val teamRepository: TeamRepository,
+    private val configurationRepository: ConfigurationRepository,
     private val generalConfig: GeneralConfig
 ) : BasePresenter<V>(errorHandler), TeamMvpPresenter<V> {
 
@@ -36,6 +39,8 @@ class TeamPresenter<V : TeamMvpView>(
         } else {
             compositeDisposable.add(
                 teamRepository.validateActivationCode(code)
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
                     .doOnSubscribe { mvpView?.displayLoading(R.string.team_code_verification) }
                     .subscribe(
                         { isSuccess ->
@@ -56,7 +61,7 @@ class TeamPresenter<V : TeamMvpView>(
     }
 
     override fun loadTeams(): Single<List<String>> {
-        return teamRepository.getAvailableTeams(generalConfig.clubId())
+        return teamRepository.getAvailableTeams(generalConfig.clubId(),configurationRepository.getCurrentSeason())
             .subscribeOn(Schedulers.io())
             .map { newTeams ->
                 this.teams = newTeams

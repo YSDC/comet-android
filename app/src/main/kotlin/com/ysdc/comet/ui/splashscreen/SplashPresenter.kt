@@ -1,5 +1,6 @@
 package com.ysdc.comet.ui.splashscreen
 
+import com.github.ajalt.timberkt.Timber
 import com.ysdc.comet.R
 import com.ysdc.comet.authentication.manager.PhoneAuthenticationManager
 import com.ysdc.comet.common.data.ErrorHandler
@@ -27,27 +28,30 @@ class SplashPresenter<V : SplashMvpView>(
         compositeDisposable.add(
             configurationRepository.appUpdateStatus()
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
                 .firstOrError()
                 .flatMapCompletable { status ->
                     when (status) {
                         AppUpdateStatus.RECOMMENDED -> {
+                            Timber.d { "loadConfiguration: RECOMMENDED" }
                             if (configurationRepository.shouldDisplayRecommandedDialog()) {
                                 mvpView?.showVersionDialog(R.string.recommended_update_title, R.string.recommended_update_message, true)
                             }
                             Completable.complete()
                         }
                         AppUpdateStatus.REQUIRED -> {
+                            Timber.d { "loadConfiguration: REQUIRED" }
                             mvpView?.showVersionDialog(R.string.required_update_title, R.string.required_update_message, false)
                             Completable.complete()
                         }
                         else -> {
+                            Timber.d { "loadConfiguration: other status" }
                             loadData()
                         }
                     }
                 }
                 .subscribe({}, {throwable -> mvpView?.onError(throwable)})
         )
+        configurationRepository.loadConfiguration()
     }
 
     override fun versionDialogClosed() {
@@ -56,15 +60,18 @@ class SplashPresenter<V : SplashMvpView>(
     }
 
     private fun loadData(): Completable {
-        return Observable.interval(3, TimeUnit.SECONDS)
-            .filter { it < 3 && it > 4 }
+        return Observable.interval(1, TimeUnit.SECONDS)
+            .filter { it >= 3 }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .firstOrError()
             .flatMapCompletable {
+                Timber.d{"load Data"}
                 if (phoneAuthenticationManager.isLoggedIn()) {
+                    Timber.d { "open home activity" }
                     mvpView?.openHomeActivity()
                 } else {
+                    Timber.d { "open authentication activity" }
                     mvpView?.openAuthenticationActivity()
                 }
                 Completable.complete()

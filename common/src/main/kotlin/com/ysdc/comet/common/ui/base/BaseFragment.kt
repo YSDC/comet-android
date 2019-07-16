@@ -50,7 +50,6 @@ abstract class BaseFragment : Fragment(), MvpView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(false)
-        //TODO: remove this when old app is not use anymore
         val actionBar = baseActivity?.supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(shouldDisplayBackButton())

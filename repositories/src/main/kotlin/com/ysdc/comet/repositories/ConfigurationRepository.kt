@@ -5,6 +5,7 @@ import com.ysdc.comet.common.data.prefs.PrefsConstants
 import com.ysdc.comet.data.RemoteConfigManager
 import com.ysdc.comet.data.model.AppUpdateStatus
 import com.ysdc.comet.data.utils.DataConstants
+import com.ysdc.comet.data.utils.DataConstants.REMOTE_CURRENT_SEASON
 import io.reactivex.Observable
 import java.util.*
 
@@ -15,6 +16,10 @@ class ConfigurationRepository(
 
     fun loadConfiguration() {
         remoteConfigManager.initialize()
+    }
+
+    fun getCurrentSeason() : Int {
+        return remoteConfigManager.getInt(REMOTE_CURRENT_SEASON)
     }
 
     fun appUpdateStatus(): Observable<AppUpdateStatus> {

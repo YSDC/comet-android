@@ -54,7 +54,7 @@ class RegisterPresenter<V : RegisterMvpView>(
         } ?: arrayOf()
     }
 
-    override fun getUser() : User {
+    override fun getUser(): User {
         return user
     }
 

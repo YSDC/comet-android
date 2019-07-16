@@ -93,6 +93,14 @@ class TeamFragment : BaseFragment(), TeamMvpView {
                 timber.log.Timber.d("Role: nothing selected")
             }
         }
+
+        team_field.onFocusChangeListener = View.OnFocusChangeListener {view, hasFocus ->
+            if (hasFocus) {
+                team_field.hint = getString(R.string.team_field)
+            } else {
+                team_field.hint = getString(R.string.team_field_placeholder)
+            }
+        }
     }
 
     override fun displayError(messageId: Int) {
