@@ -5,6 +5,7 @@ import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.data.prefs.PrefsConstants.PREFS_TEAM
 import com.ysdc.comet.common.exception.ValidationException
 import com.ysdc.comet.data.DataManager
+import com.ysdc.comet.model.Ranking
 import com.ysdc.comet.model.Team
 import com.ysdc.comet.network.DefaultNetworkServiceCreator
 import com.ysdc.comet.network.mapper.TeamMapper
@@ -57,4 +58,10 @@ class TeamRepository(
         val teamJson = generalConfig.getMoshi().adapter(Team::class.java).toJson(teamSelected)
         preferences.setString(PREFS_TEAM, teamJson)
     }
+
+//    fun getTeamRanking(season: Int) : Single<Ranking>{
+//        return Single.defer {
+//            defaultNetworkServiceCreator.getSwissFloorballService().getRanking()
+//        }
+//    }
 }

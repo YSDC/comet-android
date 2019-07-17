@@ -26,10 +26,12 @@ data class RankEntry(
     val looseOverTime: Int,
     @field:Json(name = "loose")
     val loose: Int,
+    @field:Json(name = "draw")
+    val draw: Int,
     @field:Json(name = "goals")
     val goals: String,
     @field:Json(name = "goalsDiff")
-    val goalsDiff: Int,
+    val goalsDiff: String,
     @field:Json(name = "points")
     val points: Int
 ) : Parcelable {
@@ -43,8 +45,9 @@ data class RankEntry(
         var winOverTime: Int = 0,
         var looseOverTime: Int = 0,
         var loose: Int = 0,
+        var draw: Int = 0,
         var goals: String = "0:0",
-        var goalsDiff: Int = 0,
+        var goalsDiff: String = "0",
         var points: Int = 0
     ) {
         fun teamId(value: Int) = apply { this.teamId = value }
@@ -56,10 +59,11 @@ data class RankEntry(
         fun winOverTime(value: Int) = apply { this.winOverTime = value }
         fun looseOverTime(value: Int) = apply { this.looseOverTime = value }
         fun loose(value: Int) = apply { this.loose = value }
+        fun draw(value: Int) = apply { this.draw = value }
         fun goals(value: String) = apply { this.goals = value }
-        fun goalsDiff(value: Int) = apply { this.goalsDiff = value }
+        fun goalsDiff(value: String) = apply { this.goalsDiff = value }
         fun points(value: Int) = apply { this.points = value }
-        fun build() = RankEntry(teamId, teamName, rank, picture, played, win, winOverTime, looseOverTime, loose, goals, goalsDiff, points)
+        fun build() = RankEntry(teamId, rank, picture, teamName, played, win, winOverTime, looseOverTime, loose, draw, goals, goalsDiff, points)
     }
 }
 
