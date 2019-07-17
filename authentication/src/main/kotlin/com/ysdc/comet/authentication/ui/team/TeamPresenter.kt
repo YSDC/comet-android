@@ -45,7 +45,7 @@ class TeamPresenter<V : TeamMvpView>(
                     .subscribe(
                         { isSuccess ->
                             if (isSuccess) {
-                                user.teamId = teamSelected!!.id
+                                user.teamId = teamSelected!!.teamId
                                 userRepository.updateUserLocally(user)
                                 teamRepository.updateTeamLocally(teamSelected!!)
                                 mvpView?.teamValidated()

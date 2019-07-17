@@ -31,7 +31,7 @@ class TeamRepository(
                 .subscribeOn(Schedulers.io())
                 .map { clubTeamResponse ->
                     val mapper = TeamMapper()
-                    mapper.mapTeams(clubTeamResponse)
+                    mapper.mapTeams(clubId, clubTeamResponse)
                 }
         }
 
@@ -41,14 +41,20 @@ class TeamRepository(
         return dataManager.isClubTokenValid(code).subscribeOn(Schedulers.io())
     }
 
-    fun registerTeam() : Completable {
+    fun registerTeam(season: Int) : Completable {
         return Completable.defer {
             val team = getTeam()
             if(team == null){
                 //TODO: Add error message
                 Completable.error(ValidationException(""))
             }else{
-                dataManager.registerTeam(team).subscribeOn(Schedulers.io())
+                defaultNetworkServiceCreator.getSwissFloorballService().getTeamDetails(season, team.teamId)
+                    .subscribeOn(Schedulers.io())
+                    .map { response ->
+                        TeamMapper().extractTeamDetails(response, team)
+                        team
+                    }
+                    .flatMapCompletable{newTeam -> dataManager.registerTeam(newTeam)}
             }
 
         }

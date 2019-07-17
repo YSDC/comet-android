@@ -17,5 +17,5 @@ object NetworkConstants {
     const val URL_TEAM_MATCHES = "/api/games?mode=team&games_per_page=100&locale=fr-CH"
     const val URL_CLUB_TEAMS = "/api/teams?mode=by_club&locale=fr-CH"
     const val URL_RANKING = "/api/rankings?locale=fr-CH"
-    const val URL_TEAM_DETAILS = "/api/games?mode=list?locale=fr-CH"
+    const val URL_TEAM_DETAILS = "/api/games?mode=list&locale=fr-CH"
 }

@@ -8,8 +8,10 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @JsonClass(generateAdapter = true)
 data class Team (
-    @field:Json(name = "id")
-    val id : Int,
+    @field:Json(name = "clubId")
+    val clubId : Int,
+    @field:Json(name = "teamId")
+    val teamId : Int,
     @field:Json(name = "name")
     val name : String,
     @field:Json(name = "league")

@@ -8,6 +8,7 @@ import com.ysdc.comet.authentication.model.PhoneAuthenticationStatus.*
 import com.ysdc.comet.common.data.ErrorHandler
 import com.ysdc.comet.common.data.prefs.MyPreferences
 import com.ysdc.comet.common.ui.base.BasePresenter
+import com.ysdc.comet.repositories.ConfigurationRepository
 import com.ysdc.comet.repositories.TeamRepository
 import com.ysdc.comet.repositories.UserRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -21,7 +22,8 @@ class AuthenticationPresenter<V : AuthenticationMvpView>(
     errorHandler: ErrorHandler,
     private val phoneAuthenticationManager: PhoneAuthenticationManager,
     private val userRepository: UserRepository,
-    private val teamRepository: TeamRepository
+    private val teamRepository: TeamRepository,
+    private val configurationRepository: ConfigurationRepository
 ) : BasePresenter<V>(errorHandler), AuthenticationMvpPresenter<V> {
 
     override fun initAuthenticationManager(activity: Activity) {
@@ -87,7 +89,7 @@ class AuthenticationPresenter<V : AuthenticationMvpView>(
                                 compositeDisposable.add(
                                     userRepository.createUser(user)
                                         .subscribeOn(Schedulers.io())
-                                        .andThen(teamRepository.registerTeam())
+                                        .andThen(teamRepository.registerTeam(configurationRepository.getCurrentSeason()))
                                         .observeOn(AndroidSchedulers.mainThread())
                                         .subscribe(
                                             {mvpView?.authenticationDone()},

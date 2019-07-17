@@ -28,9 +28,10 @@ class ActivityModule {
         errorHandler: ErrorHandler,
         phoneAuthenticationManager: PhoneAuthenticationManager,
         userRepository: UserRepository,
-        teamRepository: TeamRepository
+        teamRepository: TeamRepository,
+        configurationRepository: ConfigurationRepository
     ): AuthenticationMvpPresenter<AuthenticationMvpView> {
-        return AuthenticationPresenter(errorHandler, phoneAuthenticationManager, userRepository, teamRepository)
+        return AuthenticationPresenter(errorHandler, phoneAuthenticationManager, userRepository, teamRepository, configurationRepository)
     }
 
     @Provides

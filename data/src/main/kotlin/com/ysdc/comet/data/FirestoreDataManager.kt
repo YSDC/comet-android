@@ -77,19 +77,12 @@ class FirestoreDataManager(
         return Completable.defer {
             val query = firebaseFirestore.collection(COLLECTION_TEAMS)
                 .whereEqualTo(CLUB_ID, generalConfig.clubId())
-                .whereEqualTo(TEAM_ID, team.id)
+                .whereEqualTo(TEAM_ID, team.teamId)
             val result = Tasks.await(query.get())
             if (result.isEmpty) {
-                createTeam(team)
+                val newTeam = firebaseFirestore.collection(COLLECTION_TEAMS).document()
+                Tasks.await(newTeam.set(team))
             }
-            Completable.complete()
-        }
-    }
-
-    private fun createTeam(team: Team): Completable {
-        return Completable.defer {
-            val newTeam = firebaseFirestore.collection(COLLECTION_TEAMS).document()
-            Tasks.await(newTeam.set(team))
             Completable.complete()
         }
     }
