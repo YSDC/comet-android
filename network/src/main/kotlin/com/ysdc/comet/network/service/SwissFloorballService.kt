@@ -36,6 +36,18 @@ interface SwissFloorballService {
     fun getTeamMatches(@Query(PARAM_TEAM) team: Int, @Query(PARAM_SEASON) season: Int): Single<TeamMatchesResponse>
 
     /**
+     * for game details (logo, referee, etc.)
+     * curl -v -X GET "https://api-v2.swissunihockey.ch/api/games/946340
+     */
+
+    /**
+     * for game details (logo, referee, etc.)
+     * curl -v -X GET "https://api-v2.swissunihockey.ch/api/games?mode=list&season=2019&league=6&game_class=12&group=Gruppe%201&locale=fr-CH&games_per_page=100"
+     * curl -v -X GET "https://api-v2.swissunihockey.ch/api/games?mode=list&season=2019&league=6&game_class=12&group=Gruppe%201&round=99055&locale=fr-CH&games_per_page=100"
+     *
+     */
+
+    /**
      * Le classement
      * curl -v -X GET "https://api-v2.swissunihockey.ch/api/rankings?season=2018&league=6&game_class=12&group=Gruppe%201"
      */

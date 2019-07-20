@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">events</string>
+    <string name="event_type_tournament">Tournament</string>
+    <string name="event_type_cup">Cup</string>
+    <string name="event_type_training">Training</string>
+    <string name="event_type_friendly_match">Friendly Match</string>
+    <string name="event_type_other">Other</string>
+</resources>
