@@ -5,7 +5,8 @@ import java.util.*
 interface Event {
     val id: String
     val name: String
-    val date: Date
+    val date: String
+    val time: String
     val state: EventState
     val type: EventType
     val location: EventLocation

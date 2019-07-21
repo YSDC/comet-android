@@ -37,7 +37,7 @@ interface SwissFloorballService {
 
     /**
      * for game details (logo, referee, etc.)
-     * curl -v -X GET "https://api-v2.swissunihockey.ch/api/games/946340
+     * curl -v -X GET "https://api-v2.swissunihockey.ch/api/games/917086"
      */
 
     /**

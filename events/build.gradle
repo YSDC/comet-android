@@ -81,6 +81,7 @@ dependencies {
 
     implementation project(':model')
     implementation project(':common')
+    implementation project(':network')
     implementation project(':data')
     implementation project(':repositories')
 }
