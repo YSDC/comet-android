@@ -8,8 +8,8 @@ enum class EventType(
     val key: Int
 ) {
 
-    TOURNAMENT(R.string.event_type_tournament),
-    CUP(R.string.event_type_cup),
+    TOURNAMENT_MATCH(R.string.event_type_tournament),
+    CUP_MATCH(R.string.event_type_cup),
     TRAINING(R.string.event_type_training),
     FRIENDLY_MATCH(R.string.event_type_friendly_match),
     OTHER(R.string.event_type_other);

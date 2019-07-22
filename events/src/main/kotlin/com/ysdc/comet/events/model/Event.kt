@@ -9,6 +9,5 @@ interface Event {
     val time: String
     val state: EventState
     val type: EventType
-    val location: EventLocation
-    val imageUrl: String
+    val location: EventLocation?
 }

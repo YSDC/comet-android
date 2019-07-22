@@ -1,4 +1,4 @@
-package com.ysdc.comet.network.response
+package com.ysdc.comet.network.response.classes
 
 import com.squareup.moshi.Json
 
